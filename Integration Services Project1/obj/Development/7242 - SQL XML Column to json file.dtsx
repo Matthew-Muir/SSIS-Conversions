@@ -1,0 +1,904 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/26/2021 1:37:21 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-HI5QNNVI"
+  DTS:CreatorName="LAPTOP-HI5QNNVI\Bobby"
+  DTS:DTSID="{C2B38D67-E69E-4931-B685-F54D4D10AAF9}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.167"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="7242"
+  DTS:PackageType="5"
+  DTS:VersionBuild="24"
+  DTS:VersionGUID="{5C03D251-6985-4A77-93B4-4AE3D8702496}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[(localdb)\MSSQLLocalDB.TestEnv]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{93802FA8-98A1-497D-AAED-49B3D3729DD8}"
+      DTS:ObjectName="(localdb)\MSSQLLocalDB.TestEnv">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=TestEnv;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[File Connection]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{6DA8DAB0-8E38-47F5-818D-E2D189210A35}"
+      DTS:ObjectName="File Connection">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="1"
+          DTS:ConnectionString="C:\quick\hope.json" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SQL Connection]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{583DC3EB-2949-4E66-8AEA-400F3B326BF8}"
+      DTS:ObjectName="SQL Connection">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=LAPTOP-HI5QNNVI;Initial Catalog=CozyRoc_Customer_Tickets;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{68622C3A-6AA0-474F-B4D5-5EE66C5F8257}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="JsonVar">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{4D200186-7E55-46F2-A35E-1C0949FEEA3A}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="XMLVar">
+      <DTS:VariableValue
+        DTS:DataSubType="ManagedSerializable"
+        DTS:DataType="13">
+        <SOAP-ENV:Envelope xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+          <SOAP-ENV:Body>
+            <xsd:anyType
+              id="ref-1"></xsd:anyType>
+          </SOAP-ENV:Body>
+        </SOAP-ENV:Envelope>
+      </DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{8222BDB4-3E8E-4D0C-B8DD-7B71DF6734C2}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\JavaScript Component - Column to Variable"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Use JavaScript code to automate any custom logic in the package data flow.; COZYROC LLC; SSIS+; © 2006-2020 COZYROC LLC; All Rights Reserved; http://www.cozyroc.com/;0"
+              description="Use JavaScript code to automate any custom logic in the package data flow."
+              name="JavaScript Component - Column to Variable">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Code of the linked JavaScript file."
+                  name="JavaScriptCode"
+                  typeConverter="NOTBROWSABLE">&lt;![CDATA[// Documentation: http://www.cozyroc.com/ssis/script-column-variable-destination
+
+/* Copyright (c) 2006-2019 COZYROC LLC
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated 
+documentation files (the "Software"), to deal in the Software without restriction, including without limitation 
+the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and 
+to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the 
+Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE 
+WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR 
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR 
+OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
+
+require("validation.js");
+require("component.metadata.js");
+
+// Possible actions, when a second data entry arrives for storing.
+var inputName = "Input 0",
+    listSeparator = ",\n",
+    actionTypes = ["Ignore", "Overwrite", "Array", "Fail"],
+    ClrList = getClrType("System.Collections.ArrayList");
+
+component.parameters = {
+    InputColumns: {
+        desciption: "Input columns you want to store in variable(s).",
+        category: "Input",
+        type: { id: "column", direction: "input", columnType: "all", multiple: true },
+        afterEdit(parameter) {
+            metadata.useInputColumns(
+                this.inputCollection[inputName],
+                !parameter.value ? [] : parameter.value.split(listSeparator));
+        },
+        validate(parameter) {
+            if (!parameter.value)
+                return "At least one input column must be selected!";
+
+            this.parameters.StoreVariable.enabled = parameter.value.split(listSeparator).length &lt;= 1;
+        }
+    },
+    StoreVariable: {
+        description: "Select variable to store the column data into. If multiple columns the variables are automatically chosen to match the column names.",
+        category: "Store variable",
+        type: { id: "variable" },
+        order: 1
+    },
+    MultiRowAction: {
+        description: "Choose what happens if more than a single value (row) arrives.",
+        category: "Store variable",
+        type: { id: "list", values: actionTypes, multiple: false },
+        value: "Ignore",
+        order: 2
+    },
+};
+
+component.reinitializeMetadata = function () {
+    metadata.synchronizeInputs.call(this, [{ name: inputName, hasSideEffects: true }]);
+};
+
+component.validate = function () {
+    this.inputColumns = (this.parameters.InputColumns.value || "").split(listSeparator);
+
+    if (this.inputColumns.length &gt; 1)
+        console.info("Multiple input columns - destination variables will be chosen automatically by columns names.");
+    else if (!this.parameters.StoreVariable.value)
+        return "There is no variable set for storing the value.";
+}
+
+component.preExecute = function () {
+    var arrayStorage = this.parameters.MultiRowAction.value === "Array";
+
+    this.colValue = {};
+    this.inputColumns.forEach(function (colName) {
+        component.colValue[colName] = arrayStorage ? new ClrList() : null;
+    });
+
+    this.setValue = arrayStorage ?
+        function (colName, value) { this.colValue[colName].Add(value); } :
+        function (colName, value) { this.colValue[colName] = value; };
+};
+
+component.processData = function (inputBuffer) {
+    if (inputBuffer.endOfRowset || inputBuffer.rowCount == 0)
+        return;
+
+    var me = this,
+        storeType = this.parameters.MultiRowAction.value,
+        rowCount = inputBuffer.rowCount,
+        retrieveValues = function (overwrite) {
+            var foundValue = false;
+            me.inputColumns.forEach(function (colName) {
+                if (me.colValue[colName] != null) {
+                    foundValue = true;
+                    if (!overwrite)
+                        return;
+                }
+                me.setValue(colName, inputBuffer.get(colName));
+            });
+
+            return foundValue;
+        };
+
+    if (storeType === "Array") {
+        while (inputBuffer.nextRow())
+            retrieveValues(true);
+    }
+    else if (storeType === "Fail") {
+        if (retrieveValues(false))
+            console.error("Attempt to write a second value into a variable, with multiple rows action set to 'Fail'");
+    }
+    else {
+        var overwrite = storeType === "Overwrite";
+        if (overwrite)
+            inputBuffer.currentRow = rowCount - 1;
+        else
+            inputBuffer.nextRow();
+
+        retrieveValues(overwrite);
+    }
+};
+
+component.postExecute = function () {
+    var storeVar = this.parameters.StoreVariable.value;
+
+    if (storeVar) {
+        this.variables[storeVar].value = this.colValue[this.inputColumns[0]];
+    } else {
+        for (var name in this.colValue) {
+            this.variables[name].value = this.colValue[name];
+        }
+    }
+};
+]]&gt;</property>
+                <property
+                  dataType="System.String"
+                  description="Serialized parameters keys and values."
+                  name="ParametersValues"
+                  state="cdata"
+                  typeConverter="NOTBROWSABLE"><![CDATA[<dictionary>
+  <item>
+    <key>
+      <string>MultiRowAction</string>
+    </key>
+    <value>
+      <anyType xmlns:q1="http://www.w3.org/2001/XMLSchema" p5:type="q1:string" xmlns:p5="http://www.w3.org/2001/XMLSchema-instance">Ignore</anyType>
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>InputColumns</string>
+    </key>
+    <value>
+      <anyType xmlns:q1="http://www.w3.org/2001/XMLSchema" p5:type="q1:string" xmlns:p5="http://www.w3.org/2001/XMLSchema-instance">xml_data</anyType>
+    </value>
+  </item>
+  <item>
+    <key>
+      <string>StoreVariable</string>
+    </key>
+    <value>
+      <anyType xmlns:q1="http://www.w3.org/2001/XMLSchema" p5:type="q1:string" xmlns:p5="http://www.w3.org/2001/XMLSchema-instance">User::XMLVar</anyType>
+    </value>
+  </item>
+</dictionary>]]></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the Package connection manager that the task uses."
+                  name="PackageConnection"
+                  typeConverter="NOTBROWSABLE"></property>
+                <property
+                  dataType="System.String"
+                  description="Select JavaScriptComponent."
+                  name="JavaScriptLinkedComponent"
+                  typeConverter="NOTBROWSABLE"></property>
+                <property
+                  dataType="System.String"
+                  description="List of breakpoints in the script."
+                  isArray="true"
+                  name="Breakpoints"
+                  typeConverter="NOTBROWSABLE">
+                  <arrayElements
+                    arrayElementCount="0" />
+                </property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">CozyRoc.JavaScriptComponent</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\JavaScript Component - Column to Variable.Inputs[Input 0]"
+                  hasSideEffects="true"
+                  name="Input 0">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\JavaScript Component - Column to Variable.Inputs[Input 0].Columns[xml_data]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="xml_data"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[xml_data]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DC_RAW_Sent_Data]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT xml_data FROM dbo.XmlTiny 
+as XMLVariable</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[(localdb)\MSSQLLocalDB.TestEnv]"
+                  connectionManagerRefId="Package.ConnectionManagers[(localdb)\MSSQLLocalDB.TestEnv]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[xml_data]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[xml_data]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[xml_data]"
+                      name="xml_data"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[xml_data]"
+                      codePage="1252"
+                      dataType="text"
+                      name="xml_data" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[pk]"
+                      dataType="i4"
+                      name="pk" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[sending]"
+                      dataType="bool"
+                      name="sending" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[sent]"
+                      dataType="bool"
+                      name="sent" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[crc]"
+                      dataType="i4"
+                      name="crc" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[sending_test]"
+                      dataType="bool"
+                      name="sending_test" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[sent_test]"
+                      dataType="bool"
+                      name="sent_test" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SendDTS_Pacific]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="SendDTS_Pacific" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SendDTS_UTC]"
+                      dataType="dbTimeStamp"
+                      name="SendDTS_UTC" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[xml_data]"
+                      codePage="1252"
+                      dataType="text"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[xml_data]"
+                      name="xml_data" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[OLE DB Source Output]"
+              endId="Package\Data Flow Task\JavaScript Component - Column to Variable.Inputs[Input 0]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\JavaScript Task - Variable to File Task"
+      DTS:CreationName="CozyRoc.JavaScriptTask"
+      DTS:Description="JavaScript Task"
+      DTS:DTSID="{41321228-60B9-48CF-98E6-B2BEE57FD81B}"
+      DTS:ExecutableType="CozyRoc.JavaScriptTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="JavaScript Task - Variable to File Task"
+      DTS:TaskContact="JavaScript Task; COZYROC LLC; SSIS+; © 2006-2020 COZYROC LLC; All Rights Reserved; http://www.cozyroc.com/;"
+      DTS:ThreadHint="0">
+      <DTS:Variables>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:DTSID="{1F4D9B20-D234-4251-BFD0-4ECDBC679325}"
+          DTS:IncludeInDebugDump="2345"
+          DTS:Namespace="User"
+          DTS:ObjectName="_OutputFile">
+          <DTS:VariableValue
+            DTS:DataType="8">{6DA8DAB0-8E38-47F5-818D-E2D189210A35}</DTS:VariableValue>
+        </DTS:Variable>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:DTSID="{C76841A3-68ED-4FEB-A829-359017431EE1}"
+          DTS:IncludeInDebugDump="2345"
+          DTS:Namespace="User"
+          DTS:ObjectName="_StringVariable">
+          <DTS:VariableValue
+            DTS:DataType="8">User::JsonVar</DTS:VariableValue>
+        </DTS:Variable>
+      </DTS:Variables>
+      <DTS:ObjectData>
+        <JavaScriptData
+          Expression=""
+          Validation=""
+          PackageConnection=""
+          JavaScriptTaskLink="">
+          <JavaScriptCode><![CDATA[// Documentation: http://www.cozyroc.com/ssis/script-variable-file-task
+
+/* Copyright (c) 2006-2020 COZYROC LLC
+  
+ Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated 
+ documentation files (the "Software"), to deal in the Software without restriction, including without limitation 
+ the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and 
+ to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+  
+ The above copyright notice and this permission notice shall be included in all copies or substantial portions of the 
+ Software.
+  
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE 
+ WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR 
+ COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR 
+ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
+
+require("validation.js");
+
+task.parameters = {
+    StringVariable: {
+        description: "Select a string variable which contents would be saved to a file.",
+        order: 1,
+        type: { id: "variable", variableTypes: "string" },
+        validate: validation.required
+    },
+    OutputFile: {
+        description: "The file connection where the variable contents would be saved.",
+        order: 2,
+        type: { id: "connection", connectionTypes: "FILE" },
+        validate: validation.required
+    }
+};
+
+task.run = function () {
+    var File = getClrType("System.IO.File"),
+        filePath = this.connections[this.parameters.OutputFile.value].acquire(),
+        contents = this.variables[this.parameters.StringVariable.value].value;
+
+    File.WriteAllText(filePath, contents);
+
+    console.info("Wrote " + contents.Length + " characters in " + filePath);
+};]]></JavaScriptCode>
+        </JavaScriptData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\JavaScript Task - XML to JSON"
+      DTS:CreationName="CozyRoc.JavaScriptTask"
+      DTS:Description="JavaScript Task"
+      DTS:DTSID="{A903AA84-0598-48EE-9AB0-1129FA0CDBD7}"
+      DTS:ExecutableType="CozyRoc.JavaScriptTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="JavaScript Task - XML to JSON"
+      DTS:TaskContact="JavaScript Task; COZYROC LLC; SSIS+; © 2006-2020 COZYROC LLC; All Rights Reserved; http://www.cozyroc.com/;"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <JavaScriptData
+          Expression=""
+          Validation=""
+          PackageConnection=""
+          JavaScriptTaskLink="">
+          <JavaScriptCode><![CDATA[// JavaScript Task documentation: http://www.cozyroc.com/ssis/javascript-task
+// JavaScript Task programming reference: http://www.cozyroc.com/ssis/javascript-api
+
+/* Use "require" to load additional JavaScript modules.
+ * The corresponding JS files need to be available at <COZYROC SSIS+ install folder>\SSIS\JS\.
+ * */
+//require("underscore.js")
+require('xml2json');
+
+/* JavaScript Task Parameters documentation: http://www.cozyroc.com/ssis/javascript-parameters
+ * 
+ * A JavaScript Task can be easily parameterized by adding properties to the "task.parameters" object.
+ * You can specify for a "Parameter" object a name, description, category, type, default value, etc.
+ * You can also assign to parameters functions for validation, enabling, specifying of allowed values, etc. 
+ * 
+ * The values of the task parameters can be retrieved and set within the script like this:
+ *    var batchSize = task.parameters.BatchSize.value; // gets a parameter value
+ *    task.parameters.BatchSize.value = 1000; // sets a parameter value
+ * */
+task.parameters = {
+    // Email: { description: "Enter email", 
+    //      category: "Credentials", password: false },
+    // Password: { description: "Enter password", 
+    //      category: "Credentials", password: "true" },
+};
+
+
+/* Whenever a standalone validation of parameter values is insufficient, you can use global validation to 
+ * check at once the values of several related parameters
+ * 
+ * Unless you specify something else in the "Validation" property of the JavaScript Task, the function assigned
+ * to the "task.validate" property would be used for the global validation. 
+ * To indicate validation error(s), simply return a non-empty string.
+ * */
+task.validate = function () {
+    //if (!!task.parameters.ParamA.value &&
+    //    !!task.parameters.ParamB.value &&
+    //    task.parameters.CoeffA.value <= task.parameters.CoeffB.value)
+    //{
+    //    return "The parameter A must be greater than the parameter B!";
+    //}
+};
+
+
+/* Help: Variables and package or project parameters
+ * 
+ * Variables and package or project parameters are accessible only during JavaScript 
+ * Expression execution. There is no need to declare Variables or parameters which 
+ * will be used. All Variables or parameters with package or task scope are available.
+ * Package and project parameters are read-only.
+ * 
+ * Variable or package parameter can be accessed via "task.variables".
+ * 
+ * Example of reading from a variable:
+ * var userName = task.variables["System::UserName"].value;
+ * 
+ * Example of writing to a variable:
+ * task.variables["User::MyVariable"].value = "a string value";
+ * 
+ * Example of reading from a package parameter:
+ * var kind = task.variables["$Package::ReportKind"].value;
+ *
+ * Example of reading from a sensitive project parameter:
+ * var password = task.variables["$Project::SitePassword"].sensitiveValue;
+ * 
+ * 
+ * Explicit locking of a Variable is not required. Into the above examples, variables
+ * are locked and unlocked automatically.
+ * To speed up script execution an explicit locking can be used.
+ * 
+ * Shared locking (ReadOnly Variable):
+ * var userNameVariable = task.variables["System::UserName"];
+ * userNameVariable.lockShared();
+ *
+ * var userName = userNameVariable.Value;
+ * userNameVariable.unlock();
+ * 
+ * Exclusive locking (ReadWrite Variable):
+ * var myVariable = task.variables["User::MyVariable"];
+ * myVariable.lockExclusive();
+ * 
+ * myVariable.value = "a string value";
+ * myVariable.unlock();
+ *   
+ * Unlocking is not required. All locked variables will be unlocked after the script 
+ * execution. An exclusively locked variable must be unlocked to be available to 
+ * another Task running in parallel.
+ * */
+
+
+/* Help: Firing Integration Services events from a script
+ * 
+ * Example of firing an error event:
+ * console.error("Timeout!")
+ * 
+ * Example of firing an information event:
+ * console.info("Downloading.");
+ * 
+ * Example of firing a warning event:
+ * console.warning("Warning!");
+ * 
+ * Example of firing a progress event:
+ * console.progress(50, "Processing info.");
+ * console.progress(100, "Processing done.");
+ * */
+
+
+/* Help: Using Integration Services connection managers in a script
+ * 
+ * Some types of connection managers can be used in this script task.
+ * Connections are accessible everywhere - during parameters configuration into 
+ * JavaScript Task Editor and during JavaScript Expression execution.
+ * 
+ * Example of using an ADO.Net connection manager:
+ * var conn = task.connections["My Database"].acquire();
+ * try {
+ *     var dt = conn.execute("SELECT name FROM sys.databases");
+ * 
+ *     var result = _.map(dt, function (rec) { return rec[0]; });
+ *     return result;
+ * }
+ * finally {
+ *     conn.close();
+ * }
+ * 
+ * Example of using a File connection manager:
+ * var fileName = task.connections["File.txt"].acquire()
+ * */
+
+
+/* By default, the script execution starts with the "task.run" method, but you can specify another function 
+ * (or any valid JavaScript statement) in the task "Expression" property.
+ * 
+ * In SSIS a task execution needs to set its "ExecutionResult" property. The JavaScript Task execution engine
+ * does this automatically for you. If "task.run" completes normally, "DTSExecResult.Success" result is assumed.
+ * If an exception has aborted the normal execution, a "DTSExecResult.Failure" result is assumed.
+ * In the rare situations you might need to indicate a special result (i.e. "Completion" or "Canceled") the
+ * function needs to return "ScriptResults.Completion" and "ScriptResults.Canceled".
+ *
+ * In addition, if "task.run" returns a primitive value (e.g. a string or a number) it will be saved in the
+ * task's "ExecutionValue", so you would be able to use the task "ExecValueVariable" property.
+ * */
+task.run = function () {
+    //return ScriptResults.Success;
+    //task.variables is accessing the package variables
+	var json = JSON.stringify(xml2json(task.variables['XMLVar'].value));
+	task.variables['JsonVar'].value = json;
+};
+]]></JavaScriptCode>
+        </JavaScriptData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{372CA754-B658-4D2C-BCB9-136AA935DAB3}"
+      DTS:From="Package\Data Flow Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\JavaScript Task - XML to JSON" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{6EACCB95-5CE4-4CA3-B9CA-C1DCCAB90217}"
+      DTS:From="Package\JavaScript Task - XML to JSON"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\JavaScript Task - Variable to File Task" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="153,43"
+          Id="Package\Data Flow Task"
+          TopLeft="46.2499993108213,53.7368431355485" />
+        <NodeLayout
+          Size="261,43"
+          Id="Package\JavaScript Task - Variable to File Task"
+          TopLeft="84.9999987334013,262.736847050633" />
+        <NodeLayout
+          Size="229,43"
+          Id="Package\JavaScript Task - XML to JSON"
+          TopLeft="62.4999990686774,176.526319112144" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="122.749999310821,96.7368431355485">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="54.2499997578561,79.7894759765955"
+              Start="0,0"
+              End="54.2499997578561,72.2894759765955">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.8947379882977" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,35.8947379882977"
+                    Point2="0,39.8947379882977"
+                    Point3="4,39.8947379882977" />
+                  <mssgle:LineSegment
+                    End="50.2499997578561,39.8947379882977" />
+                  <mssgle:CubicBezierSegment
+                    Point1="50.2499997578561,39.8947379882977"
+                    Point2="54.2499997578561,39.8947379882977"
+                    Point3="54.2499997578561,43.8947379882977" />
+                  <mssgle:LineSegment
+                    End="54.2499997578561,72.2894759765955" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="177.166665735344,219.19298577881">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="38.4999996647238,43.5438612718222"
+              Start="0,0"
+              End="38.4999996647238,36.0438612718222">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.7719306359111" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.7719306359111"
+                    Point2="0,21.7719306359111"
+                    Point3="4,21.7719306359111" />
+                  <mssgle:LineSegment
+                    End="34.4999996647238,21.7719306359111" />
+                  <mssgle:CubicBezierSegment
+                    Point1="34.4999996647238,21.7719306359111"
+                    Point2="38.4999996647238,21.7719306359111"
+                    Point3="38.4999996647238,25.7719306359111" />
+                  <mssgle:LineSegment
+                    End="38.4999996647238,36.0438612718222" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="157,42"
+          Id="Package\Data Flow Task\OLE DB Source"
+          TopLeft="455.833332277834,39.4561408488484" />
+        <NodeLayout
+          Size="288,43"
+          Id="Package\Data Flow Task\JavaScript Component - Column to Variable"
+          TopLeft="98.3333318680525,150.526318622758" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="534.333332277834,81.4561408488484">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-292.000000409782,69.0701777739096"
+              Start="0,0"
+              End="-292.000000409782,61.5701777739096">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.5350888869548" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30.5350888869548"
+                    Point2="0,34.5350888869548"
+                    Point3="-4,34.5350888869548" />
+                  <mssgle:LineSegment
+                    End="-288.000000409782,34.5350888869548" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-288.000000409782,34.5350888869548"
+                    Point2="-292.000000409782,34.5350888869548"
+                    Point3="-292.000000409782,38.5350888869548" />
+                  <mssgle:LineSegment
+                    End="-292.000000409782,61.5701777739096" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
