@@ -11,23 +11,11 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="XmlToJsonDB Testing"
   DTS:PackageType="5"
-  DTS:VersionBuild="61"
-  DTS:VersionGUID="{BF0CB251-33F4-484F-89E4-58DC73F5D2B1}">
+  DTS:VersionBuild="64"
+  DTS:VersionGUID="{BA35AB48-5FDA-44B6-8CA2-1ADB76E1C2BB}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[(localdb)\MSSQLLocalDB.TestEnv]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{504553C3-7608-4B22-8927-D0EB2C330C7B}"
-      DTS:ObjectName="(localdb)\MSSQLLocalDB.TestEnv">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=TestEnv;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[File Connection]"
       DTS:CreationName="FILE"
@@ -53,24 +41,15 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\mattm\Desktop\burn.csv">
+          DTS:ConnectionString="C:\Users\coded\Desktop\hmmm.csv">
           <DTS:FlatFileColumns>
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="7000"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="JSON"
-              DTS:DTSID="{5F941247-5231-4F7A-A51C-6A25A592EA86}"
-              DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="pk"
-              DTS:DTSID="{C9AB9C9C-079E-4947-83C6-CA3A5671C03D}"
+              DTS:DTSID="{A0F7CE39-F893-4368-AC59-611C74C0C5F1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -78,7 +57,15 @@
               DTS:DataType="11"
               DTS:TextQualified="True"
               DTS:ObjectName="sending"
-              DTS:DTSID="{85A41DB1-B061-418F-99F8-BFD533A77B9F}"
+              DTS:DTSID="{F5C57A63-0770-45AE-B7B8-FA34E6385F2C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="11"
+              DTS:TextQualified="True"
+              DTS:ObjectName="sent"
+              DTS:DTSID="{FF1403F3-1277-46C5-99CE-1274D97499E6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -86,7 +73,7 @@
               DTS:DataType="302"
               DTS:TextQualified="True"
               DTS:ObjectName="xml_data"
-              DTS:DTSID="{E16FC4E0-7D47-4A99-BD79-551A9F53124A}"
+              DTS:DTSID="{8C6A7B26-D4AE-4C77-AF3F-D356FC4F31C9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -94,7 +81,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="crc"
-              DTS:DTSID="{F6119973-9E76-4F82-9880-0302446BEE13}"
+              DTS:DTSID="{E7CE641F-CEBC-476E-AD49-AA63FA086818}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -102,7 +89,7 @@
               DTS:DataType="11"
               DTS:TextQualified="True"
               DTS:ObjectName="sending_test"
-              DTS:DTSID="{70AA67AF-04CC-4B51-B3BC-27F52F074DE2}"
+              DTS:DTSID="{1F9B29FB-DDB3-4888-A326-B153103BC226}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -110,7 +97,7 @@
               DTS:DataType="11"
               DTS:TextQualified="True"
               DTS:ObjectName="sent_test"
-              DTS:DTSID="{B0BA4371-5ABE-42A4-B664-4E7D46E0B645}"
+              DTS:DTSID="{6660F567-B81D-4204-B4B0-1765406D0357}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -119,7 +106,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="SendDTS_Pacific"
-              DTS:DTSID="{F49275E1-7D25-4EDC-A5D6-B02572BC6928}"
+              DTS:DTSID="{BCD58117-1FCD-4440-AD37-75FCC6EF6C86}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -127,18 +114,43 @@
               DTS:DataType="135"
               DTS:TextQualified="True"
               DTS:ObjectName="SendDTS_UTC"
-              DTS:DTSID="{1DDD4B6E-EB16-40FF-9A4F-F0202EDDBE14}"
+              DTS:DTSID="{A3C68A77-B721-484C-902B-6C5BB5AD8B4D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:DataType="11"
+              DTS:MaximumWidth="7000"
+              DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="sent"
-              DTS:DTSID="{79369F0F-FDCD-4710-8679-4B5B05787789}"
+              DTS:ObjectName="JSON"
+              DTS:DTSID="{C6BBD6C8-D91D-4DA2-B98D-D9426FA7A191}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LP_TestEnv]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{4305F33A-7BF5-4016-A85A-7A13C7F1AA11}"
+      DTS:ObjectName="LP_TestEnv">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=TestEnv;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[PC_TestEnv]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{504553C3-7608-4B22-8927-D0EB2C330C7B}"
+      DTS:ObjectName="PC_TestEnv">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=TestEnv;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -200,157 +212,634 @@
           version="1">
           <components>
             <component
-              refId="Package\Data Flow Task - Get Other Columns\Flat File Destination"
-              componentClassID="Microsoft.FlatFileDestination"
-              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Flat File Destination"
-              localeId="1033"
-              name="Flat File Destination"
+              refId="Package\Data Flow Task - Get Other Columns\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task - Get Other Columns\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task - Get Other Columns\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Data Flow Task - Get Other Columns\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Get Other Columns\Derived Column.Outputs[Derived Column Output].Columns[key_join]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task - Get Other Columns\Derived Column.Outputs[Derived Column Output].Columns[key_join]"
+                      name="key_join"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">1</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">1</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task - Get Other Columns\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Data Flow Task - Get Other Columns\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Get Other Columns\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Get Other Columns\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Get Other Columns\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Get Other Columns\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task - Get Other Columns\Derived Column 1"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column 1"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task - Get Other Columns\Derived Column 1.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task - Get Other Columns\Derived Column 1.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Data Flow Task - Get Other Columns\Derived Column 1.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Get Other Columns\Derived Column 1.Outputs[Derived Column Output].Columns[key_join]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task - Get Other Columns\Derived Column 1.Outputs[Derived Column Output].Columns[key_join]"
+                      name="key_join"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">1</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">1</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task - Get Other Columns\Derived Column 1.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Data Flow Task - Get Other Columns\Derived Column 1.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Get Other Columns\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Get Other Columns\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Get Other Columns\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Get Other Columns\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task - Get Other Columns\Merge Join"
+              componentClassID="Microsoft.MergeJoin"
+              contactInfo="Merge Join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combine two sorted data flows into one using the FULL, LEFT, or INNER join. We recommend this transformation when data flows can be sorted at their sources."
+              name="Merge Join"
               version="1">
               <properties>
                 <property
-                  dataType="System.Boolean"
-                  description="Specifies whether the data will overwrite or append to the destination file."
-                  name="Overwrite">true</property>
+                  dataType="System.Int32"
+                  description="Specifies the type of join to perform."
+                  name="JoinType"
+                  typeConverter="JoinType">0</property>
                 <property
-                  dataType="System.Null"
-                  description="Specifies the text to write to the destination file before any data is written."
-                  expressionType="Notify"
-                  name="Header" />
+                  dataType="System.Int32"
+                  description="Specifies the number of columns in the ordering key."
+                  name="NumKeyColumns">1</property>
                 <property
                   dataType="System.Boolean"
-                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
-                  name="EscapeQualifier">false</property>
+                  description="Indicates whether the null values are treated as equal values."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Indicates the requested maximum buffers per input before blocking."
+                  name="MaxBuffersPerInput">5</property>
               </properties>
-              <connections>
-                <connection
-                  refId="Package\Data Flow Task - Get Other Columns\Flat File Destination.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
-                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
-                  name="FlatFileConnection" />
-              </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task - Get Other Columns\Flat File Destination.Inputs[Flat File Destination Input]"
+                  refId="Package\Data Flow Task - Get Other Columns\Merge Join.Inputs[Merge Join Left Input]"
                   hasSideEffects="true"
-                  name="Flat File Destination Input">
+                  name="Merge Join Left Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task - Get Other Columns\Flat File Destination.Inputs[Flat File Destination Input].Columns[JSON]"
+                      refId="Package\Data Flow Task - Get Other Columns\Merge Join.Inputs[Merge Join Left Input].Columns[key_join]"
+                      cachedDataType="i4"
+                      cachedName="key_join"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Data Flow Task - Get Other Columns\Sort.Outputs[Sort Output].Columns[key_join]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Get Other Columns\Merge Join.Inputs[Merge Join Left Input].Columns[JSON]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="7000"
                       cachedName="JSON"
-                      externalMetadataColumnId="Package\Data Flow Task - Get Other Columns\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[JSON]"
-                      lineageId="Package\Data Flow Task - Get Other Columns\Union All.Outputs[Union All Output 1].Columns[JSON]" />
+                      lineageId="Package\Data Flow Task - Get Other Columns\Sort.Outputs[Sort Output].Columns[JSON]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Data Flow Task - Get Other Columns\Merge Join.Inputs[Merge Join Right Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Right Input">
+                  <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task - Get Other Columns\Flat File Destination.Inputs[Flat File Destination Input].Columns[pk]"
+                      refId="Package\Data Flow Task - Get Other Columns\Merge Join.Inputs[Merge Join Right Input].Columns[key_join]"
+                      cachedDataType="i4"
+                      cachedName="key_join"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Data Flow Task - Get Other Columns\Sort 1.Outputs[Sort Output].Columns[key_join]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Get Other Columns\Merge Join.Inputs[Merge Join Right Input].Columns[pk]"
                       cachedDataType="i4"
                       cachedName="pk"
-                      externalMetadataColumnId="Package\Data Flow Task - Get Other Columns\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[pk]"
-                      lineageId="Package\Data Flow Task - Get Other Columns\Union All.Outputs[Union All Output 1].Columns[pk]" />
+                      lineageId="Package\Data Flow Task - Get Other Columns\Sort 1.Outputs[Sort Output].Columns[pk]" />
                     <inputColumn
-                      refId="Package\Data Flow Task - Get Other Columns\Flat File Destination.Inputs[Flat File Destination Input].Columns[sending]"
+                      refId="Package\Data Flow Task - Get Other Columns\Merge Join.Inputs[Merge Join Right Input].Columns[sending]"
                       cachedDataType="bool"
                       cachedName="sending"
-                      externalMetadataColumnId="Package\Data Flow Task - Get Other Columns\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[sending]"
-                      lineageId="Package\Data Flow Task - Get Other Columns\Union All.Outputs[Union All Output 1].Columns[sending]" />
+                      lineageId="Package\Data Flow Task - Get Other Columns\Sort 1.Outputs[Sort Output].Columns[sending]" />
                     <inputColumn
-                      refId="Package\Data Flow Task - Get Other Columns\Flat File Destination.Inputs[Flat File Destination Input].Columns[xml_data]"
+                      refId="Package\Data Flow Task - Get Other Columns\Merge Join.Inputs[Merge Join Right Input].Columns[sent]"
+                      cachedDataType="bool"
+                      cachedName="sent"
+                      lineageId="Package\Data Flow Task - Get Other Columns\Sort 1.Outputs[Sort Output].Columns[sent]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Get Other Columns\Merge Join.Inputs[Merge Join Right Input].Columns[xml_data]"
                       cachedCodepage="1252"
                       cachedDataType="text"
                       cachedName="xml_data"
-                      externalMetadataColumnId="Package\Data Flow Task - Get Other Columns\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[xml_data]"
-                      lineageId="Package\Data Flow Task - Get Other Columns\Union All.Outputs[Union All Output 1].Columns[xml_data]" />
+                      lineageId="Package\Data Flow Task - Get Other Columns\Sort 1.Outputs[Sort Output].Columns[xml_data]" />
                     <inputColumn
-                      refId="Package\Data Flow Task - Get Other Columns\Flat File Destination.Inputs[Flat File Destination Input].Columns[crc]"
+                      refId="Package\Data Flow Task - Get Other Columns\Merge Join.Inputs[Merge Join Right Input].Columns[crc]"
                       cachedDataType="i4"
                       cachedName="crc"
-                      externalMetadataColumnId="Package\Data Flow Task - Get Other Columns\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[crc]"
-                      lineageId="Package\Data Flow Task - Get Other Columns\Union All.Outputs[Union All Output 1].Columns[crc]" />
+                      lineageId="Package\Data Flow Task - Get Other Columns\Sort 1.Outputs[Sort Output].Columns[crc]" />
                     <inputColumn
-                      refId="Package\Data Flow Task - Get Other Columns\Flat File Destination.Inputs[Flat File Destination Input].Columns[sending_test]"
+                      refId="Package\Data Flow Task - Get Other Columns\Merge Join.Inputs[Merge Join Right Input].Columns[sending_test]"
                       cachedDataType="bool"
                       cachedName="sending_test"
-                      externalMetadataColumnId="Package\Data Flow Task - Get Other Columns\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[sending_test]"
-                      lineageId="Package\Data Flow Task - Get Other Columns\Union All.Outputs[Union All Output 1].Columns[sending_test]" />
+                      lineageId="Package\Data Flow Task - Get Other Columns\Sort 1.Outputs[Sort Output].Columns[sending_test]" />
                     <inputColumn
-                      refId="Package\Data Flow Task - Get Other Columns\Flat File Destination.Inputs[Flat File Destination Input].Columns[sent_test]"
+                      refId="Package\Data Flow Task - Get Other Columns\Merge Join.Inputs[Merge Join Right Input].Columns[sent_test]"
                       cachedDataType="bool"
                       cachedName="sent_test"
-                      externalMetadataColumnId="Package\Data Flow Task - Get Other Columns\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[sent_test]"
-                      lineageId="Package\Data Flow Task - Get Other Columns\Union All.Outputs[Union All Output 1].Columns[sent_test]" />
+                      lineageId="Package\Data Flow Task - Get Other Columns\Sort 1.Outputs[Sort Output].Columns[sent_test]" />
                     <inputColumn
-                      refId="Package\Data Flow Task - Get Other Columns\Flat File Destination.Inputs[Flat File Destination Input].Columns[SendDTS_Pacific]"
+                      refId="Package\Data Flow Task - Get Other Columns\Merge Join.Inputs[Merge Join Right Input].Columns[SendDTS_Pacific]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="100"
                       cachedName="SendDTS_Pacific"
-                      externalMetadataColumnId="Package\Data Flow Task - Get Other Columns\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[SendDTS_Pacific]"
-                      lineageId="Package\Data Flow Task - Get Other Columns\Union All.Outputs[Union All Output 1].Columns[SendDTS_Pacific]" />
+                      lineageId="Package\Data Flow Task - Get Other Columns\Sort 1.Outputs[Sort Output].Columns[SendDTS_Pacific]" />
                     <inputColumn
-                      refId="Package\Data Flow Task - Get Other Columns\Flat File Destination.Inputs[Flat File Destination Input].Columns[SendDTS_UTC]"
+                      refId="Package\Data Flow Task - Get Other Columns\Merge Join.Inputs[Merge Join Right Input].Columns[SendDTS_UTC]"
                       cachedDataType="dbTimeStamp"
                       cachedName="SendDTS_UTC"
-                      externalMetadataColumnId="Package\Data Flow Task - Get Other Columns\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[SendDTS_UTC]"
-                      lineageId="Package\Data Flow Task - Get Other Columns\Union All.Outputs[Union All Output 1].Columns[SendDTS_UTC]" />
+                      lineageId="Package\Data Flow Task - Get Other Columns\Sort 1.Outputs[Sort Output].Columns[SendDTS_UTC]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task - Get Other Columns\Merge Join.Outputs[Merge Join Output]"
+                  name="Merge Join Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Get Other Columns\Merge Join.Outputs[Merge Join Output].Columns[pk]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Get Other Columns\Merge Join.Outputs[Merge Join Output].Columns[pk]"
+                      name="pk">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task - Get Other Columns\Merge Join.Inputs[Merge Join Right Input].Columns[pk]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Get Other Columns\Merge Join.Outputs[Merge Join Output].Columns[sending]"
+                      dataType="bool"
+                      lineageId="Package\Data Flow Task - Get Other Columns\Merge Join.Outputs[Merge Join Output].Columns[sending]"
+                      name="sending">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task - Get Other Columns\Merge Join.Inputs[Merge Join Right Input].Columns[sending]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Get Other Columns\Merge Join.Outputs[Merge Join Output].Columns[sent]"
+                      dataType="bool"
+                      lineageId="Package\Data Flow Task - Get Other Columns\Merge Join.Outputs[Merge Join Output].Columns[sent]"
+                      name="sent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task - Get Other Columns\Merge Join.Inputs[Merge Join Right Input].Columns[sent]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Get Other Columns\Merge Join.Outputs[Merge Join Output].Columns[xml_data]"
+                      codePage="1252"
+                      dataType="text"
+                      lineageId="Package\Data Flow Task - Get Other Columns\Merge Join.Outputs[Merge Join Output].Columns[xml_data]"
+                      name="xml_data">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task - Get Other Columns\Merge Join.Inputs[Merge Join Right Input].Columns[xml_data]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Get Other Columns\Merge Join.Outputs[Merge Join Output].Columns[crc]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Get Other Columns\Merge Join.Outputs[Merge Join Output].Columns[crc]"
+                      name="crc">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task - Get Other Columns\Merge Join.Inputs[Merge Join Right Input].Columns[crc]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Get Other Columns\Merge Join.Outputs[Merge Join Output].Columns[sending_test]"
+                      dataType="bool"
+                      lineageId="Package\Data Flow Task - Get Other Columns\Merge Join.Outputs[Merge Join Output].Columns[sending_test]"
+                      name="sending_test">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task - Get Other Columns\Merge Join.Inputs[Merge Join Right Input].Columns[sending_test]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Get Other Columns\Merge Join.Outputs[Merge Join Output].Columns[sent_test]"
+                      dataType="bool"
+                      lineageId="Package\Data Flow Task - Get Other Columns\Merge Join.Outputs[Merge Join Output].Columns[sent_test]"
+                      name="sent_test">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task - Get Other Columns\Merge Join.Inputs[Merge Join Right Input].Columns[sent_test]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Get Other Columns\Merge Join.Outputs[Merge Join Output].Columns[SendDTS_Pacific]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\Data Flow Task - Get Other Columns\Merge Join.Outputs[Merge Join Output].Columns[SendDTS_Pacific]"
+                      name="SendDTS_Pacific">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task - Get Other Columns\Merge Join.Inputs[Merge Join Right Input].Columns[SendDTS_Pacific]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Get Other Columns\Merge Join.Outputs[Merge Join Output].Columns[SendDTS_UTC]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task - Get Other Columns\Merge Join.Outputs[Merge Join Output].Columns[SendDTS_UTC]"
+                      name="SendDTS_UTC">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task - Get Other Columns\Merge Join.Inputs[Merge Join Right Input].Columns[SendDTS_UTC]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Get Other Columns\Merge Join.Outputs[Merge Join Output].Columns[JSON]"
+                      codePage="1252"
+                      dataType="str"
+                      length="7000"
+                      lineageId="Package\Data Flow Task - Get Other Columns\Merge Join.Outputs[Merge Join Output].Columns[JSON]"
+                      name="JSON">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task - Get Other Columns\Merge Join.Inputs[Merge Join Left Input].Columns[JSON]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task - Get Other Columns\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DC_JSON_DATA_and_STATUS]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task - Get Other Columns\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LP_TestEnv]"
+                  connectionManagerRefId="Package.ConnectionManagers[LP_TestEnv]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task - Get Other Columns\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task - Get Other Columns\Flat File Destination.Inputs[Flat File Destination Input].Columns[sent]"
+                      refId="Package\Data Flow Task - Get Other Columns\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[pk]"
+                      cachedDataType="i4"
+                      cachedName="pk"
+                      externalMetadataColumnId="Package\Data Flow Task - Get Other Columns\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[pk]"
+                      lineageId="Package\Data Flow Task - Get Other Columns\Merge Join.Outputs[Merge Join Output].Columns[pk]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Get Other Columns\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[sending]"
+                      cachedDataType="bool"
+                      cachedName="sending"
+                      externalMetadataColumnId="Package\Data Flow Task - Get Other Columns\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[sending]"
+                      lineageId="Package\Data Flow Task - Get Other Columns\Merge Join.Outputs[Merge Join Output].Columns[sending]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Get Other Columns\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[sent]"
                       cachedDataType="bool"
                       cachedName="sent"
-                      externalMetadataColumnId="Package\Data Flow Task - Get Other Columns\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[sent]"
-                      lineageId="Package\Data Flow Task - Get Other Columns\Union All.Outputs[Union All Output 1].Columns[sent]" />
+                      externalMetadataColumnId="Package\Data Flow Task - Get Other Columns\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[sent]"
+                      lineageId="Package\Data Flow Task - Get Other Columns\Merge Join.Outputs[Merge Join Output].Columns[sent]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Get Other Columns\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[xml_data]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="xml_data"
+                      externalMetadataColumnId="Package\Data Flow Task - Get Other Columns\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[xml_data]"
+                      lineageId="Package\Data Flow Task - Get Other Columns\Merge Join.Outputs[Merge Join Output].Columns[xml_data]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Get Other Columns\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[crc]"
+                      cachedDataType="i4"
+                      cachedName="crc"
+                      externalMetadataColumnId="Package\Data Flow Task - Get Other Columns\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[crc]"
+                      lineageId="Package\Data Flow Task - Get Other Columns\Merge Join.Outputs[Merge Join Output].Columns[crc]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Get Other Columns\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[sending_test]"
+                      cachedDataType="bool"
+                      cachedName="sending_test"
+                      externalMetadataColumnId="Package\Data Flow Task - Get Other Columns\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[sending_test]"
+                      lineageId="Package\Data Flow Task - Get Other Columns\Merge Join.Outputs[Merge Join Output].Columns[sending_test]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Get Other Columns\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[sent_test]"
+                      cachedDataType="bool"
+                      cachedName="sent_test"
+                      externalMetadataColumnId="Package\Data Flow Task - Get Other Columns\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[sent_test]"
+                      lineageId="Package\Data Flow Task - Get Other Columns\Merge Join.Outputs[Merge Join Output].Columns[sent_test]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Get Other Columns\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SendDTS_Pacific]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="SendDTS_Pacific"
+                      externalMetadataColumnId="Package\Data Flow Task - Get Other Columns\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SendDTS_Pacific]"
+                      lineageId="Package\Data Flow Task - Get Other Columns\Merge Join.Outputs[Merge Join Output].Columns[SendDTS_Pacific]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Get Other Columns\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SendDTS_UTC]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="SendDTS_UTC"
+                      externalMetadataColumnId="Package\Data Flow Task - Get Other Columns\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SendDTS_UTC]"
+                      lineageId="Package\Data Flow Task - Get Other Columns\Merge Join.Outputs[Merge Join Output].Columns[SendDTS_UTC]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Get Other Columns\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[JSON]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="7000"
+                      cachedName="JSON"
+                      externalMetadataColumnId="Package\Data Flow Task - Get Other Columns\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[JSONText]"
+                      lineageId="Package\Data Flow Task - Get Other Columns\Merge Join.Outputs[Merge Join Output].Columns[JSON]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task - Get Other Columns\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[JSON]"
-                      codePage="1252"
-                      dataType="str"
-                      length="7000"
-                      name="JSON" />
+                      refId="Package\Data Flow Task - Get Other Columns\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LocalID]"
+                      dataType="i4"
+                      name="LocalID" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task - Get Other Columns\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[pk]"
+                      refId="Package\Data Flow Task - Get Other Columns\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[InsertDTS_Local]"
+                      dataType="dbTimeStamp"
+                      name="InsertDTS_Local" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Get Other Columns\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[InsertDTS_UTC]"
+                      dataType="dbTimeStamp"
+                      name="InsertDTS_UTC" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Get Other Columns\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[pk]"
                       dataType="i4"
                       name="pk" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task - Get Other Columns\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[sending]"
+                      refId="Package\Data Flow Task - Get Other Columns\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[sending]"
                       dataType="bool"
                       name="sending" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task - Get Other Columns\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[xml_data]"
+                      refId="Package\Data Flow Task - Get Other Columns\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[sent]"
+                      dataType="bool"
+                      name="sent" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Get Other Columns\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[xml_data]"
                       codePage="1252"
                       dataType="text"
                       name="xml_data" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task - Get Other Columns\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[crc]"
+                      refId="Package\Data Flow Task - Get Other Columns\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[crc]"
                       dataType="i4"
                       name="crc" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task - Get Other Columns\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[sending_test]"
+                      refId="Package\Data Flow Task - Get Other Columns\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[sending_test]"
                       dataType="bool"
                       name="sending_test" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task - Get Other Columns\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[sent_test]"
+                      refId="Package\Data Flow Task - Get Other Columns\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[sent_test]"
                       dataType="bool"
                       name="sent_test" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task - Get Other Columns\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[SendDTS_Pacific]"
+                      refId="Package\Data Flow Task - Get Other Columns\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SendDTS_Pacific]"
                       codePage="1252"
                       dataType="str"
                       length="100"
                       name="SendDTS_Pacific" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task - Get Other Columns\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[SendDTS_UTC]"
+                      refId="Package\Data Flow Task - Get Other Columns\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SendDTS_UTC]"
                       dataType="dbTimeStamp"
                       name="SendDTS_UTC" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task - Get Other Columns\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[sent]"
-                      dataType="bool"
-                      name="sent" />
+                      refId="Package\Data Flow Task - Get Other Columns\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[JSONText]"
+                      codePage="1252"
+                      dataType="text"
+                      name="JSONText" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Get Other Columns\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[JSON_Sent]"
+                      dataType="i4"
+                      name="JSON_Sent" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task - Get Other Columns\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task - Get Other Columns\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Get Other Columns\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Get Other Columns\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Get Other Columns\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Get Other Columns\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
             </component>
             <component
               refId="Package\Data Flow Task - Get Other Columns\OLE DB Source"
@@ -412,8 +901,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task - Get Other Columns\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[(localdb)\MSSQLLocalDB.TestEnv]"
-                  connectionManagerRefId="Package.ConnectionManagers[(localdb)\MSSQLLocalDB.TestEnv]"
+                  connectionManagerID="Package.ConnectionManagers[LP_TestEnv]"
+                  connectionManagerRefId="Package.ConnectionManagers[LP_TestEnv]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1501,6 +1990,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                 <output
                   refId="Package\Data Flow Task - Get Other Columns\Script Component - Output JsonVar.Outputs[Output 0]"
                   hasSideEffects="true"
+                  isSorted="true"
                   name="Output 0">
                   <outputColumns>
                     <outputColumn
@@ -1509,128 +1999,253 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       dataType="str"
                       length="7000"
                       lineageId="Package\Data Flow Task - Get Other Columns\Script Component - Output JsonVar.Outputs[Output 0].Columns[JSON]"
-                      name="JSON" />
+                      name="JSON"
+                      sortKeyPosition="1" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task - Get Other Columns\Union All"
-              componentClassID="Microsoft.UnionAll"
-              contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
-              name="Union All"
+              refId="Package\Data Flow Task - Get Other Columns\Sort"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort"
               version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task - Get Other Columns\Union All.Inputs[Union All Input 1]"
-                  name="Union All Input 1">
+                  refId="Package\Data Flow Task - Get Other Columns\Sort.Inputs[Sort Input]"
+                  name="Sort Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task - Get Other Columns\Union All.Inputs[Union All Input 1].Columns[JSON]"
+                      refId="Package\Data Flow Task - Get Other Columns\Sort.Inputs[Sort Input].Columns[JSON]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="7000"
                       cachedName="JSON"
+                      cachedSortKeyPosition="1"
                       lineageId="Package\Data Flow Task - Get Other Columns\Script Component - Output JsonVar.Outputs[Output 0].Columns[JSON]">
                       <properties>
                         <property
-                          containsID="true"
                           dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task - Get Other Columns\Union All.Outputs[Union All Output 1].Columns[JSON]}</property>
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task - Get Other Columns\Sort.Inputs[Sort Input].Columns[key_join]"
+                      cachedDataType="i4"
+                      cachedName="key_join"
+                      lineageId="Package\Data Flow Task - Get Other Columns\Derived Column.Outputs[Derived Column Output].Columns[key_join]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task - Get Other Columns\Sort.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Get Other Columns\Sort.Outputs[Sort Output].Columns[JSON]"
+                      codePage="1252"
+                      dataType="str"
+                      length="7000"
+                      lineageId="Package\Data Flow Task - Get Other Columns\Sort.Outputs[Sort Output].Columns[JSON]"
+                      name="JSON">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task - Get Other Columns\Script Component - Output JsonVar.Outputs[Output 0].Columns[JSON]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Get Other Columns\Sort.Outputs[Sort Output].Columns[key_join]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Get Other Columns\Sort.Outputs[Sort Output].Columns[key_join]"
+                      name="key_join"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task - Get Other Columns\Derived Column.Outputs[Derived Column Output].Columns[key_join]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task - Get Other Columns\Sort 1"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort 1"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
                 <input
-                  refId="Package\Data Flow Task - Get Other Columns\Union All.Inputs[Union All Input 2]"
-                  hasSideEffects="true"
-                  name="Union All Input 2">
+                  refId="Package\Data Flow Task - Get Other Columns\Sort 1.Inputs[Sort Input]"
+                  name="Sort Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task - Get Other Columns\Union All.Inputs[Union All Input 2].Columns[pk]"
+                      refId="Package\Data Flow Task - Get Other Columns\Sort 1.Inputs[Sort Input].Columns[pk]"
                       cachedDataType="i4"
                       cachedName="pk"
                       lineageId="Package\Data Flow Task - Get Other Columns\OLE DB Source.Outputs[OLE DB Source Output].Columns[pk]">
                       <properties>
                         <property
-                          containsID="true"
                           dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task - Get Other Columns\Union All.Outputs[Union All Output 1].Columns[pk]}</property>
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task - Get Other Columns\Union All.Inputs[Union All Input 2].Columns[sending]"
+                      refId="Package\Data Flow Task - Get Other Columns\Sort 1.Inputs[Sort Input].Columns[sending]"
                       cachedDataType="bool"
                       cachedName="sending"
                       lineageId="Package\Data Flow Task - Get Other Columns\OLE DB Source.Outputs[OLE DB Source Output].Columns[sending]">
                       <properties>
                         <property
-                          containsID="true"
                           dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task - Get Other Columns\Union All.Outputs[Union All Output 1].Columns[sending]}</property>
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task - Get Other Columns\Union All.Inputs[Union All Input 2].Columns[xml_data]"
+                      refId="Package\Data Flow Task - Get Other Columns\Sort 1.Inputs[Sort Input].Columns[sent]"
+                      cachedDataType="bool"
+                      cachedName="sent"
+                      lineageId="Package\Data Flow Task - Get Other Columns\OLE DB Source.Outputs[OLE DB Source Output].Columns[sent]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task - Get Other Columns\Sort 1.Inputs[Sort Input].Columns[xml_data]"
                       cachedCodepage="1252"
                       cachedDataType="text"
                       cachedName="xml_data"
                       lineageId="Package\Data Flow Task - Get Other Columns\OLE DB Source.Outputs[OLE DB Source Output].Columns[xml_data]">
                       <properties>
                         <property
-                          containsID="true"
                           dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task - Get Other Columns\Union All.Outputs[Union All Output 1].Columns[xml_data]}</property>
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task - Get Other Columns\Union All.Inputs[Union All Input 2].Columns[crc]"
+                      refId="Package\Data Flow Task - Get Other Columns\Sort 1.Inputs[Sort Input].Columns[crc]"
                       cachedDataType="i4"
                       cachedName="crc"
                       lineageId="Package\Data Flow Task - Get Other Columns\OLE DB Source.Outputs[OLE DB Source Output].Columns[crc]">
                       <properties>
                         <property
-                          containsID="true"
                           dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task - Get Other Columns\Union All.Outputs[Union All Output 1].Columns[crc]}</property>
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task - Get Other Columns\Union All.Inputs[Union All Input 2].Columns[sending_test]"
+                      refId="Package\Data Flow Task - Get Other Columns\Sort 1.Inputs[Sort Input].Columns[sending_test]"
                       cachedDataType="bool"
                       cachedName="sending_test"
                       lineageId="Package\Data Flow Task - Get Other Columns\OLE DB Source.Outputs[OLE DB Source Output].Columns[sending_test]">
                       <properties>
                         <property
-                          containsID="true"
                           dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task - Get Other Columns\Union All.Outputs[Union All Output 1].Columns[sending_test]}</property>
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task - Get Other Columns\Union All.Inputs[Union All Input 2].Columns[sent_test]"
+                      refId="Package\Data Flow Task - Get Other Columns\Sort 1.Inputs[Sort Input].Columns[sent_test]"
                       cachedDataType="bool"
                       cachedName="sent_test"
                       lineageId="Package\Data Flow Task - Get Other Columns\OLE DB Source.Outputs[OLE DB Source Output].Columns[sent_test]">
                       <properties>
                         <property
-                          containsID="true"
                           dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task - Get Other Columns\Union All.Outputs[Union All Output 1].Columns[sent_test]}</property>
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task - Get Other Columns\Union All.Inputs[Union All Input 2].Columns[SendDTS_Pacific]"
+                      refId="Package\Data Flow Task - Get Other Columns\Sort 1.Inputs[Sort Input].Columns[SendDTS_Pacific]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="100"
@@ -1638,109 +2253,191 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       lineageId="Package\Data Flow Task - Get Other Columns\OLE DB Source.Outputs[OLE DB Source Output].Columns[SendDTS_Pacific]">
                       <properties>
                         <property
-                          containsID="true"
                           dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task - Get Other Columns\Union All.Outputs[Union All Output 1].Columns[SendDTS_Pacific]}</property>
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task - Get Other Columns\Union All.Inputs[Union All Input 2].Columns[SendDTS_UTC]"
+                      refId="Package\Data Flow Task - Get Other Columns\Sort 1.Inputs[Sort Input].Columns[SendDTS_UTC]"
                       cachedDataType="dbTimeStamp"
                       cachedName="SendDTS_UTC"
                       lineageId="Package\Data Flow Task - Get Other Columns\OLE DB Source.Outputs[OLE DB Source Output].Columns[SendDTS_UTC]">
                       <properties>
                         <property
-                          containsID="true"
                           dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task - Get Other Columns\Union All.Outputs[Union All Output 1].Columns[SendDTS_UTC]}</property>
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task - Get Other Columns\Union All.Inputs[Union All Input 2].Columns[sent]"
-                      cachedDataType="bool"
-                      cachedName="sent"
-                      lineageId="Package\Data Flow Task - Get Other Columns\OLE DB Source.Outputs[OLE DB Source Output].Columns[sent]">
+                      refId="Package\Data Flow Task - Get Other Columns\Sort 1.Inputs[Sort Input].Columns[key_join]"
+                      cachedDataType="i4"
+                      cachedName="key_join"
+                      lineageId="Package\Data Flow Task - Get Other Columns\Derived Column 1.Outputs[Derived Column Output].Columns[key_join]">
                       <properties>
                         <property
-                          containsID="true"
                           dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task - Get Other Columns\Union All.Outputs[Union All Output 1].Columns[sent]}</property>
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
-                <input
-                  refId="Package\Data Flow Task - Get Other Columns\Union All.Inputs[Union All Input 3]"
-                  dangling="true"
-                  hasSideEffects="true"
-                  name="Union All Input 3">
-                  <externalMetadataColumns />
-                </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task - Get Other Columns\Union All.Outputs[Union All Output 1]"
-                  name="Union All Output 1">
+                  refId="Package\Data Flow Task - Get Other Columns\Sort 1.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task - Get Other Columns\Union All.Outputs[Union All Output 1].Columns[JSON]"
-                      codePage="1252"
-                      dataType="str"
-                      length="7000"
-                      lineageId="Package\Data Flow Task - Get Other Columns\Union All.Outputs[Union All Output 1].Columns[JSON]"
-                      name="JSON" />
-                    <outputColumn
-                      refId="Package\Data Flow Task - Get Other Columns\Union All.Outputs[Union All Output 1].Columns[pk]"
+                      refId="Package\Data Flow Task - Get Other Columns\Sort 1.Outputs[Sort Output].Columns[pk]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task - Get Other Columns\Union All.Outputs[Union All Output 1].Columns[pk]"
-                      name="pk" />
+                      lineageId="Package\Data Flow Task - Get Other Columns\Sort 1.Outputs[Sort Output].Columns[pk]"
+                      name="pk">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task - Get Other Columns\OLE DB Source.Outputs[OLE DB Source Output].Columns[pk]}</property>
+                      </properties>
+                    </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task - Get Other Columns\Union All.Outputs[Union All Output 1].Columns[sending]"
+                      refId="Package\Data Flow Task - Get Other Columns\Sort 1.Outputs[Sort Output].Columns[sending]"
                       dataType="bool"
-                      lineageId="Package\Data Flow Task - Get Other Columns\Union All.Outputs[Union All Output 1].Columns[sending]"
-                      name="sending" />
+                      lineageId="Package\Data Flow Task - Get Other Columns\Sort 1.Outputs[Sort Output].Columns[sending]"
+                      name="sending">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task - Get Other Columns\OLE DB Source.Outputs[OLE DB Source Output].Columns[sending]}</property>
+                      </properties>
+                    </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task - Get Other Columns\Union All.Outputs[Union All Output 1].Columns[xml_data]"
+                      refId="Package\Data Flow Task - Get Other Columns\Sort 1.Outputs[Sort Output].Columns[sent]"
+                      dataType="bool"
+                      lineageId="Package\Data Flow Task - Get Other Columns\Sort 1.Outputs[Sort Output].Columns[sent]"
+                      name="sent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task - Get Other Columns\OLE DB Source.Outputs[OLE DB Source Output].Columns[sent]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Get Other Columns\Sort 1.Outputs[Sort Output].Columns[xml_data]"
                       codePage="1252"
                       dataType="text"
-                      lineageId="Package\Data Flow Task - Get Other Columns\Union All.Outputs[Union All Output 1].Columns[xml_data]"
-                      name="xml_data" />
+                      lineageId="Package\Data Flow Task - Get Other Columns\Sort 1.Outputs[Sort Output].Columns[xml_data]"
+                      name="xml_data">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task - Get Other Columns\OLE DB Source.Outputs[OLE DB Source Output].Columns[xml_data]}</property>
+                      </properties>
+                    </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task - Get Other Columns\Union All.Outputs[Union All Output 1].Columns[crc]"
+                      refId="Package\Data Flow Task - Get Other Columns\Sort 1.Outputs[Sort Output].Columns[crc]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task - Get Other Columns\Union All.Outputs[Union All Output 1].Columns[crc]"
-                      name="crc" />
+                      lineageId="Package\Data Flow Task - Get Other Columns\Sort 1.Outputs[Sort Output].Columns[crc]"
+                      name="crc">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task - Get Other Columns\OLE DB Source.Outputs[OLE DB Source Output].Columns[crc]}</property>
+                      </properties>
+                    </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task - Get Other Columns\Union All.Outputs[Union All Output 1].Columns[sending_test]"
+                      refId="Package\Data Flow Task - Get Other Columns\Sort 1.Outputs[Sort Output].Columns[sending_test]"
                       dataType="bool"
-                      lineageId="Package\Data Flow Task - Get Other Columns\Union All.Outputs[Union All Output 1].Columns[sending_test]"
-                      name="sending_test" />
+                      lineageId="Package\Data Flow Task - Get Other Columns\Sort 1.Outputs[Sort Output].Columns[sending_test]"
+                      name="sending_test">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task - Get Other Columns\OLE DB Source.Outputs[OLE DB Source Output].Columns[sending_test]}</property>
+                      </properties>
+                    </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task - Get Other Columns\Union All.Outputs[Union All Output 1].Columns[sent_test]"
+                      refId="Package\Data Flow Task - Get Other Columns\Sort 1.Outputs[Sort Output].Columns[sent_test]"
                       dataType="bool"
-                      lineageId="Package\Data Flow Task - Get Other Columns\Union All.Outputs[Union All Output 1].Columns[sent_test]"
-                      name="sent_test" />
+                      lineageId="Package\Data Flow Task - Get Other Columns\Sort 1.Outputs[Sort Output].Columns[sent_test]"
+                      name="sent_test">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task - Get Other Columns\OLE DB Source.Outputs[OLE DB Source Output].Columns[sent_test]}</property>
+                      </properties>
+                    </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task - Get Other Columns\Union All.Outputs[Union All Output 1].Columns[SendDTS_Pacific]"
+                      refId="Package\Data Flow Task - Get Other Columns\Sort 1.Outputs[Sort Output].Columns[SendDTS_Pacific]"
                       codePage="1252"
                       dataType="str"
                       length="100"
-                      lineageId="Package\Data Flow Task - Get Other Columns\Union All.Outputs[Union All Output 1].Columns[SendDTS_Pacific]"
-                      name="SendDTS_Pacific" />
+                      lineageId="Package\Data Flow Task - Get Other Columns\Sort 1.Outputs[Sort Output].Columns[SendDTS_Pacific]"
+                      name="SendDTS_Pacific">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task - Get Other Columns\OLE DB Source.Outputs[OLE DB Source Output].Columns[SendDTS_Pacific]}</property>
+                      </properties>
+                    </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task - Get Other Columns\Union All.Outputs[Union All Output 1].Columns[SendDTS_UTC]"
+                      refId="Package\Data Flow Task - Get Other Columns\Sort 1.Outputs[Sort Output].Columns[SendDTS_UTC]"
                       dataType="dbTimeStamp"
-                      lineageId="Package\Data Flow Task - Get Other Columns\Union All.Outputs[Union All Output 1].Columns[SendDTS_UTC]"
-                      name="SendDTS_UTC" />
+                      lineageId="Package\Data Flow Task - Get Other Columns\Sort 1.Outputs[Sort Output].Columns[SendDTS_UTC]"
+                      name="SendDTS_UTC">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task - Get Other Columns\OLE DB Source.Outputs[OLE DB Source Output].Columns[SendDTS_UTC]}</property>
+                      </properties>
+                    </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task - Get Other Columns\Union All.Outputs[Union All Output 1].Columns[sent]"
-                      dataType="bool"
-                      lineageId="Package\Data Flow Task - Get Other Columns\Union All.Outputs[Union All Output 1].Columns[sent]"
-                      name="sent" />
+                      refId="Package\Data Flow Task - Get Other Columns\Sort 1.Outputs[Sort Output].Columns[key_join]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Get Other Columns\Sort 1.Outputs[Sort Output].Columns[key_join]"
+                      name="key_join"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task - Get Other Columns\Derived Column 1.Outputs[Derived Column Output].Columns[key_join]}</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -1749,20 +2446,40 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           </components>
           <paths>
             <path
+              refId="Package\Data Flow Task - Get Other Columns.Paths[Derived Column Output]"
+              endId="Package\Data Flow Task - Get Other Columns\Sort.Inputs[Sort Input]"
+              name="Derived Column Output"
+              startId="Package\Data Flow Task - Get Other Columns\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Data Flow Task - Get Other Columns.Paths[Derived Column Output1]"
+              endId="Package\Data Flow Task - Get Other Columns\Sort 1.Inputs[Sort Input]"
+              name="Derived Column Output"
+              startId="Package\Data Flow Task - Get Other Columns\Derived Column 1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Data Flow Task - Get Other Columns.Paths[Merge Join Output]"
+              endId="Package\Data Flow Task - Get Other Columns\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Merge Join Output"
+              startId="Package\Data Flow Task - Get Other Columns\Merge Join.Outputs[Merge Join Output]" />
+            <path
               refId="Package\Data Flow Task - Get Other Columns.Paths[OLE DB Source Output]"
-              endId="Package\Data Flow Task - Get Other Columns\Union All.Inputs[Union All Input 2]"
+              endId="Package\Data Flow Task - Get Other Columns\Derived Column 1.Inputs[Derived Column Input]"
               name="OLE DB Source Output"
               startId="Package\Data Flow Task - Get Other Columns\OLE DB Source.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\Data Flow Task - Get Other Columns.Paths[Output 0]"
-              endId="Package\Data Flow Task - Get Other Columns\Union All.Inputs[Union All Input 1]"
+              endId="Package\Data Flow Task - Get Other Columns\Derived Column.Inputs[Derived Column Input]"
               name="Output 0"
               startId="Package\Data Flow Task - Get Other Columns\Script Component - Output JsonVar.Outputs[Output 0]" />
             <path
-              refId="Package\Data Flow Task - Get Other Columns.Paths[Union All Output 1]"
-              endId="Package\Data Flow Task - Get Other Columns\Flat File Destination.Inputs[Flat File Destination Input]"
-              name="Union All Output 1"
-              startId="Package\Data Flow Task - Get Other Columns\Union All.Outputs[Union All Output 1]" />
+              refId="Package\Data Flow Task - Get Other Columns.Paths[Sort Output]"
+              endId="Package\Data Flow Task - Get Other Columns\Merge Join.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\Data Flow Task - Get Other Columns\Sort.Outputs[Sort Output]" />
+            <path
+              refId="Package\Data Flow Task - Get Other Columns.Paths[Sort Output1]"
+              endId="Package\Data Flow Task - Get Other Columns\Merge Join.Inputs[Merge Join Right Input]"
+              name="Sort Output"
+              startId="Package\Data Flow Task - Get Other Columns\Sort 1.Outputs[Sort Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -2052,8 +2769,8 @@ as XMLVariable</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task - Get XML\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[(localdb)\MSSQLLocalDB.TestEnv]"
-                  connectionManagerRefId="Package.ConnectionManagers[(localdb)\MSSQLLocalDB.TestEnv]"
+                  connectionManagerID="Package.ConnectionManagers[LP_TestEnv]"
+                  connectionManagerRefId="Package.ConnectionManagers[LP_TestEnv]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2356,6 +3073,10 @@ task.run = function () {
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="259,42"
+          Id="Package\Data Flow Task - Get Other Columns"
+          TopLeft="538,334" />
+        <NodeLayout
           Size="208,42"
           Id="Package\Data Flow Task - Get XML"
           TopLeft="561.249999310821,49.7368431355485" />
@@ -2385,10 +3106,6 @@ task.run = function () {
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="259,42"
-          Id="Package\Data Flow Task - Get Other Columns"
-          TopLeft="538,334" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
           TopLeft="666.999999534338,263.526319112144">
@@ -2414,6 +3131,249 @@ task.run = function () {
       </GraphLayout>
     </LayoutInfo>
   </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task - Get Other Columns">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="253,42"
+          Id="Package\Data Flow Task - Get Other Columns\Script Component - Output JsonVar"
+          TopLeft="417,112" />
+        <NodeLayout
+          Size="157,42"
+          Id="Package\Data Flow Task - Get Other Columns\OLE DB Source"
+          TopLeft="750,110" />
+        <NodeLayout
+          Size="154,42"
+          Id="Package\Data Flow Task - Get Other Columns\Derived Column"
+          TopLeft="470,235" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Data Flow Task - Get Other Columns\Derived Column 1"
+          TopLeft="765,238" />
+        <EdgeLayout
+          Id="Package\Data Flow Task - Get Other Columns.Paths[Output 0]"
+          TopLeft="545.25,154">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,81"
+              Start="0,0"
+              End="0,73.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,73.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task - Get Other Columns.Paths[OLE DB Source Output]"
+          TopLeft="828.5,152">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="18,86"
+              Start="0,0"
+              End="18,78.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,39"
+                    Point2="0,43"
+                    Point3="4,43" />
+                  <mssgle:LineSegment
+                    End="14,43" />
+                  <mssgle:CubicBezierSegment
+                    Point1="14,43"
+                    Point2="18,43"
+                    Point3="18,47" />
+                  <mssgle:LineSegment
+                    End="18,78.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="98,42"
+          Id="Package\Data Flow Task - Get Other Columns\Sort"
+          TopLeft="503,330" />
+        <NodeLayout
+          Size="107,42"
+          Id="Package\Data Flow Task - Get Other Columns\Sort 1"
+          TopLeft="792,323" />
+        <EdgeLayout
+          Id="Package\Data Flow Task - Get Other Columns.Paths[Derived Column Output]"
+          TopLeft="549.5,277">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,53"
+              Start="0,0"
+              End="0,45.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task - Get Other Columns.Paths[Derived Column Output1]"
+          TopLeft="846,280">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,43"
+              Start="0,0"
+              End="0,35.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="130,42"
+          Id="Package\Data Flow Task - Get Other Columns\Merge Join"
+          TopLeft="634,424" />
+        <EdgeLayout
+          Id="Package\Data Flow Task - Get Other Columns.Paths[Sort Output]"
+          TopLeft="552,372">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="147,52"
+              Start="0,0"
+              End="147,44.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22"
+                    Point2="0,26"
+                    Point3="4,26" />
+                  <mssgle:LineSegment
+                    End="143,26" />
+                  <mssgle:CubicBezierSegment
+                    Point1="143,26"
+                    Point2="147,26"
+                    Point3="147,30" />
+                  <mssgle:LineSegment
+                    End="147,44.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task - Get Other Columns.Paths[Sort Output1]"
+          TopLeft="845.5,365">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-126.166666666667,59"
+              Start="0,0"
+              End="-126.166666666667,51.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.9696048632219" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30.9696048632219"
+                    Point2="0,34.9696048632219"
+                    Point3="-4,34.9696048632219" />
+                  <mssgle:LineSegment
+                    End="-122.166666666667,34.9696048632219" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-122.166666666667,34.9696048632219"
+                    Point2="-126.166666666667,34.9696048632219"
+                    Point3="-126.166666666667,38.9696048632219" />
+                  <mssgle:LineSegment
+                    End="-126.166666666667,51.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Data Flow Task - Get Other Columns\OLE DB Destination"
+          TopLeft="609,520" />
+        <EdgeLayout
+          Id="Package\Data Flow Task - Get Other Columns.Paths[Merge Join Output]"
+          TopLeft="696.75,466">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,54"
+              Start="0,0"
+              End="0,46.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,46.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task - Get Other Columns\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Data Flow Task - Get XML">
     <LayoutInfo>
@@ -2465,134 +3425,8 @@ task.run = function () {
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Data Flow Task - Get Other Columns">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="253,42"
-          Id="Package\Data Flow Task - Get Other Columns\Script Component - Output JsonVar"
-          TopLeft="417,112" />
-        <NodeLayout
-          Size="157,42"
-          Id="Package\Data Flow Task - Get Other Columns\OLE DB Source"
-          TopLeft="762,113" />
-        <NodeLayout
-          Size="123,42"
-          Id="Package\Data Flow Task - Get Other Columns\Union All"
-          TopLeft="667,328" />
-        <EdgeLayout
-          Id="Package\Data Flow Task - Get Other Columns.Paths[Output 0]"
-          TopLeft="543.5,154">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="185,174"
-              Start="0,0"
-              End="185,166.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,83" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,83"
-                    Point2="0,87"
-                    Point3="4,87" />
-                  <mssgle:LineSegment
-                    End="181,87" />
-                  <mssgle:CubicBezierSegment
-                    Point1="181,87"
-                    Point2="185,87"
-                    Point3="185,91" />
-                  <mssgle:LineSegment
-                    End="185,166.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task - Get Other Columns.Paths[OLE DB Source Output]"
-          TopLeft="840.5,155">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-92.8333333333334,173"
-              Start="0,0"
-              End="-92.8333333333334,165.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,98.4670947030497" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,98.4670947030497"
-                    Point2="0,102.46709470305"
-                    Point3="-4,102.46709470305" />
-                  <mssgle:LineSegment
-                    End="-88.8333333333334,102.46709470305" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-88.8333333333334,102.46709470305"
-                    Point2="-92.8333333333334,102.46709470305"
-                    Point3="-92.8333333333334,106.46709470305" />
-                  <mssgle:LineSegment
-                    End="-92.8333333333334,165.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="176,42"
-          Id="Package\Data Flow Task - Get Other Columns\Flat File Destination"
-          TopLeft="559,405" />
-        <EdgeLayout
-          Id="Package\Data Flow Task - Get Other Columns.Paths[Union All Output 1]"
-          TopLeft="728.5,370">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-81.5,35"
-              Start="0,0"
-              End="-81.5,27.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,13.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,13.5"
-                    Point2="0,17.5"
-                    Point3="-4,17.5" />
-                  <mssgle:LineSegment
-                    End="-77.5,17.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-77.5,17.5"
-                    Point2="-81.5,17.5"
-                    Point3="-81.5,21.5" />
-                  <mssgle:LineSegment
-                    End="-81.5,27.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task - Get Other Columns\OLE DB Source">
+    design-time-name="Package\Data Flow Task - Get Other Columns\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
