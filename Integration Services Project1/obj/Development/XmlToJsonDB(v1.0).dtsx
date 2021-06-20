@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="XmlToJsonDB Testing"
   DTS:PackageType="5"
-  DTS:VersionBuild="66"
-  DTS:VersionGUID="{C0AAF576-411B-4C07-81DC-0F59EB80DC7B}">
+  DTS:VersionBuild="70"
+  DTS:VersionGUID="{E986F726-A488-4CCA-AF09-CBC4306B9182}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1666,7 +1666,7 @@ namespace SC_7b06b6a1ab0d4238a7b5e0c075614f1f.Properties {
     <msb:CodeName>SC_7b06b6a1ab0d4238a7b5e0c075614f1f</msb:CodeName>
     <msb:Language>msBuild</msb:Language>
     <msb:DisplayName>SC_7b06b6a1ab0d4238a7b5e0c075614f1f</msb:DisplayName>
-    <msb:ProjectId>{C9CAD408-1C20-4915-AC78-FDA92FD823A7}</msb:ProjectId>
+    <msb:ProjectId>{474395B4-93BA-42FD-A502-90BAA7025CA6}</msb:ProjectId>
   </msb:PropertyGroup>
   <msb:ItemGroup>
     <msb:Project Include="SC_7b06b6a1ab0d4238a7b5e0c075614f1f.csproj" />
@@ -1813,7 +1813,7 @@ namespace SC_7b06b6a1ab0d4238a7b5e0c075614f1f.Properties {
                     <arrayElement
                       dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
-ZGUuDQ0KJAAAAAAAAABQRQAATAEDANANzWAAAAAAAAAAAOAAIiALATAAABQAAAAIAAAAAAAAAjMA
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAG3LzmAAAAAAAAAAAOAAIiALATAAABQAAAAIAAAAAAAAAjMA
 AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
 ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAALAyAABPAAAAAEAAAEgEAAAAAAAAAAAAAAAAAAAA
 AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1892,8 +1892,8 @@ dAB5ACAAYwBhAG4AbgBvAHQAIABiAGUAIABzAGUAdAAgAHQAbwAgAEYAYQBsAHMAZQAuACAAQQBz
 AHMAaQBnAG4AIABhACAAdgBhAGwAdQBlACAAdABvACAAdABoAGUAIABjAG8AbAB1AG0AbgAgAGkA
 bgBzAHQAZQBhAGQALgAAEU8AdQB0AHAAdQB0ACAAMAAAD0oAcwBvAG4AVgBhAHIAAHFTAEMAXwA3
 AGIAMAA2AGIANgBhADEAYQBiADAAZAA0ADIAMwA4AGEANwBiADUAZQAwAGMAMAA3ADUANgAxADQA
-ZgAxAGYALgBQAHIAbwBwAGUAcgB0AGkAZQBzAC4AUgBlAHMAbwB1AHIAYwBlAHMAAAAAm1/9Pm+E
-FEyslmlCS9aiawAEIAEBCAMgAAEFIAEBEREEIAEBDgUgAQERWQkgAwESPR0IEkEFIAIBCBwDIAAC
+ZgAxAGYALgBQAHIAbwBwAGUAcgB0AGkAZQBzAC4AUgBlAHMAbwB1AHIAYwBlAHMAAAAAtJTjprzu
+wEmvdq6TqgHyeQAEIAEBCAMgAAEFIAEBEREEIAEBDgUgAQERWQkgAwESPR0IEkEFIAIBCBwDIAAC
 AwcBCAYAAggSQQ4FIAEdCAgEIAASbQUgARJxHAQAABJ1BSABHBJ5CAABEoCBEYCFBSAAEoCJByAC
 AQ4SgIkIt3pcVhk04IkIiYRdzYCAzJEDBhIUAwYSGAMGEgwDBhJFAwYSUQMGElUDBhIgBCABAQIL
 IAQBCB0IHRI9EkEFIAEBEkUDIAAOBAAAElEEAAASVQUAAQESVQQAABIgAwAAAQMoAA4DKAACBAgA
@@ -3137,21 +3137,105 @@ task.run = function () {
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="250,42"
+          Id="Package\Data Flow Task - Combine columns &amp; output\OLE DB Source - Get Other Columns"
+          TopLeft="750,110" />
+        <NodeLayout
+          Size="250,42"
+          Id="Package\Data Flow Task - Combine columns &amp; output\Derived Column 1 -  Create Sort Key"
+          TopLeft="749,201" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Data Flow Task - Combine columns &amp; output\Sort - Sort on Key"
+          TopLeft="467,301" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Data Flow Task - Combine columns &amp; output\OLE DB Destination"
+          TopLeft="624,501" />
+        <NodeLayout
           Size="253,42"
           Id="Package\Data Flow Task - Combine columns &amp; output\Script Component - Output JsonVar"
           TopLeft="417,112" />
         <NodeLayout
-          Size="250,42"
-          Id="Package\Data Flow Task - Combine columns &amp; output\OLE DB Source - Get Other Columns"
-          TopLeft="750,110" />
+          Size="224,42"
+          Id="Package\Data Flow Task - Combine columns &amp; output\Merge Join - Combine columns"
+          TopLeft="598,415" />
         <NodeLayout
           Size="238,42"
           Id="Package\Data Flow Task - Combine columns &amp; output\Derived Column - Create Sort Key"
           TopLeft="423,199" />
         <NodeLayout
-          Size="250,42"
-          Id="Package\Data Flow Task - Combine columns &amp; output\Derived Column 1 -  Create Sort Key"
-          TopLeft="749,201" />
+          Size="173,42"
+          Id="Package\Data Flow Task - Combine columns &amp; output\Sort 1 - Sort on Key"
+          TopLeft="792,289" />
+        <EdgeLayout
+          Id="Package\Data Flow Task - Combine columns &amp; output.Paths[Sort Output1]"
+          TopLeft="878.5,331">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-132.5,84"
+              Start="0,0"
+              End="-132.5,76.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,46.0425531914894" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,46.0425531914894"
+                    Point2="0,50.0425531914894"
+                    Point3="-4,50.0425531914894" />
+                  <mssgle:LineSegment
+                    End="-128.5,50.0425531914894" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-128.5,50.0425531914894"
+                    Point2="-132.5,50.0425531914894"
+                    Point3="-132.5,54.0425531914894" />
+                  <mssgle:LineSegment
+                    End="-132.5,76.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task - Combine columns &amp; output.Paths[Sort Output]"
+          TopLeft="548.5,343">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="125.5,72"
+              Start="0,0"
+              End="125.5,64.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.8936170212766" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,38.8936170212766"
+                    Point2="0,42.8936170212766"
+                    Point3="4,42.8936170212766" />
+                  <mssgle:LineSegment
+                    End="121.5,42.8936170212766" />
+                  <mssgle:CubicBezierSegment
+                    Point1="121.5,42.8936170212766"
+                    Point2="125.5,42.8936170212766"
+                    Point3="125.5,46.8936170212766" />
+                  <mssgle:LineSegment
+                    End="125.5,64.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task - Combine columns &amp; output.Paths[Output 0]"
           TopLeft="542.75,154">
@@ -3196,28 +3280,20 @@ task.run = function () {
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="163,42"
-          Id="Package\Data Flow Task - Combine columns &amp; output\Sort - Sort on Key"
-          TopLeft="467,301" />
-        <NodeLayout
-          Size="173,42"
-          Id="Package\Data Flow Task - Combine columns &amp; output\Sort 1 - Sort on Key"
-          TopLeft="792,289" />
         <EdgeLayout
-          Id="Package\Data Flow Task - Combine columns &amp; output.Paths[Derived Column Output]"
-          TopLeft="545.25,241">
+          Id="Package\Data Flow Task - Combine columns &amp; output.Paths[Merge Join Output]"
+          TopLeft="709.75,457">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60"
+              EndConnector="0,44"
               Start="0,0"
-              End="0,52.5">
+              End="0,36.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="0,36.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3248,96 +3324,20 @@ task.run = function () {
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="224,42"
-          Id="Package\Data Flow Task - Combine columns &amp; output\Merge Join - Combine columns"
-          TopLeft="598,415" />
         <EdgeLayout
-          Id="Package\Data Flow Task - Combine columns &amp; output.Paths[Sort Output]"
-          TopLeft="548.5,343">
+          Id="Package\Data Flow Task - Combine columns &amp; output.Paths[Derived Column Output]"
+          TopLeft="545.25,241">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="125.5,72"
+              EndConnector="0,60"
               Start="0,0"
-              End="125.5,64.5">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,38.8936170212766" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,38.8936170212766"
-                    Point2="0,42.8936170212766"
-                    Point3="4,42.8936170212766" />
-                  <mssgle:LineSegment
-                    End="121.5,42.8936170212766" />
-                  <mssgle:CubicBezierSegment
-                    Point1="121.5,42.8936170212766"
-                    Point2="125.5,42.8936170212766"
-                    Point3="125.5,46.8936170212766" />
-                  <mssgle:LineSegment
-                    End="125.5,64.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task - Combine columns &amp; output.Paths[Sort Output1]"
-          TopLeft="878.5,331">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-132.5,84"
-              Start="0,0"
-              End="-132.5,76.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,46.0425531914894" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,46.0425531914894"
-                    Point2="0,50.0425531914894"
-                    Point3="-4,50.0425531914894" />
-                  <mssgle:LineSegment
-                    End="-128.5,50.0425531914894" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-128.5,50.0425531914894"
-                    Point2="-132.5,50.0425531914894"
-                    Point3="-132.5,54.0425531914894" />
-                  <mssgle:LineSegment
-                    End="-132.5,76.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Data Flow Task - Combine columns &amp; output\OLE DB Destination"
-          TopLeft="624,501" />
-        <EdgeLayout
-          Id="Package\Data Flow Task - Combine columns &amp; output.Paths[Merge Join Output]"
-          TopLeft="709.75,457">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,44"
-              Start="0,0"
-              End="0,36.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,36.5" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3351,6 +3351,19 @@ task.run = function () {
   </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task - Combine columns &amp; output\OLE DB Source - Get Other Columns">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task - Combine columns &amp; output\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -3402,19 +3415,6 @@ task.run = function () {
   </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task - Get XML\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task - Combine columns &amp; output\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

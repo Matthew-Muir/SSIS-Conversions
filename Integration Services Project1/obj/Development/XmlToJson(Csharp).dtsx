@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="26"
-  DTS:VersionGUID="{F5019443-CA53-40E5-87C8-4AE3E52935D3}">
+  DTS:VersionBuild="73"
+  DTS:VersionGUID="{6ABDE6A7-196E-4497-990E-D081807C7606}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -63,35 +63,2319 @@
   </DTS:Variables>
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Execute SQL Task"
+      DTS:refId="Package\Data Flow Task - Create row and push to table"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{84FD6DC7-B1B9-45ED-865F-B7D41926E9FD}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task - Create row and push to table"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task - Create row and push to table\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task - Create row and push to table\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task - Create row and push to table\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Data Flow Task - Create row and push to table\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\Derived Column.Outputs[Derived Column Output].Columns[sort_key]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task - Create row and push to table\Derived Column.Outputs[Derived Column Output].Columns[sort_key]"
+                      name="sort_key"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">1</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">1</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task - Create row and push to table\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Data Flow Task - Create row and push to table\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Create row and push to table\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Create row and push to table\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task - Create row and push to table\Derived Column 1"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column 1"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task - Create row and push to table\Derived Column 1.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task - Create row and push to table\Derived Column 1.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Data Flow Task - Create row and push to table\Derived Column 1.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\Derived Column 1.Outputs[Derived Column Output].Columns[sort_key]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task - Create row and push to table\Derived Column 1.Outputs[Derived Column Output].Columns[sort_key]"
+                      name="sort_key"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">1</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">1</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task - Create row and push to table\Derived Column 1.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Data Flow Task - Create row and push to table\Derived Column 1.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Create row and push to table\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Create row and push to table\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task - Create row and push to table\Merge Join"
+              componentClassID="Microsoft.MergeJoin"
+              contactInfo="Merge Join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combine two sorted data flows into one using the FULL, LEFT, or INNER join. We recommend this transformation when data flows can be sorted at their sources."
+              name="Merge Join"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of join to perform."
+                  name="JoinType"
+                  typeConverter="JoinType">2</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the number of columns in the ordering key."
+                  name="NumKeyColumns">1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the null values are treated as equal values."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Indicates the requested maximum buffers per input before blocking."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task - Create row and push to table\Merge Join.Inputs[Merge Join Left Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Left Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\Merge Join.Inputs[Merge Join Left Input].Columns[sort_key]"
+                      cachedDataType="i4"
+                      cachedName="sort_key"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Data Flow Task - Create row and push to table\Sort.Outputs[Sort Output].Columns[sort_key]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\Merge Join.Inputs[Merge Join Left Input].Columns[JSON]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="7000"
+                      cachedName="JSON"
+                      lineageId="Package\Data Flow Task - Create row and push to table\Sort.Outputs[Sort Output].Columns[JSON]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Data Flow Task - Create row and push to table\Merge Join.Inputs[Merge Join Right Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Right Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\Merge Join.Inputs[Merge Join Right Input].Columns[sort_key]"
+                      cachedDataType="i4"
+                      cachedName="sort_key"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Data Flow Task - Create row and push to table\Sort 1.Outputs[Sort Output].Columns[sort_key]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\Merge Join.Inputs[Merge Join Right Input].Columns[pk]"
+                      cachedDataType="i4"
+                      cachedName="pk"
+                      lineageId="Package\Data Flow Task - Create row and push to table\Sort 1.Outputs[Sort Output].Columns[pk]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\Merge Join.Inputs[Merge Join Right Input].Columns[sending]"
+                      cachedDataType="bool"
+                      cachedName="sending"
+                      lineageId="Package\Data Flow Task - Create row and push to table\Sort 1.Outputs[Sort Output].Columns[sending]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\Merge Join.Inputs[Merge Join Right Input].Columns[sent]"
+                      cachedDataType="bool"
+                      cachedName="sent"
+                      lineageId="Package\Data Flow Task - Create row and push to table\Sort 1.Outputs[Sort Output].Columns[sent]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\Merge Join.Inputs[Merge Join Right Input].Columns[xml_data]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="xml_data"
+                      lineageId="Package\Data Flow Task - Create row and push to table\Sort 1.Outputs[Sort Output].Columns[xml_data]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\Merge Join.Inputs[Merge Join Right Input].Columns[crc]"
+                      cachedDataType="i4"
+                      cachedName="crc"
+                      lineageId="Package\Data Flow Task - Create row and push to table\Sort 1.Outputs[Sort Output].Columns[crc]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\Merge Join.Inputs[Merge Join Right Input].Columns[sending_test]"
+                      cachedDataType="bool"
+                      cachedName="sending_test"
+                      lineageId="Package\Data Flow Task - Create row and push to table\Sort 1.Outputs[Sort Output].Columns[sending_test]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\Merge Join.Inputs[Merge Join Right Input].Columns[sent_test]"
+                      cachedDataType="bool"
+                      cachedName="sent_test"
+                      lineageId="Package\Data Flow Task - Create row and push to table\Sort 1.Outputs[Sort Output].Columns[sent_test]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\Merge Join.Inputs[Merge Join Right Input].Columns[SendDTS_Pacific]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="SendDTS_Pacific"
+                      lineageId="Package\Data Flow Task - Create row and push to table\Sort 1.Outputs[Sort Output].Columns[SendDTS_Pacific]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\Merge Join.Inputs[Merge Join Right Input].Columns[SendDTS_UTC]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="SendDTS_UTC"
+                      lineageId="Package\Data Flow Task - Create row and push to table\Sort 1.Outputs[Sort Output].Columns[SendDTS_UTC]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task - Create row and push to table\Merge Join.Outputs[Merge Join Output]"
+                  name="Merge Join Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\Merge Join.Outputs[Merge Join Output].Columns[pk]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Create row and push to table\Merge Join.Outputs[Merge Join Output].Columns[pk]"
+                      name="pk">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task - Create row and push to table\Merge Join.Inputs[Merge Join Right Input].Columns[pk]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\Merge Join.Outputs[Merge Join Output].Columns[sending]"
+                      dataType="bool"
+                      lineageId="Package\Data Flow Task - Create row and push to table\Merge Join.Outputs[Merge Join Output].Columns[sending]"
+                      name="sending">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task - Create row and push to table\Merge Join.Inputs[Merge Join Right Input].Columns[sending]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\Merge Join.Outputs[Merge Join Output].Columns[sent]"
+                      dataType="bool"
+                      lineageId="Package\Data Flow Task - Create row and push to table\Merge Join.Outputs[Merge Join Output].Columns[sent]"
+                      name="sent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task - Create row and push to table\Merge Join.Inputs[Merge Join Right Input].Columns[sent]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\Merge Join.Outputs[Merge Join Output].Columns[xml_data]"
+                      codePage="1252"
+                      dataType="text"
+                      lineageId="Package\Data Flow Task - Create row and push to table\Merge Join.Outputs[Merge Join Output].Columns[xml_data]"
+                      name="xml_data">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task - Create row and push to table\Merge Join.Inputs[Merge Join Right Input].Columns[xml_data]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\Merge Join.Outputs[Merge Join Output].Columns[crc]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Create row and push to table\Merge Join.Outputs[Merge Join Output].Columns[crc]"
+                      name="crc">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task - Create row and push to table\Merge Join.Inputs[Merge Join Right Input].Columns[crc]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\Merge Join.Outputs[Merge Join Output].Columns[sending_test]"
+                      dataType="bool"
+                      lineageId="Package\Data Flow Task - Create row and push to table\Merge Join.Outputs[Merge Join Output].Columns[sending_test]"
+                      name="sending_test">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task - Create row and push to table\Merge Join.Inputs[Merge Join Right Input].Columns[sending_test]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\Merge Join.Outputs[Merge Join Output].Columns[sent_test]"
+                      dataType="bool"
+                      lineageId="Package\Data Flow Task - Create row and push to table\Merge Join.Outputs[Merge Join Output].Columns[sent_test]"
+                      name="sent_test">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task - Create row and push to table\Merge Join.Inputs[Merge Join Right Input].Columns[sent_test]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\Merge Join.Outputs[Merge Join Output].Columns[SendDTS_Pacific]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\Data Flow Task - Create row and push to table\Merge Join.Outputs[Merge Join Output].Columns[SendDTS_Pacific]"
+                      name="SendDTS_Pacific">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task - Create row and push to table\Merge Join.Inputs[Merge Join Right Input].Columns[SendDTS_Pacific]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\Merge Join.Outputs[Merge Join Output].Columns[SendDTS_UTC]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task - Create row and push to table\Merge Join.Outputs[Merge Join Output].Columns[SendDTS_UTC]"
+                      name="SendDTS_UTC">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task - Create row and push to table\Merge Join.Inputs[Merge Join Right Input].Columns[SendDTS_UTC]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\Merge Join.Outputs[Merge Join Output].Columns[JSON]"
+                      codePage="1252"
+                      dataType="str"
+                      length="7000"
+                      lineageId="Package\Data Flow Task - Create row and push to table\Merge Join.Outputs[Merge Join Output].Columns[JSON]"
+                      name="JSON">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task - Create row and push to table\Merge Join.Inputs[Merge Join Left Input].Columns[JSON]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DC_JSON_DATA_and_STATUS]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.TestEnv]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.TestEnv]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[pk]"
+                      cachedDataType="i4"
+                      cachedName="pk"
+                      externalMetadataColumnId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[pk]"
+                      lineageId="Package\Data Flow Task - Create row and push to table\Merge Join.Outputs[Merge Join Output].Columns[pk]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[sending]"
+                      cachedDataType="bool"
+                      cachedName="sending"
+                      externalMetadataColumnId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[sending]"
+                      lineageId="Package\Data Flow Task - Create row and push to table\Merge Join.Outputs[Merge Join Output].Columns[sending]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[sent]"
+                      cachedDataType="bool"
+                      cachedName="sent"
+                      externalMetadataColumnId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[sent]"
+                      lineageId="Package\Data Flow Task - Create row and push to table\Merge Join.Outputs[Merge Join Output].Columns[sent]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[xml_data]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="xml_data"
+                      externalMetadataColumnId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[xml_data]"
+                      lineageId="Package\Data Flow Task - Create row and push to table\Merge Join.Outputs[Merge Join Output].Columns[xml_data]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[crc]"
+                      cachedDataType="i4"
+                      cachedName="crc"
+                      externalMetadataColumnId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[crc]"
+                      lineageId="Package\Data Flow Task - Create row and push to table\Merge Join.Outputs[Merge Join Output].Columns[crc]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[sending_test]"
+                      cachedDataType="bool"
+                      cachedName="sending_test"
+                      externalMetadataColumnId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[sending_test]"
+                      lineageId="Package\Data Flow Task - Create row and push to table\Merge Join.Outputs[Merge Join Output].Columns[sending_test]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[sent_test]"
+                      cachedDataType="bool"
+                      cachedName="sent_test"
+                      externalMetadataColumnId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[sent_test]"
+                      lineageId="Package\Data Flow Task - Create row and push to table\Merge Join.Outputs[Merge Join Output].Columns[sent_test]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SendDTS_Pacific]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="SendDTS_Pacific"
+                      externalMetadataColumnId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SendDTS_Pacific]"
+                      lineageId="Package\Data Flow Task - Create row and push to table\Merge Join.Outputs[Merge Join Output].Columns[SendDTS_Pacific]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SendDTS_UTC]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="SendDTS_UTC"
+                      externalMetadataColumnId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SendDTS_UTC]"
+                      lineageId="Package\Data Flow Task - Create row and push to table\Merge Join.Outputs[Merge Join Output].Columns[SendDTS_UTC]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[JSON]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="7000"
+                      cachedName="JSON"
+                      externalMetadataColumnId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[JSONText]"
+                      lineageId="Package\Data Flow Task - Create row and push to table\Merge Join.Outputs[Merge Join Output].Columns[JSON]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LocalID]"
+                      dataType="i4"
+                      name="LocalID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[InsertDTS_Local]"
+                      dataType="dbTimeStamp"
+                      name="InsertDTS_Local" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[InsertDTS_UTC]"
+                      dataType="dbTimeStamp"
+                      name="InsertDTS_UTC" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[pk]"
+                      dataType="i4"
+                      name="pk" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[sending]"
+                      dataType="bool"
+                      name="sending" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[sent]"
+                      dataType="bool"
+                      name="sent" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[xml_data]"
+                      codePage="1252"
+                      dataType="text"
+                      name="xml_data" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[crc]"
+                      dataType="i4"
+                      name="crc" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[sending_test]"
+                      dataType="bool"
+                      name="sending_test" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[sent_test]"
+                      dataType="bool"
+                      name="sent_test" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SendDTS_Pacific]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="SendDTS_Pacific" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SendDTS_UTC]"
+                      dataType="dbTimeStamp"
+                      name="SendDTS_UTC" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[JSONText]"
+                      codePage="1252"
+                      dataType="text"
+                      name="JSONText" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[JSON_Sent]"
+                      dataType="i4"
+                      name="JSON_Sent" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task - Create row and push to table\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DC_RAW_Sent_Data]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT TOP (1) [pk]
+      ,[sending]
+      ,[sent]
+      ,[xml_data]
+      ,[crc]
+      ,[sending_test]
+      ,[sent_test]
+      ,[SendDTS_Pacific]
+      ,[SendDTS_UTC]
+  FROM [TestEnv].[dbo].[DC_RAW_Sent_Data]</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.TestEnv]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.TestEnv]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output].Columns[pk]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[pk]"
+                      lineageId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output].Columns[pk]"
+                      name="pk"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output].Columns[sending]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[sending]"
+                      lineageId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output].Columns[sending]"
+                      name="sending"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output].Columns[sent]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[sent]"
+                      lineageId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output].Columns[sent]"
+                      name="sent"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output].Columns[xml_data]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[xml_data]"
+                      lineageId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output].Columns[xml_data]"
+                      name="xml_data"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output].Columns[crc]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[crc]"
+                      lineageId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output].Columns[crc]"
+                      name="crc"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output].Columns[sending_test]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[sending_test]"
+                      lineageId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output].Columns[sending_test]"
+                      name="sending_test"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output].Columns[sent_test]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[sent_test]"
+                      lineageId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output].Columns[sent_test]"
+                      name="sent_test"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output].Columns[SendDTS_Pacific]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SendDTS_Pacific]"
+                      length="100"
+                      lineageId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output].Columns[SendDTS_Pacific]"
+                      name="SendDTS_Pacific"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output].Columns[SendDTS_UTC]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SendDTS_UTC]"
+                      lineageId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output].Columns[SendDTS_UTC]"
+                      name="SendDTS_UTC"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[pk]"
+                      dataType="i4"
+                      name="pk" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[sending]"
+                      dataType="bool"
+                      name="sending" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[sent]"
+                      dataType="bool"
+                      name="sent" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[xml_data]"
+                      codePage="1252"
+                      dataType="text"
+                      name="xml_data" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[crc]"
+                      dataType="i4"
+                      name="crc" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[sending_test]"
+                      dataType="bool"
+                      name="sending_test" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[sent_test]"
+                      dataType="bool"
+                      name="sent_test" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SendDTS_Pacific]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="SendDTS_Pacific" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SendDTS_UTC]"
+                      dataType="dbTimeStamp"
+                      name="SendDTS_UTC" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[pk]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[pk]"
+                      name="pk" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[sending]"
+                      dataType="bool"
+                      lineageId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[sending]"
+                      name="sending" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[sent]"
+                      dataType="bool"
+                      lineageId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[sent]"
+                      name="sent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[xml_data]"
+                      codePage="1252"
+                      dataType="text"
+                      lineageId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[xml_data]"
+                      name="xml_data" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[crc]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[crc]"
+                      name="crc" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[sending_test]"
+                      dataType="bool"
+                      lineageId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[sending_test]"
+                      name="sending_test" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[sent_test]"
+                      dataType="bool"
+                      lineageId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[sent_test]"
+                      name="sent_test" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SendDTS_Pacific]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SendDTS_Pacific]"
+                      name="SendDTS_Pacific" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SendDTS_UTC]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SendDTS_UTC]"
+                      name="SendDTS_UTC" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task - Create row and push to table\Script Component"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;12"
+              description="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum."
+              name="Script Component"
+              version="12">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Stores the source code of the component"
+                  isArray="true"
+                  name="SourceCode"
+                  state="cdata">
+                  <arrayElements
+                    arrayElementCount="30">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[ComponentWrapper.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+*  Microsoft SQL Server Integration Services component wrapper
+*  This module defines the base class for your component
+*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
+
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+using Microsoft.SqlServer.Dts.Runtime.Wrapper;
+
+public class UserComponent: ScriptComponent
+{
+    public Connections Connections;
+    public Variables Variables;
+    public UserComponent()
+    {
+        Connections = new Connections(this);
+        Variables = new Variables(this);
+    }
+
+    public Output0Buffer Output0Buffer;
+
+    public virtual void FinishOutputs()
+    {
+    }
+
+    private void MarkOutputsFinished()
+    {
+
+        if (null != Output0Buffer)
+        {
+            Output0Buffer.SetEndOfRowset();
+            Output0Buffer = null;
+        }
+
+    }
+
+    public override void PrimeOutput(int Outputs, int[] OutputIDs, PipelineBuffer[] Buffers, OutputNameMap OutputMap)
+    {
+       for(int Idx = 0; Idx < Outputs; Idx++)
+       {
+            if(OutputIDs[Idx] == GetOutputID(OutputMap, @"Output 0"))
+            {
+                Output0Buffer = new Output0Buffer(Buffers[Idx], GetColumnIndexes(OutputIDs[Idx]), OutputMap);
+            }
+        }
+
+        CreateNewOutputRows();
+
+        FinishOutputs();
+        MarkOutputsFinished();
+
+    }
+
+    public virtual void CreateNewOutputRows()
+    {
+    }
+
+}
+
+public class Connections
+{
+    ScriptComponent ParentComponent;
+
+    public Connections(ScriptComponent Component)
+    {
+        ParentComponent = Component;
+    }
+
+}
+
+public class Variables
+{
+    ScriptComponent ParentComponent;
+
+    public Variables(ScriptComponent Component)
+    {
+        ParentComponent = Component;
+    }
+
+    public String VarJSON
+    {
+        get
+        {
+            return (String)(ParentComponent.ReadOnlyVariables["VarJSON"].GetValueWithContext(ScriptComponent.EvaluatorContext));
+        }
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Resources.resx]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+</root>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[main.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[#region Help:  Introduction to the Script Component
+/* The Script Component allows you to perform virtually any operation that can be accomplished in
+ * a .Net application within the context of an Integration Services data flow.
+ *
+ * Expand the other regions which have "Help" prefixes for examples of specific ways to use
+ * Integration Services features within this script component. */
+#endregion
+
+#region Namespaces
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+using Microsoft.SqlServer.Dts.Runtime.Wrapper;
+#endregion
+
+/// <summary>
+/// This is the class to which to add your code.  Do not change the name, attributes, or parent
+/// of this class.
+/// </summary>
+[Microsoft.SqlServer.Dts.Pipeline.SSISScriptComponentEntryPointAttribute]
+public class ScriptMain : UserComponent
+{
+    #region Help:  Using Integration Services variables and parameters
+    /* To use a variable in this script, first ensure that the variable has been added to
+     * either the list contained in the ReadOnlyVariables property or the list contained in
+     * the ReadWriteVariables property of this script component, according to whether or not your
+     * code needs to write into the variable.  To do so, save this script, close this instance of
+     * Visual Studio, and update the ReadOnlyVariables and ReadWriteVariables properties in the
+     * Script Transformation Editor window.
+     * To use a parameter in this script, follow the same steps. Parameters are always read-only.
+     *
+     * Example of reading from a variable or parameter:
+     *  DateTime startTime = Variables.MyStartTime;
+     *
+     * Example of writing to a variable:
+     *  Variables.myStringVariable = "new value";
+     */
+    #endregion
+
+    #region Help:  Using Integration Services Connnection Managers
+    /* Some types of connection managers can be used in this script component.  See the help topic
+     * "Working with Connection Managers Programatically" for details.
+     *
+     * To use a connection manager in this script, first ensure that the connection manager has
+     * been added to either the list of connection managers on the Connection Managers page of the
+     * script component editor.  To add the connection manager, save this script, close this instance of
+     * Visual Studio, and add the Connection Manager to the list.
+     *
+     * If the component needs to hold a connection open while processing rows, override the
+     * AcquireConnections and ReleaseConnections methods.
+     * 
+     * Example of using an ADO.Net connection manager to acquire a SqlConnection:
+     *  object rawConnection = Connections.SalesDB.AcquireConnection(transaction);
+     *  SqlConnection salesDBConn = (SqlConnection)rawConnection;
+     *
+     * Example of using a File connection manager to acquire a file path:
+     *  object rawConnection = Connections.Prices_zip.AcquireConnection(transaction);
+     *  string filePath = (string)rawConnection;
+     *
+     * Example of releasing a connection manager:
+     *  Connections.SalesDB.ReleaseConnection(rawConnection);
+     */
+    #endregion
+
+    #region Help:  Firing Integration Services Events
+    /* This script component can fire events.
+     *
+     * Example of firing an error event:
+     *  ComponentMetaData.FireError(10, "Process Values", "Bad value", "", 0, out cancel);
+     *
+     * Example of firing an information event:
+     *  ComponentMetaData.FireInformation(10, "Process Values", "Processing has started", "", 0, fireAgain);
+     *
+     * Example of firing a warning event:
+     *  ComponentMetaData.FireWarning(10, "Process Values", "No rows were received", "", 0);
+     */
+    #endregion
+
+    /// <summary>
+    /// This method is called once, before rows begin to be processed in the data flow.
+    ///
+    /// You can remove this method if you don't need to do anything here.
+    /// </summary>
+    public override void PreExecute()
+    {
+        base.PreExecute();
+        /*
+         * Add your code here
+         */
+    }
+
+    /// <summary>
+    /// This method is called after all the rows have passed through this component.
+    ///
+    /// You can delete this method if you don't need to do anything here.
+    /// </summary>
+    public override void PostExecute()
+    {
+        base.PostExecute();
+        /*
+         * Add your code here
+         */
+    }
+
+    public override void CreateNewOutputRows()
+    {
+        /*
+          Add rows by calling the AddRow method on the member variable named "<Output Name>Buffer".
+          For example, call MyOutputBuffer.AddRow() if your output was named "MyOutput".
+        */
+
+        Output0Buffer.AddRow();
+        Output0Buffer.JSON = Variables.VarJSON;
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[BufferWrapper.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+*  Microsoft SQL Server Integration Services buffer wrappers
+*  This module defines classes for accessing data flow buffers
+*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
+
+
+
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+
+public class Output0Buffer: ScriptBuffer
+
+{
+    public Output0Buffer(PipelineBuffer Buffer, int[] BufferColumnIndexes, OutputNameMap OutputMap)
+        : base(Buffer, BufferColumnIndexes, OutputMap)
+    {
+    }
+
+    public String JSON
+    {
+        set
+        {
+            this[0] = value;
+        }
+    }
+    public bool JSON_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(0);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    new public void AddRow()
+    {
+        base.AddRow();
+    }
+
+    new public void SetEndOfRowset()
+    {
+        base.SetEndOfRowset();
+    }
+
+    new public bool EndOfRowset()
+    {
+        return base.EndOfRowset();
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_24703a577a0844378bb85d49b26cd535.csproj]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{154DCB33-ED71-4EF8-8E88-8B6B3048D712}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SC_24703a577a0844378bb85d49b26cd535</RootNamespace>
+    <AssemblyName>SC_24703a577a0844378bb85d49b26cd535</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.SqlServer.TxScript, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSRuntimeWrap, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSPipelineWrap, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.PipelineHost, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Compile Include="main.cs" />
+    <Compile Include="BufferWrapper.cs" />
+    <Compile Include="ComponentWrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <!-- Include the build rules for a C# project.-->
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- This section defines VSTA properties that describe the host-changable project properties. -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
+        <ProjectProperties HostName="VSTAHostName" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" />
+        <Host Name="ScriptComponent" IconIndex="0" />
+        <ProjectClient>
+          <HostIdentifier>SSIS_SC150</HostIdentifier>
+        </ProjectClient>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Settings.Designer.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_24703a577a0844378bb85d49b26cd535.Properties.Settings.get_Default():SC_24703a577a0844378bb85d49b26cd535.Properties.Sett" +
+    "ings")]
+
+namespace SC_24703a577a0844378bb85d49b26cd535.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Project]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF16LE]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="3.0" schemaVersion="1.0">
+  <msb:PropertyGroup>
+    <msb:Language>msBuild</msb:Language>
+    <msb:CodeName>SC_24703a577a0844378bb85d49b26cd535</msb:CodeName>
+    <msb:DisplayName>SC_24703a577a0844378bb85d49b26cd535</msb:DisplayName>
+    <msb:ProjectId>{13237E52-778E-4D02-BF13-E3C35721A0D8}</msb:ProjectId>
+  </msb:PropertyGroup>
+  <msb:ItemGroup>
+    <msb:Project Include="SC_24703a577a0844378bb85d49b26cd535.csproj" />
+    <msb:File Include="Properties\Settings.settings" />
+    <msb:File Include="Properties\AssemblyInfo.cs" />
+    <msb:File Include="Properties\Resources.resx" />
+    <msb:File Include="Properties\Resources.Designer.cs" />
+    <msb:File Include="main.cs" />
+    <msb:File Include="BufferWrapper.cs" />
+    <msb:File Include="Properties\Settings.Designer.cs" />
+    <msb:File Include="ComponentWrapper.cs" />
+  </msb:ItemGroup>
+</c:Project>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\AssemblyInfo.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("SC_24703a577a0844378bb85d49b26cd535")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("SC_24703a577a0844378bb85d49b26cd535")]
+[assembly: AssemblyCopyright("Copyright @  2021")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.0.0")]
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Settings.settings]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Resources.Designer.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_24703a577a0844378bb85d49b26cd535.Properties.Resources.get_ResourceManager():System.Resources.Resou" +
+    "rceManager")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_24703a577a0844378bb85d49b26cd535.Properties.Resources.get_Culture():System.Globalization.CultureIn" +
+    "fo")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_24703a577a0844378bb85d49b26cd535.Properties.Resources.set_Culture(System.Globalization.CultureInfo" +
+    "):Void")]
+
+namespace SC_24703a577a0844378bb85d49b26cd535.Properties {
+    
+    
+    /// <summary>
+    ///   A strongly-typed resource class, for looking up localized strings, etc.
+    /// </summary>
+    // This class was auto-generated by the StronglyTypedResourceBuilder
+    // class via a tool like ResGen or Visual Studio.
+    // To add or remove a member, edit your .ResX file then rerun ResGen
+    // with the /str option, or rebuild your VS project.
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    internal class Resources {
+        
+        private static global::System.Resources.ResourceManager resourceMan;
+        
+        private static global::System.Globalization.CultureInfo resourceCulture;
+        
+        [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
+        internal Resources() {
+        }
+        
+        /// <summary>
+        ///   Returns the cached ResourceManager instance used by this class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if ((resourceMan == null)) {
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SC_24703a577a0844378bb85d49b26cd535.Properties.Resources", typeof(Resources).Assembly);
+                    resourceMan = temp;
+                }
+                return resourceMan;
+            }
+        }
+        
+        /// <summary>
+        ///   Overrides the current thread's CurrentUICulture property for all
+        ///   resource lookups using this strongly typed resource class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
+                return resourceCulture;
+            }
+            set {
+                resourceCulture = value;
+            }
+        }
+    }
+}
+]]></arrayElement>
+                  </arrayElements>
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Stores the binary representation of the component"
+                  isArray="true"
+                  name="BinaryCode"
+                  state="cdata">
+                  <arrayElements
+                    arrayElementCount="2">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_24703a577a0844378bb85d49b26cd535.dll]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDALrLzmAAAAAAAAAAAOAAIiALATAAABQAAAAIAAAAAAAAAjMA
+AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAALAyAABPAAAAAEAAAEgEAAAAAAAAAAAAAAAAAAAA
+AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAACBMAAAAgAAAAFAAAAAIA
+AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAEgEAAAAQAAAAAYAAAAWAAAAAAAAAAAAAAAAAABAAABA
+LnJlbG9jAAAMAAAAAGAAAAACAAAAHAAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAADk
+MgAAAAAAAEgAAAACAAUACCIAAPAPAAABAAAAAAAAAPgxAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4CKBAAAAoqHgIoEQAACiqKAnsDAAAEbwgAAAYCewMAAAQC
+ewIAAARvEgAABm8GAAAGKh4CKAsAAAYqKgIDBAUoEgAACiomAhYDKBMAAAoqWgMsCAIWKBQAAAoq
+cgEAAHBzFQAACnoeAigWAAAKKh4CKBcAAAoqHgIoGAAACip+AigZAAAKAgJzEAAABn0BAAAEAgJz
+EQAABn0CAAAEKgYqbgJ7AwAABCwSAnsDAAAEbwkAAAYCFH0DAAAEKgAAABMwBQBJAAAAAQAAERYK
+Ky4EBpQOBHKeAABwKBoAAAozGQIFBpoCBAaUKBsAAAoOBHMFAAAGfQMAAAQGF1gKBgMyzgJvDwAA
+BgJvDAAABgIoDQAABio6AigcAAAKAgN9BAAABCo6AigcAAAKAgN9BQAABCqWAnsFAAAEbx0AAApy
+sAAAcG8eAAAKKB8AAApvIAAACnQfAAABKh4CKBwAAAoqrn4GAAAELR5ywAAAcNAHAAACKCEAAApv
+IgAACnMjAAAKgAYAAAR+BgAABCoafgcAAAQqHgKABwAABCoafggAAAQqHgIoJAAACioucxgAAAaA
+CAAABCoAQlNKQgEAAQAAAAAADAAAAHY0LjAuMzAzMTkAAAAABQBsAAAAkAUAACN+AAD8BQAABAcA
+ACNTdHJpbmdzAAAAAAANAAA0AQAAI1VTADQOAAAQAAAAI0dVSUQAAABEDgAArAEAACNCbG9iAAAA
+AAAAAAIAAAFXFaIBCQEAAAD6ATMAFgAAAQAAACIAAAAIAAAACAAAABkAAAAMAAAAJAAAABAAAAAB
+AAAABAAAAAYAAAAHAAAAAQAAAAUAAAABAAAAAABGAwEAAAAAAAYAQALjBAYA1ALjBAYAjAHQBA8A
+VwUAAAYAuQHgAwYAIwLgAwYABALgAwYAuwLgAwYAYALgAwYAeQLgAwYA0AHgAwYA6wEPAwoAlALZ
+AAoAcATZAA4AYQTZAAoAGATZAAoATwbZAAYADwaYAwYAbwHQBAYAgQQDBQYADATLAxIAPwEwAxIA
+oAEwAxIAJwG2AwYAVAHjBAYA8gOYAxYAEQCRBBYAAQCRBEcAvQYAABYAIgCRBAYAKQOYAwYA+gCY
+AwYAtQCYAwYA+AbgAwAAAABeAAAAAAABAAEAAQAQAKsDAAAQAAEAAQABABAAUwQAADkAAQAFAAEA
+EAAxBgAARQABAAsAAQAQANkFAABJAAQAEAABABAAoQUAAEkABQARAAAAEAAKBWYFSQAGABMAAAEQ
+ANAFZgVhAAgAFwAGANkFfwAGAKEFgwAGAFMEhwABAD8GiwABAD8GiwARAJ8DjwARABcBkwARAKUA
+lwBQIAAAAADGAPICBgABAFggAAAAAMYA/QIGAAEAYCAAAAAAxgD7BQYAAQCDIAAAAACGGLkEBgAB
+AIsgAAAAAIYYuQQbAAEAliAAAAAAhghzABAABACgIAAAAACGCG4DmwAFALcgAAAAAIYA7QYGAAYA
+vyAAAAAAhgAWBgYABgDHIAAAAACGABkGKwAGAM8gAAAAAIYYuQQGAAYA7yAAAAAAxgHtBQYABgDx
+IAAAAACBAJEABgAGABAhAAAAAMYAnQagAAYA7yAAAAAAxgH7BQYACgBlIQAAAACGGLkErAAKAHQh
+AAAAAIYYuQSsAAsAgyEAAAAAhgh8ALIADACpIQAAAACDGLkEBgAMALEhAAAAAJMIfQS2AAwA3SEA
+AAAAkwj/ALsADADkIQAAAACTCAsBwAAMAOwhAAAAAJYIJQbGAA0A8yEAAAAAhhi5BAYADQD7IQAA
+AACRGL8EywANAAAAAQB2BAAAAgCrBQAAAwAmBAAAAQAJAwAAAQAJAwAAAQDzBQAAAgDGBAAAAwDl
+BQAABAAmBAAAAQBVBgAAAQBVBgAAAQAJAwkAuQQBABEAuQQGABkAuQQKACkAuQQQADEAuQQQADkA
+uQQQAEEAuQQQAEkAuQQQAFEAuQQQAFkAuQQQAGEAuQQQAGkAuQQGAJkAuQQGALkAuQQVAMkAuQQG
+AIkA8gIGAIkA/QIGAHEAuQQbAHEAjwMlAHEAfgMBANEAuQQQAHEA7QYGAHEAFgYGAHEAGQYrAIkA
+uQQGAIkAZwAzAIkAvwU6AJEAuQQGAIkAlQVAANkAhgNFAIkA2AZLAOEAqQZQAAEBxwBWAAEB9AZf
+AKEAuQRlAMEAuQQGAC4ACwDmAC4AEwDvAC4AGwAOAS4AIwAXAS4AKwBAAS4AMwBAAS4AOwBAAS4A
+QwAXAS4ASwBGAS4AUwBAAS4AWwBdAUMAYwCnAYkAcwAOAakAcwAOAeMAawCnAQEBewCnAS8AAwAB
+AAYAAwAHAAQACAAGAAAAgwDPAAAAcgPTAAAAgADPAAAAgQTXAAAAHwHcAAAAKQbhAAEABgADAAEA
+BwAFAAIAEgAHAAIAFAAJAAIAFQALAAEAFgALAAIAFwANAASAAAABAAAAAAAAAAAAAAAAADoAAAAE
+AAAAAAAAAAAAAABtAIgAAAAAAA8AAAAAAAAAAAAAAHYAXwYAAAAADwAAAAAAAAAAAAAAdgB8BgAA
+AAAEAAAAAAAAAAAAAABtAJgDAAAAAA8AAAAAAAAAAAAAAHYAMAQAAAAAAAAAAAEAAAAUBQAAAAAA
+SURUU1ZhcmlhYmxlMTAwAElEVFNWYXJpYWJsZXMxMDAASURUU0V2YWx1YXRvckNvbnRleHQxMDAA
+U0NfMjQ3MDNhNTc3YTA4NDQzNzhiYjg1ZDQ5YjI2Y2Q1MzUAPE1vZHVsZT4AR2V0T3V0cHV0SUQA
+c2V0X0pTT04AZ2V0X1ZhckpTT04AbXNjb3JsaWIATWFya091dHB1dHNGaW5pc2hlZABkZWZhdWx0
+SW5zdGFuY2UAUnVudGltZVR5cGVIYW5kbGUAR2V0VHlwZUZyb21IYW5kbGUATWljcm9zb2Z0LlNx
+bFNlcnZlci5EdHMuUGlwZWxpbmUAVHlwZQBnZXRfQ3VsdHVyZQBzZXRfQ3VsdHVyZQByZXNvdXJj
+ZUN1bHR1cmUAQXBwbGljYXRpb25TZXR0aW5nc0Jhc2UARWRpdG9yQnJvd3NhYmxlU3RhdGUAQ29t
+cGlsZXJHZW5lcmF0ZWRBdHRyaWJ1dGUARGVidWdnZXJOb25Vc2VyQ29kZUF0dHJpYnV0ZQBEZWJ1
+Z2dhYmxlQXR0cmlidXRlAEVkaXRvckJyb3dzYWJsZUF0dHJpYnV0ZQBBc3NlbWJseVRpdGxlQXR0
+cmlidXRlAEFzc2VtYmx5VHJhZGVtYXJrQXR0cmlidXRlAFRhcmdldEZyYW1ld29ya0F0dHJpYnV0
+ZQBBc3NlbWJseUNvbmZpZ3VyYXRpb25BdHRyaWJ1dGUAQXNzZW1ibHlEZXNjcmlwdGlvbkF0dHJp
+YnV0ZQBDb21waWxhdGlvblJlbGF4YXRpb25zQXR0cmlidXRlAEFzc2VtYmx5UHJvZHVjdEF0dHJp
+YnV0ZQBBc3NlbWJseUNvcHlyaWdodEF0dHJpYnV0ZQBTU0lTU2NyaXB0Q29tcG9uZW50RW50cnlQ
+b2ludEF0dHJpYnV0ZQBBc3NlbWJseUNvbXBhbnlBdHRyaWJ1dGUAUnVudGltZUNvbXBhdGliaWxp
+dHlBdHRyaWJ1dGUAUHJlRXhlY3V0ZQBQb3N0RXhlY3V0ZQB2YWx1ZQBTeXN0ZW0uUnVudGltZS5W
+ZXJzaW9uaW5nAFN0cmluZwBTeXN0ZW0uQ29tcG9uZW50TW9kZWwAU0NfMjQ3MDNhNTc3YTA4NDQz
+NzhiYjg1ZDQ5YjI2Y2Q1MzUuZGxsAHNldF9KU09OX0lzTnVsbABTZXROdWxsAGdldF9JdGVtAHNl
+dF9JdGVtAFN5c3RlbQByZXNvdXJjZU1hbgBTY3JpcHRNYWluAFN5c3RlbS5Db25maWd1cmF0aW9u
+AFN5c3RlbS5HbG9iYWxpemF0aW9uAFN5c3RlbS5SZWZsZWN0aW9uAEludmFsaWRPcGVyYXRpb25F
+eGNlcHRpb24AQ3VsdHVyZUluZm8AT3V0cHV0TmFtZU1hcABPdXRwdXRNYXAATWljcm9zb2Z0LlNx
+bFNlcnZlci5EVFNSdW50aW1lV3JhcABPdXRwdXQwQnVmZmVyAFBpcGVsaW5lQnVmZmVyAFNjcmlw
+dEJ1ZmZlcgBnZXRfUmVzb3VyY2VNYW5hZ2VyAE1pY3Jvc29mdC5TcWxTZXJ2ZXIuRHRzLlJ1bnRp
+bWUuV3JhcHBlcgAuY3RvcgAuY2N0b3IAT3V0cHV0SURzAFN5c3RlbS5EaWFnbm9zdGljcwBTeXN0
+ZW0uUnVudGltZS5Db21waWxlclNlcnZpY2VzAFN5c3RlbS5SZXNvdXJjZXMAU0NfMjQ3MDNhNTc3
+YTA4NDQzNzhiYjg1ZDQ5YjI2Y2Q1MzUuUHJvcGVydGllcy5SZXNvdXJjZXMucmVzb3VyY2VzAERl
+YnVnZ2luZ01vZGVzAFNDXzI0NzAzYTU3N2EwODQ0Mzc4YmI4NWQ0OWIyNmNkNTM1LlByb3BlcnRp
+ZXMAZ2V0X1JlYWRPbmx5VmFyaWFibGVzAEJ1ZmZlckNvbHVtbkluZGV4ZXMAR2V0Q29sdW1uSW5k
+ZXhlcwBTZXR0aW5ncwBDb25uZWN0aW9ucwBCdWZmZXJzAEZpbmlzaE91dHB1dHMAQ3JlYXRlTmV3
+T3V0cHV0Um93cwBPYmplY3QAU2V0RW5kT2ZSb3dzZXQAZ2V0X0RlZmF1bHQAVXNlckNvbXBvbmVu
+dABQYXJlbnRDb21wb25lbnQAU2NyaXB0Q29tcG9uZW50AE1pY3Jvc29mdC5TcWxTZXJ2ZXIuVHhT
+Y3JpcHQATWljcm9zb2Z0LlNxbFNlcnZlci5QaXBlbGluZUhvc3QAUHJpbWVPdXRwdXQAR2V0VmFs
+dWVXaXRoQ29udGV4dABTY3JpcHRDb21wb25lbnRFdmFsQ29udGV4dABnZXRfRXZhbHVhdG9yQ29u
+dGV4dABBZGRSb3cAZ2V0X0Fzc2VtYmx5AAAAAACAm0kAcwBOAHUAbABsACAAcAByAG8AcABlAHIA
+dAB5ACAAYwBhAG4AbgBvAHQAIABiAGUAIABzAGUAdAAgAHQAbwAgAEYAYQBsAHMAZQAuACAAQQBz
+AHMAaQBnAG4AIABhACAAdgBhAGwAdQBlACAAdABvACAAdABoAGUAIABjAG8AbAB1AG0AbgAgAGkA
+bgBzAHQAZQBhAGQALgAAEU8AdQB0AHAAdQB0ACAAMAAAD1YAYQByAEoAUwBPAE4AAHFTAEMAXwAy
+ADQANwAwADMAYQA1ADcANwBhADAAOAA0ADQAMwA3ADgAYgBiADgANQBkADQAOQBiADIANgBjAGQA
+NQAzADUALgBQAHIAbwBwAGUAcgB0AGkAZQBzAC4AUgBlAHMAbwB1AHIAYwBlAHMAAAAAI/NPRrHX
+JkeV8lFd7t8bGgAEIAEBCAMgAAEFIAEBEREEIAEBDgUgAQERWQkgAwESPR0IEkEFIAIBCBwDIAAC
+AwcBCAYAAggSQQ4FIAEdCAgEIAASbQUgARJxHAQAABJ1BSABHBJ5CAABEoCBEYCFBSAAEoCJByAC
+AQ4SgIkIt3pcVhk04IkIiYRdzYCAzJEDBhIUAwYSGAMGEgwDBhJFAwYSUQMGElUDBhIgBCABAQIL
+IAQBCB0IHRI9EkEFIAEBEkUDIAAOBAAAElEEAAASVQUAAQESVQQAABIgAwAAAQMoAA4DKAACBAgA
+ElEECAASVQQIABIgCAEACAAAAAAAHgEAAQBUAhZXcmFwTm9uRXhjZXB0aW9uVGhyb3dzAQgBAAIA
+AAAAACgBACNTQ18yNDcwM2E1NzdhMDg0NDM3OGJiODVkNDliMjZjZDUzNQAABQEAAAAAFgEAEUNv
+cHlyaWdodCBAICAyMDIxAABJAQAaLk5FVEZyYW1ld29yayxWZXJzaW9uPXY0LjcBAFQOFEZyYW1l
+d29ya0Rpc3BsYXlOYW1lEi5ORVQgRnJhbWV3b3JrIDQuNwQBAAAAtAAAAM7K774BAAAAkQAAAGxT
+eXN0ZW0uUmVzb3VyY2VzLlJlc291cmNlUmVhZGVyLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4w
+LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkjU3lzdGVt
+LlJlc291cmNlcy5SdW50aW1lUmVzb3VyY2VTZXQCAAAAAAAAAAAAAABQQURQQURQtAAAANgyAAAA
+AAAAAAAAAPIyAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAADkMgAAAAAAAAAAAAAAAF9Db3JEbGxN
+YWluAG1zY29yZWUuZGxsAAAAAAD/JQAgABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAQAQAAAAGAAAgAAAAAAAAAAAAAAAAAAAAQABAAAAMAAAgAAAAAAAAAAAAAAAAAAAAQAAAAAA
+SAAAAFhAAADsAwAAAAAAAAAAAADsAzQAAABWAFMAXwBWAEUAUgBTAEkATwBOAF8ASQBOAEYATwAA
+AAAAvQTv/gAAAQAAAAEAAAAAAAAAAQAAAAAAPwAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAAEQA
+AAABAFYAYQByAEYAaQBsAGUASQBuAGYAbwAAAAAAJAAEAAAAVAByAGEAbgBzAGwAYQB0AGkAbwBu
+AAAAAAAAALAETAMAAAEAUwB0AHIAaQBuAGcARgBpAGwAZQBJAG4AZgBvAAAAKAMAAAEAMAAwADAA
+MAAwADQAYgAwAAAAGgABAAEAQwBvAG0AbQBlAG4AdABzAAAAAAAAACIAAQABAEMAbwBtAHAAYQBu
+AHkATgBhAG0AZQAAAAAAAAAAAHAAJAABAEYAaQBsAGUARABlAHMAYwByAGkAcAB0AGkAbwBuAAAA
+AABTAEMAXwAyADQANwAwADMAYQA1ADcANwBhADAAOAA0ADQAMwA3ADgAYgBiADgANQBkADQAOQBi
+ADIANgBjAGQANQAzADUAAAAwAAgAAQBGAGkAbABlAFYAZQByAHMAaQBvAG4AAAAAADEALgAwAC4A
+MAAuADAAAABwACgAAQBJAG4AdABlAHIAbgBhAGwATgBhAG0AZQAAAFMAQwBfADIANAA3ADAAMwBh
+ADUANwA3AGEAMAA4ADQANAAzADcAOABiAGIAOAA1AGQANAA5AGIAMgA2AGMAZAA1ADMANQAuAGQA
+bABsAAAASAASAAEATABlAGcAYQBsAEMAbwBwAHkAcgBpAGcAaAB0AAAAQwBvAHAAeQByAGkAZwBo
+AHQAIABAACAAIAAyADAAMgAxAAAAKgABAAEATABlAGcAYQBsAFQAcgBhAGQAZQBtAGEAcgBrAHMA
+AAAAAAAAAAB4ACgAAQBPAHIAaQBnAGkAbgBhAGwARgBpAGwAZQBuAGEAbQBlAAAAUwBDAF8AMgA0
+ADcAMAAzAGEANQA3ADcAYQAwADgANAA0ADMANwA4AGIAYgA4ADUAZAA0ADkAYgAyADYAYwBkADUA
+MwA1AC4AZABsAGwAAABoACQAAQBQAHIAbwBkAHUAYwB0AE4AYQBtAGUAAAAAAFMAQwBfADIANAA3
+ADAAMwBhADUANwA3AGEAMAA4ADQANAAzADcAOABiAGIAOAA1AGQANAA5AGIAMgA2AGMAZAA1ADMA
+NQAAADQACAABAFAAcgBvAGQAdQBjAHQAVgBlAHIAcwBpAG8AbgAAADEALgAwAC4AMAAuADAAAAA4
+AAgAAQBBAHMAcwBlAG0AYgBsAHkAIABWAGUAcgBzAGkAbwBuAAAAMQAuADAALgAwAC4AMAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAMAAAABDMAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
+                  </arrayElements>
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the Microsoft Visual Studio Tools for Applications project. Project names must be unique within a package."
+                  name="VSTAProjectName"
+                  typeConverter="NOTBROWSABLE">SC_24703a577a0844378bb85d49b26cd535</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the programming language used by the script."
+                  name="ScriptLanguage"
+                  typeConverter="Microsoft.SqlServer.VSTAHosting.ScriptingLanguages">CSharp</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a comma-separated list of read-only variables."
+                  name="ReadOnlyVariables"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIVariablePickerDlg">User::VarJSON</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a comma-separated list of read/write variables."
+                  name="ReadWriteVariables"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIWriteableVariablePickerDlg"></property>
+                <property
+                  dataType="System.String"
+                  description="List of breakpoints present on the script."
+                  isArray="true"
+                  name="BreakpointCollection"
+                  typeConverter="NOTBROWSABLE">
+                  <arrayElements
+                    arrayElementCount="0" />
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Checksum to match component metedata against compiled codes."
+                  name="MetadataChecksum140"
+                  typeConverter="NOTBROWSABLE">8E</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ScriptComponentHost</property>
+              </properties>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task - Create row and push to table\Script Component.Outputs[Output 0]"
+                  hasSideEffects="true"
+                  name="Output 0">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\Script Component.Outputs[Output 0].Columns[JSON]"
+                      codePage="1252"
+                      dataType="str"
+                      length="7000"
+                      lineageId="Package\Data Flow Task - Create row and push to table\Script Component.Outputs[Output 0].Columns[JSON]"
+                      name="JSON" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task - Create row and push to table\Sort"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task - Create row and push to table\Sort.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\Sort.Inputs[Sort Input].Columns[JSON]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="7000"
+                      cachedName="JSON"
+                      lineageId="Package\Data Flow Task - Create row and push to table\Script Component.Outputs[Output 0].Columns[JSON]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\Sort.Inputs[Sort Input].Columns[sort_key]"
+                      cachedDataType="i4"
+                      cachedName="sort_key"
+                      lineageId="Package\Data Flow Task - Create row and push to table\Derived Column.Outputs[Derived Column Output].Columns[sort_key]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task - Create row and push to table\Sort.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\Sort.Outputs[Sort Output].Columns[JSON]"
+                      codePage="1252"
+                      dataType="str"
+                      length="7000"
+                      lineageId="Package\Data Flow Task - Create row and push to table\Sort.Outputs[Sort Output].Columns[JSON]"
+                      name="JSON">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task - Create row and push to table\Script Component.Outputs[Output 0].Columns[JSON]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\Sort.Outputs[Sort Output].Columns[sort_key]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Create row and push to table\Sort.Outputs[Sort Output].Columns[sort_key]"
+                      name="sort_key"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task - Create row and push to table\Derived Column.Outputs[Derived Column Output].Columns[sort_key]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task - Create row and push to table\Sort 1"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort 1"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task - Create row and push to table\Sort 1.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\Sort 1.Inputs[Sort Input].Columns[pk]"
+                      cachedDataType="i4"
+                      cachedName="pk"
+                      lineageId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output].Columns[pk]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\Sort 1.Inputs[Sort Input].Columns[sending]"
+                      cachedDataType="bool"
+                      cachedName="sending"
+                      lineageId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output].Columns[sending]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\Sort 1.Inputs[Sort Input].Columns[sent]"
+                      cachedDataType="bool"
+                      cachedName="sent"
+                      lineageId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output].Columns[sent]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\Sort 1.Inputs[Sort Input].Columns[xml_data]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="xml_data"
+                      lineageId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output].Columns[xml_data]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\Sort 1.Inputs[Sort Input].Columns[crc]"
+                      cachedDataType="i4"
+                      cachedName="crc"
+                      lineageId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output].Columns[crc]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\Sort 1.Inputs[Sort Input].Columns[sending_test]"
+                      cachedDataType="bool"
+                      cachedName="sending_test"
+                      lineageId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output].Columns[sending_test]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\Sort 1.Inputs[Sort Input].Columns[sent_test]"
+                      cachedDataType="bool"
+                      cachedName="sent_test"
+                      lineageId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output].Columns[sent_test]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\Sort 1.Inputs[Sort Input].Columns[SendDTS_Pacific]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
+                      cachedName="SendDTS_Pacific"
+                      lineageId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output].Columns[SendDTS_Pacific]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\Sort 1.Inputs[Sort Input].Columns[SendDTS_UTC]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="SendDTS_UTC"
+                      lineageId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output].Columns[SendDTS_UTC]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\Sort 1.Inputs[Sort Input].Columns[sort_key]"
+                      cachedDataType="i4"
+                      cachedName="sort_key"
+                      lineageId="Package\Data Flow Task - Create row and push to table\Derived Column 1.Outputs[Derived Column Output].Columns[sort_key]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task - Create row and push to table\Sort 1.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\Sort 1.Outputs[Sort Output].Columns[pk]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Create row and push to table\Sort 1.Outputs[Sort Output].Columns[pk]"
+                      name="pk">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output].Columns[pk]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\Sort 1.Outputs[Sort Output].Columns[sending]"
+                      dataType="bool"
+                      lineageId="Package\Data Flow Task - Create row and push to table\Sort 1.Outputs[Sort Output].Columns[sending]"
+                      name="sending">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output].Columns[sending]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\Sort 1.Outputs[Sort Output].Columns[sent]"
+                      dataType="bool"
+                      lineageId="Package\Data Flow Task - Create row and push to table\Sort 1.Outputs[Sort Output].Columns[sent]"
+                      name="sent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output].Columns[sent]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\Sort 1.Outputs[Sort Output].Columns[xml_data]"
+                      codePage="1252"
+                      dataType="text"
+                      lineageId="Package\Data Flow Task - Create row and push to table\Sort 1.Outputs[Sort Output].Columns[xml_data]"
+                      name="xml_data">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output].Columns[xml_data]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\Sort 1.Outputs[Sort Output].Columns[crc]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Create row and push to table\Sort 1.Outputs[Sort Output].Columns[crc]"
+                      name="crc">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output].Columns[crc]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\Sort 1.Outputs[Sort Output].Columns[sending_test]"
+                      dataType="bool"
+                      lineageId="Package\Data Flow Task - Create row and push to table\Sort 1.Outputs[Sort Output].Columns[sending_test]"
+                      name="sending_test">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output].Columns[sending_test]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\Sort 1.Outputs[Sort Output].Columns[sent_test]"
+                      dataType="bool"
+                      lineageId="Package\Data Flow Task - Create row and push to table\Sort 1.Outputs[Sort Output].Columns[sent_test]"
+                      name="sent_test">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output].Columns[sent_test]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\Sort 1.Outputs[Sort Output].Columns[SendDTS_Pacific]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      lineageId="Package\Data Flow Task - Create row and push to table\Sort 1.Outputs[Sort Output].Columns[SendDTS_Pacific]"
+                      name="SendDTS_Pacific">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output].Columns[SendDTS_Pacific]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\Sort 1.Outputs[Sort Output].Columns[SendDTS_UTC]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Task - Create row and push to table\Sort 1.Outputs[Sort Output].Columns[SendDTS_UTC]"
+                      name="SendDTS_UTC">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output].Columns[SendDTS_UTC]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task - Create row and push to table\Sort 1.Outputs[Sort Output].Columns[sort_key]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task - Create row and push to table\Sort 1.Outputs[Sort Output].Columns[sort_key]"
+                      name="sort_key"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task - Create row and push to table\Derived Column 1.Outputs[Derived Column Output].Columns[sort_key]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task - Create row and push to table.Paths[Derived Column Output]"
+              endId="Package\Data Flow Task - Create row and push to table\Sort.Inputs[Sort Input]"
+              name="Derived Column Output"
+              startId="Package\Data Flow Task - Create row and push to table\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Data Flow Task - Create row and push to table.Paths[Derived Column Output1]"
+              endId="Package\Data Flow Task - Create row and push to table\Sort 1.Inputs[Sort Input]"
+              name="Derived Column Output"
+              startId="Package\Data Flow Task - Create row and push to table\Derived Column 1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Data Flow Task - Create row and push to table.Paths[Merge Join Output]"
+              endId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Merge Join Output"
+              startId="Package\Data Flow Task - Create row and push to table\Merge Join.Outputs[Merge Join Output]" />
+            <path
+              refId="Package\Data Flow Task - Create row and push to table.Paths[OLE DB Source Output]"
+              endId="Package\Data Flow Task - Create row and push to table\Derived Column 1.Inputs[Derived Column Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task - Create row and push to table\OLE DB Source.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Data Flow Task - Create row and push to table.Paths[Output 0]"
+              endId="Package\Data Flow Task - Create row and push to table\Derived Column.Inputs[Derived Column Input]"
+              name="Output 0"
+              startId="Package\Data Flow Task - Create row and push to table\Script Component.Outputs[Output 0]" />
+            <path
+              refId="Package\Data Flow Task - Create row and push to table.Paths[Sort Output]"
+              endId="Package\Data Flow Task - Create row and push to table\Merge Join.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\Data Flow Task - Create row and push to table\Sort.Outputs[Sort Output]" />
+            <path
+              refId="Package\Data Flow Task - Create row and push to table.Paths[Sort Output1]"
+              endId="Package\Data Flow Task - Create row and push to table\Merge Join.Inputs[Merge Join Right Input]"
+              name="Sort Output"
+              startId="Package\Data Flow Task - Create row and push to table\Sort 1.Outputs[Sort Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Execute SQL Task - Retrieve XML from table"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
       DTS:DTSID="{15B6B6EB-6C11-453C-AEE3-333E3EB0CAD3}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Execute SQL Task"
+      DTS:ObjectName="Execute SQL Task - Retrieve XML from table"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
       DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{7F8F9285-2440-4681-899E-52BBE5D5D675}"
-          SQLTask:SqlStatementSource="SELECT TOP (1) CAST(xml_data as varchar) as xml_data FROM dbo.XmlTiny;&#xA;"
-          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
-          <SQLTask:ResultBinding
-            SQLTask:ResultName="xml_data"
-            SQLTask:DtsVariableName="User::VarXML" />
+          SQLTask:SqlStatementSource="SELECT TOP (1) ? =  xml_data FROM dbo.DC_RAW_Sent_Data&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="0"
+            SQLTask:DtsVariableName="User::VarXML"
+            SQLTask:ParameterDirection="Output"
+            SQLTask:DataType="129"
+            SQLTask:ParameterSize="-1" />
         </SQLTask:SqlTaskData>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Script Task"
+      DTS:refId="Package\Script Task - Convert XML to JSON"
       DTS:CreationName="Microsoft.ScriptTask"
       DTS:Description="Script Task"
       DTS:DTSID="{DAF855C0-7B8E-47E8-974C-FF8684EC3EEB}"
       DTS:ExecutableType="Microsoft.ScriptTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Script Task"
+      DTS:ObjectName="Script Task - Convert XML to JSON"
       DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -100,7 +2384,8 @@
           VSTAMajorVersion="15"
           VSTAMinorVersion="0"
           Language="CSharp"
-          ReadOnlyVariables="User::VarXML">
+          ReadOnlyVariables="User::VarXML"
+          ReadWriteVariables="User::VarJSON">
           <ProjectItem
             Name="Properties\Settings.settings"
             Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
@@ -245,102 +2530,111 @@ using System;
 using System.Data;
 using Microsoft.SqlServer.Dts.Runtime;
 using System.Windows.Forms;
+using System.Xml;
+using Newtonsoft.Json;
 #endregion
 
 namespace ST_aaceeb0234534912a4a172012d79cf33
 {
-    /// <summary>
-    /// ScriptMain is the entry point class of the script.  Do not change the name, attributes,
-    /// or parent of this class.
-    /// </summary>
+	/// <summary>
+	/// ScriptMain is the entry point class of the script.  Do not change the name, attributes,
+	/// or parent of this class.
+	/// </summary>
 	[Microsoft.SqlServer.Dts.Tasks.ScriptTask.SSISScriptTaskEntryPointAttribute]
 	public partial class ScriptMain : Microsoft.SqlServer.Dts.Tasks.ScriptTask.VSTARTScriptObjectModelBase
 	{
-        #region Help:  Using Integration Services variables and parameters in a script
-        /* To use a variable in this script, first ensure that the variable has been added to 
-         * either the list contained in the ReadOnlyVariables property or the list contained in 
-         * the ReadWriteVariables property of this script task, according to whether or not your
-         * code needs to write to the variable.  To add the variable, save this script, close this instance of
-         * Visual Studio, and update the ReadOnlyVariables and 
-         * ReadWriteVariables properties in the Script Transformation Editor window.
-         * To use a parameter in this script, follow the same steps. Parameters are always read-only.
-         * 
-         * Example of reading from a variable:
-         *  DateTime startTime = (DateTime) Dts.Variables["System::StartTime"].Value;
-         * 
-         * Example of writing to a variable:
-         *  Dts.Variables["User::myStringVariable"].Value = "new value";
-         * 
-         * Example of reading from a package parameter:
-         *  int batchId = (int) Dts.Variables["$Package::batchId"].Value;
-         *  
-         * Example of reading from a project parameter:
-         *  int batchId = (int) Dts.Variables["$Project::batchId"].Value;
-         * 
-         * Example of reading from a sensitive project parameter:
-         *  int batchId = (int) Dts.Variables["$Project::batchId"].GetSensitiveValue();
-         * */
+		#region Help:  Using Integration Services variables and parameters in a script
+		/* To use a variable in this script, first ensure that the variable has been added to 
+		 * either the list contained in the ReadOnlyVariables property or the list contained in 
+		 * the ReadWriteVariables property of this script task, according to whether or not your
+		 * code needs to write to the variable.  To add the variable, save this script, close this instance of
+		 * Visual Studio, and update the ReadOnlyVariables and 
+		 * ReadWriteVariables properties in the Script Transformation Editor window.
+		 * To use a parameter in this script, follow the same steps. Parameters are always read-only.
+		 * 
+		 * Example of reading from a variable:
+		 *  DateTime startTime = (DateTime) Dts.Variables["System::StartTime"].Value;
+		 * 
+		 * Example of writing to a variable:
+		 *  Dts.Variables["User::myStringVariable"].Value = "new value";
+		 * 
+		 * Example of reading from a package parameter:
+		 *  int batchId = (int) Dts.Variables["$Package::batchId"].Value;
+		 *  
+		 * Example of reading from a project parameter:
+		 *  int batchId = (int) Dts.Variables["$Project::batchId"].Value;
+		 * 
+		 * Example of reading from a sensitive project parameter:
+		 *  int batchId = (int) Dts.Variables["$Project::batchId"].GetSensitiveValue();
+		 * */
 
-        #endregion
+		#endregion
 
-        #region Help:  Firing Integration Services events from a script
-        /* This script task can fire events for logging purposes.
-         * 
-         * Example of firing an error event:
-         *  Dts.Events.FireError(18, "Process Values", "Bad value", "", 0);
-         * 
-         * Example of firing an information event:
-         *  Dts.Events.FireInformation(3, "Process Values", "Processing has started", "", 0, ref fireAgain)
-         * 
-         * Example of firing a warning event:
-         *  Dts.Events.FireWarning(14, "Process Values", "No values received for input", "", 0);
-         * */
-        #endregion
+		#region Help:  Firing Integration Services events from a script
+		/* This script task can fire events for logging purposes.
+		 * 
+		 * Example of firing an error event:
+		 *  Dts.Events.FireError(18, "Process Values", "Bad value", "", 0);
+		 * 
+		 * Example of firing an information event:
+		 *  Dts.Events.FireInformation(3, "Process Values", "Processing has started", "", 0, ref fireAgain)
+		 * 
+		 * Example of firing a warning event:
+		 *  Dts.Events.FireWarning(14, "Process Values", "No values received for input", "", 0);
+		 * */
+		#endregion
 
-        #region Help:  Using Integration Services connection managers in a script
-        /* Some types of connection managers can be used in this script task.  See the topic 
-         * "Working with Connection Managers Programatically" for details.
-         * 
-         * Example of using an ADO.Net connection manager:
-         *  object rawConnection = Dts.Connections["Sales DB"].AcquireConnection(Dts.Transaction);
-         *  SqlConnection myADONETConnection = (SqlConnection)rawConnection;
-         *  //Use the connection in some code here, then release the connection
-         *  Dts.Connections["Sales DB"].ReleaseConnection(rawConnection);
-         *
-         * Example of using a File connection manager
-         *  object rawConnection = Dts.Connections["Prices.zip"].AcquireConnection(Dts.Transaction);
-         *  string filePath = (string)rawConnection;
-         *  //Use the connection in some code here, then release the connection
-         *  Dts.Connections["Prices.zip"].ReleaseConnection(rawConnection);
-         * */
-        #endregion
+		#region Help:  Using Integration Services connection managers in a script
+		/* Some types of connection managers can be used in this script task.  See the topic 
+		 * "Working with Connection Managers Programatically" for details.
+		 * 
+		 * Example of using an ADO.Net connection manager:
+		 *  object rawConnection = Dts.Connections["Sales DB"].AcquireConnection(Dts.Transaction);
+		 *  SqlConnection myADONETConnection = (SqlConnection)rawConnection;
+		 *  //Use the connection in some code here, then release the connection
+		 *  Dts.Connections["Sales DB"].ReleaseConnection(rawConnection);
+		 *
+		 * Example of using a File connection manager
+		 *  object rawConnection = Dts.Connections["Prices.zip"].AcquireConnection(Dts.Transaction);
+		 *  string filePath = (string)rawConnection;
+		 *  //Use the connection in some code here, then release the connection
+		 *  Dts.Connections["Prices.zip"].ReleaseConnection(rawConnection);
+		 * */
+		#endregion
 
 
 		/// <summary>
-        /// This method is called when this script task executes in the control flow.
-        /// Before returning from this method, set the value of Dts.TaskResult to indicate success or failure.
-        /// To open Help, press F1.
-        /// </summary>
+		/// This method is called when this script task executes in the control flow.
+		/// Before returning from this method, set the value of Dts.TaskResult to indicate success or failure.
+		/// To open Help, press F1.
+		/// </summary>
 		public void Main()
 		{
-            // TODO: Add your code here
-            MessageBox.Show(Dts.Variables["User::VarXML"].Value.ToString());
+			//Grab xml string stored in Package variable VarXML and turn into XMLDocument Obj.
+			var xmlStr = Dts.Variables["User::VarXML"].Value.ToString();
+			XmlDocument xmlDoc = new XmlDocument();
+			xmlDoc.LoadXml(xmlStr);
+
+			// Convert XMLDoc into JSON text and store into a string. Then pass that value into our Package variable VarJSON
+			string jsonStr = JsonConvert.SerializeObject(xmlDoc);
+			Dts.Variables["User::VarJSON"].Value = jsonStr;
+
 			Dts.TaskResult = (int)ScriptResults.Success;
 		}
 
-        #region ScriptResults declaration
-        /// <summary>
-        /// This enum provides a convenient shorthand within the scope of this class for setting the
-        /// result of the script.
-        /// 
-        /// This code was generated automatically.
-        /// </summary>
-        enum ScriptResults
-        {
-            Success = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Success,
-            Failure = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Failure
-        };
-        #endregion
+		#region ScriptResults declaration
+		/// <summary>
+		/// This enum provides a convenient shorthand within the scope of this class for setting the
+		/// result of the script.
+		/// 
+		/// This code was generated automatically.
+		/// </summary>
+		enum ScriptResults
+		{
+			Success = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Success,
+			Failure = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Failure
+		};
+		#endregion
 
 	}
 }]]></ProjectItem>
@@ -384,6 +2678,10 @@ namespace ST_aaceeb0234534912a4a172012d79cf33
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="netstandard, Version=2.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>C:\Users\coded\AppData\Local\Temp\Vsta\SSIS_ST150\Vstal0xnTLvg7EKOc1m6azFOmQ\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Windows.Forms" />
@@ -404,6 +2702,7 @@ namespace ST_aaceeb0234534912a4a172012d79cf33
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -438,7 +2737,7 @@ namespace ST_aaceeb0234534912a4a172012d79cf33
     <msb:CodeName>ST_aaceeb0234534912a4a172012d79cf33</msb:CodeName>
     <msb:Language>msBuild</msb:Language>
     <msb:DisplayName>ST_aaceeb0234534912a4a172012d79cf33</msb:DisplayName>
-    <msb:ProjectId>{3084040B-F12F-41E7-BBFF-981AC5DCE078}</msb:ProjectId>
+    <msb:ProjectId>{8128F7BD-524A-4C3D-B3EE-C0E44138517F}</msb:ProjectId>
   </msb:PropertyGroup>
   <msb:ItemGroup>
     <msb:Project Include="ST_aaceeb0234534912a4a172012d79cf33.csproj" />
@@ -447,9 +2746,16 @@ namespace ST_aaceeb0234534912a4a172012d79cf33
     <msb:File Include="Properties\AssemblyInfo.cs" />
     <msb:File Include="Properties\Resources.Designer.cs" />
     <msb:File Include="Properties\Settings.Designer.cs" />
+    <msb:File Include="packages.config" />
     <msb:File Include="ScriptMain.cs" />
   </msb:ItemGroup>
 </c:Project>]]></ProjectItem>
+          <ProjectItem
+            Name="packages.config"
+            Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<packages>
+  <package id="Newtonsoft.Json" version="13.0.1" targetFramework="net47" />
+</packages>]]></ProjectItem>
           <ProjectItem
             Name="Properties\Settings.Designer.cs"
             Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -580,103 +2886,112 @@ namespace ST_aaceeb0234534912a4a172012d79cf33.Properties {
           <BinaryItem
             Name="ST_aaceeb0234534912a4a172012d79cf33.dll">TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
-ZGUuDQ0KJAAAAAAAAABQRQAATAEDAHiMzWAAAAAAAAAAAOAAIiALATAAAA4AAAAIAAAAAAAA0i0A
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDADjHzmAAAAAAAAAAAOAAIiALATAAABAAAAAIAAAAAAAAei4A
 AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
-ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAIAtAABPAAAAAEAAAHgEAAAAAAAAAAAAAAAAAAAA
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAACguAABPAAAAAEAAAHgEAAAAAAAAAAAAAAAAAAAA
 AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAA2A0AAAAgAAAADgAAAAIA
-AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAHgEAAAAQAAAAAYAAAAQAAAAAAAAAAAAAAAAAABAAABA
-LnJlbG9jAAAMAAAAAGAAAAACAAAAFgAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAAC0
-LQAAAAAAAEgAAAACAAUA7CAAANwLAAABAAAAAAAAAMgsAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAMoCKBAAAApvEQAACnIBAABwbxIAAApvEwAACm8UAAAKKBUA
-AAomAigQAAAKFm8WAAAKKh4CKBcAAAoqHgIoGAAACiqufgEAAAQtHnIbAABw0AMAAAIoGQAACm8a
-AAAKcxsAAAqAAQAABH4BAAAEKhp+AgAABCoeAoACAAAEKhp+AwAABCoeAigcAAAKKi5zCAAABoAD
-AAAEKgAAAEJTSkIBAAEAAAAAAAwAAAB2NC4wLjMwMzE5AAAAAAUAbAAAANwDAAAjfgAASAQAAJAF
-AAAjU3RyaW5ncwAAAADYCQAAkAAAACNVUwBoCgAAEAAAACNHVUlEAAAAeAoAAGQBAAAjQmxvYgAA
-AAAAAAACAAABVx2gAQkDAAAA+gEzABYAAAEAAAAfAAAABQAAAAYAAAAJAAAAAQAAABwAAAACAAAA
-EAAAAAIAAAADAAAABAAAAAEAAAAFAAAAAQAAAAEAAAAAAHUDAQAAAAAABgAlAkUEBgC0AkUEBgBx
-ATIEDwC5BAAABgCeAfMDBgAIAvMDBgDpAfMDBgCbAvMDBgBFAvMDBgBeAvMDBgC1AfMDBgDQAeIC
-CgB5AiQDCgDwACQDBgCtA6YDBgBUATIEBgBBBaYDBgAVBGUEBgAFBN4DDgAkAV8DDgCFAV8DDgAM
-AckDBgA5AUUECgBNAyQDEgD7BJsAEgBuAJsAFgB1BQ4FFgBUBQ4FBgC7AKYDBgB3AKYDBgCEBfMD
-AAAAACUAAAAAAAEAAQABABAAvgMBADkAAQABAAAAEABsBMgERQABAAMAAAEQAAUFyARZAAMABwAD
-AQAAMwUAAD0ABAAKABEAsgNoABEA4ABsABEAXgBwAAYGTQB0AFaAIwV3AFaAwAB3AFAgAAAAAIYA
-xAMGAAEAgyAAAAAAhhglBAYAAQCLIAAAAACDGCUEBgABAJMgAAAAAJMIEQR7AAEAvyAAAAAAkwjI
-AIAAAQDGIAAAAACTCNQAhQABAM4gAAAAAJYISAWLAAIA1SAAAAAAhhglBAYAAgDdIAAAAACRGCsE
-kAACAAAAAQDcAgkAJQQBABEAJQQGABkAJQQKACkAJQQQADEAJQQQADkAJQQQAEEAJQQQAEkAJQQQ
-AFEAJQQQAFkAJQQQAGEAJQQQAGkAJQQGAIEAJQQGAKkAJQQVALkAJQQGAHEAKwUbAMEA9wQgAMkA
-nQMlANEA0gIrAIkA/AIvANkAcAUzAMEAYQUBAHEAJQQGAIkAJQQGAOkAiQA5AOkAgAVAAJEAJQRF
-ALEAJQQGAAgAFABeAAgAGABjACkAcwDLAC4ACwCjAC4AEwCsAC4AGwDLAC4AIwDUAC4AKwD9AC4A
-MwD9AC4AOwD9AC4AQwDUAC4ASwADAS4AUwD9AC4AWwAaAUMAYwBjAEkAcwDLAGEAewBjAGMAawBj
-AAMAAQAEAAMAAAAVBJQAAADoAJkAAABMBZ4AAgAEAAMAAgAFAAUAAQAGAAUAAgAHAAcABIAAAAEA
-AACfHgSkAAAAAAAAAQAAAAQAAAAAAAAAAAAAAEwAVQAAAAAADwAAAAAAAAAAAAAAVQAFAwAAAAAE
-AAAAAAAAAAAAAABMAKYDAAAAAA8AAAAAAAAAAAAAAFUALgAAAAAABAAAAAAAAAAAAAAATAAOBQAA
-AAAAAAAAAQAAAHYEAAAFAAIAAAAAU1RfYWFjZWViMDIzNDUzNDkxMmE0YTE3MjAxMmQ3OWNmMzMA
-PE1vZHVsZT4ATWljcm9zb2Z0LlNxbFNlcnZlci5NYW5hZ2VkRFRTAHZhbHVlX18AbXNjb3JsaWIA
-ZGVmYXVsdEluc3RhbmNlAFZhcmlhYmxlAFJ1bnRpbWVUeXBlSGFuZGxlAEdldFR5cGVGcm9tSGFu
-ZGxlAE1pY3Jvc29mdC5TcWxTZXJ2ZXIuRHRzLlJ1bnRpbWUAVHlwZQBGYWlsdXJlAGdldF9DdWx0
-dXJlAHNldF9DdWx0dXJlAHJlc291cmNlQ3VsdHVyZQBWU1RBUlRTY3JpcHRPYmplY3RNb2RlbEJh
-c2UAQXBwbGljYXRpb25TZXR0aW5nc0Jhc2UARWRpdG9yQnJvd3NhYmxlU3RhdGUAQ29tcGlsZXJH
-ZW5lcmF0ZWRBdHRyaWJ1dGUARGVidWdnZXJOb25Vc2VyQ29kZUF0dHJpYnV0ZQBEZWJ1Z2dhYmxl
-QXR0cmlidXRlAEVkaXRvckJyb3dzYWJsZUF0dHJpYnV0ZQBBc3NlbWJseVRpdGxlQXR0cmlidXRl
-AEFzc2VtYmx5VHJhZGVtYXJrQXR0cmlidXRlAFRhcmdldEZyYW1ld29ya0F0dHJpYnV0ZQBBc3Nl
-bWJseUNvbmZpZ3VyYXRpb25BdHRyaWJ1dGUAQXNzZW1ibHlEZXNjcmlwdGlvbkF0dHJpYnV0ZQBD
-b21waWxhdGlvblJlbGF4YXRpb25zQXR0cmlidXRlAEFzc2VtYmx5UHJvZHVjdEF0dHJpYnV0ZQBB
-c3NlbWJseUNvcHlyaWdodEF0dHJpYnV0ZQBTU0lTU2NyaXB0VGFza0VudHJ5UG9pbnRBdHRyaWJ1
-dGUAQXNzZW1ibHlDb21wYW55QXR0cmlidXRlAFJ1bnRpbWVDb21wYXRpYmlsaXR5QXR0cmlidXRl
-AGdldF9WYWx1ZQB2YWx1ZQBTeXN0ZW0uUnVudGltZS5WZXJzaW9uaW5nAFRvU3RyaW5nAE1pY3Jv
-c29mdC5TcWxTZXJ2ZXIuU2NyaXB0VGFzawBNaWNyb3NvZnQuU3FsU2VydmVyLkR0cy5UYXNrcy5T
-Y3JpcHRUYXNrAFNjcmlwdE9iamVjdE1vZGVsAFN5c3RlbS5Db21wb25lbnRNb2RlbABTVF9hYWNl
-ZWIwMjM0NTM0OTEyYTRhMTcyMDEyZDc5Y2YzMy5kbGwAZ2V0X0l0ZW0AU3lzdGVtAEVudW0AcmVz
-b3VyY2VNYW4AU2NyaXB0TWFpbgBTeXN0ZW0uQ29uZmlndXJhdGlvbgBTeXN0ZW0uR2xvYmFsaXph
-dGlvbgBTeXN0ZW0uUmVmbGVjdGlvbgBDdWx0dXJlSW5mbwBnZXRfUmVzb3VyY2VNYW5hZ2VyAC5j
-dG9yAC5jY3RvcgBTeXN0ZW0uRGlhZ25vc3RpY3MAU3lzdGVtLlJ1bnRpbWUuQ29tcGlsZXJTZXJ2
-aWNlcwBTeXN0ZW0uUmVzb3VyY2VzAFNUX2FhY2VlYjAyMzQ1MzQ5MTJhNGExNzIwMTJkNzljZjMz
-LlByb3BlcnRpZXMuUmVzb3VyY2VzLnJlc291cmNlcwBEZWJ1Z2dpbmdNb2RlcwBTVF9hYWNlZWIw
-MjM0NTM0OTEyYTRhMTcyMDEyZDc5Y2YzMy5Qcm9wZXJ0aWVzAGdldF9WYXJpYWJsZXMAU2V0dGlu
-Z3MAU3lzdGVtLldpbmRvd3MuRm9ybXMAU3VjY2VzcwBnZXRfRHRzAFNjcmlwdFJlc3VsdHMAT2Jq
-ZWN0AGdldF9EZWZhdWx0AERpYWxvZ1Jlc3VsdABzZXRfVGFza1Jlc3VsdABTaG93AE1lc3NhZ2VC
-b3gAZ2V0X0Fzc2VtYmx5AAAAAAAZVQBzAGUAcgA6ADoAVgBhAHIAWABNAEwAAHFTAFQAXwBhAGEA
-YwBlAGUAYgAwADIAMwA0ADUAMwA0ADkAMQAyAGEANABhADEANwAyADAAMQAyAGQANwA5AGMAZgAz
-ADMALgBQAHIAbwBwAGUAcgB0AGkAZQBzAC4AUgBlAHMAbwB1AHIAYwBlAHMAAAAAAOBm58vorOpM
-qXgs2YDfAgcABCABAQgDIAABBSABARERBCABAQ4FIAEBEVEEIAASYQQgABJlBSABEmkcAyAAHAMg
-AA4FAAERcQ4GAAESdRF5BCAAEn0GIAIBDhJ9CLd6XFYZNOCJCImEXc2AgMyRBAAAAAAEAQAAAAMG
-EkkDBhJNAwYSEAIGCAMGERQEAAASSQQAABJNBQABARJNBAAAEhADAAABBAgAEkkECAASTQQIABIQ
-CAEACAAAAAAAHgEAAQBUAhZXcmFwTm9uRXhjZXB0aW9uVGhyb3dzAQgBAAIAAAAAACgBACNTVF9h
-YWNlZWIwMjM0NTM0OTEyYTRhMTcyMDEyZDc5Y2YzMwAABQEAAAAAFgEAEUNvcHlyaWdodCBAICAy
-MDIxAABJAQAaLk5FVEZyYW1ld29yayxWZXJzaW9uPXY0LjcBAFQOFEZyYW1ld29ya0Rpc3BsYXlO
-YW1lEi5ORVQgRnJhbWV3b3JrIDQuN7QAAADOyu++AQAAAJEAAABsU3lzdGVtLlJlc291cmNlcy5S
-ZXNvdXJjZVJlYWRlciwgbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFs
-LCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5I1N5c3RlbS5SZXNvdXJjZXMuUnVudGlt
-ZVJlc291cmNlU2V0AgAAAAAAAAAAAAAAUEFEUEFEULQAAACoLQAAAAAAAAAAAADCLQAAACAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAtC0AAAAAAAAAAAAAAABfQ29yRGxsTWFpbgBtc2NvcmVlLmRsbAAA
-AAAA/yUAIAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAQAQAAAAGAAAgAAAAAAAAAAAAAAAAAAAAQABAAAAMAAAgAAAAAAAAAAAAAAAAAAAAQAA
-AAAASAAAAFhAAAAaBAAAAAAAAAAAAAAaBDQAAABWAFMAXwBWAEUAUgBTAEkATwBOAF8ASQBOAEYA
-TwAAAAAAvQTv/gAAAQAAAAEABKSfHgAAAQAEpJ8ePwAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAA
-AEQAAAABAFYAYQByAEYAaQBsAGUASQBuAGYAbwAAAAAAJAAEAAAAVAByAGEAbgBzAGwAYQB0AGkA
-bwBuAAAAAAAAALAEegMAAAEAUwB0AHIAaQBuAGcARgBpAGwAZQBJAG4AZgBvAAAAVgMAAAEAMAAw
-ADAAMAAwADQAYgAwAAAAGgABAAEAQwBvAG0AbQBlAG4AdABzAAAAAAAAACIAAQABAEMAbwBtAHAA
-YQBuAHkATgBhAG0AZQAAAAAAAAAAAHAAJAABAEYAaQBsAGUARABlAHMAYwByAGkAcAB0AGkAbwBu
-AAAAAABTAFQAXwBhAGEAYwBlAGUAYgAwADIAMwA0ADUAMwA0ADkAMQAyAGEANABhADEANwAyADAA
-MQAyAGQANwA5AGMAZgAzADMAAAA+AA8AAQBGAGkAbABlAFYAZQByAHMAaQBvAG4AAAAAADEALgAw
-AC4ANwA4ADMAOQAuADQAMQA5ADgAOAAAAAAAcAAoAAEASQBuAHQAZQByAG4AYQBsAE4AYQBtAGUA
-AABTAFQAXwBhAGEAYwBlAGUAYgAwADIAMwA0ADUAMwA0ADkAMQAyAGEANABhADEANwAyADAAMQAy
-AGQANwA5AGMAZgAzADMALgBkAGwAbAAAAEgAEgABAEwAZQBnAGEAbABDAG8AcAB5AHIAaQBnAGgA
-dAAAAEMAbwBwAHkAcgBpAGcAaAB0ACAAQAAgACAAMgAwADIAMQAAACoAAQABAEwAZQBnAGEAbABU
-AHIAYQBkAGUAbQBhAHIAawBzAAAAAAAAAAAAeAAoAAEATwByAGkAZwBpAG4AYQBsAEYAaQBsAGUA
-bgBhAG0AZQAAAFMAVABfAGEAYQBjAGUAZQBiADAAMgAzADQANQAzADQAOQAxADIAYQA0AGEAMQA3
-ADIAMAAxADIAZAA3ADkAYwBmADMAMwAuAGQAbABsAAAAaAAkAAEAUAByAG8AZAB1AGMAdABOAGEA
-bQBlAAAAAABTAFQAXwBhAGEAYwBlAGUAYgAwADIAMwA0ADUAMwA0ADkAMQAyAGEANABhADEANwAy
-ADAAMQAyAGQANwA5AGMAZgAzADMAAABCAA8AAQBQAHIAbwBkAHUAYwB0AFYAZQByAHMAaQBvAG4A
-AAAxAC4AMAAuADcAOAAzADkALgA0ADEAOQA4ADgAAAAAAEYADwABAEEAcwBzAGUAbQBiAGwAeQAg
-AFYAZQByAHMAaQBvAG4AAAAxAC4AMAAuADcAOAAzADkALgA0ADEAOQA4ADgAAAAAAAAAAAAAAAAA
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAAgA4AAAAgAAAAEAAAAAIA
+AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAHgEAAAAQAAAAAYAAAASAAAAAAAAAAAAAAAAAABAAABA
+LnJlbG9jAAAMAAAAAGAAAAACAAAAGAAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAABc
+LgAAAAAAAEgAAAACAAUAHCEAAFQMAAABAAAAAAAAAHAtAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAABMwAwBaAAAAAQAAEQIoEAAACm8RAAAKcgEAAHBvEgAACm8T
+AAAKbxQAAAoKcxUAAAolBm8WAAAKKBcAAAoLAigQAAAKbxEAAApyGwAAcG8SAAAKB28YAAAKAigQ
+AAAKFm8ZAAAKKh4CKBoAAAoqHgIoGwAACiqufgEAAAQtHnI3AABw0AMAAAIoHAAACm8dAAAKcx4A
+AAqAAQAABH4BAAAEKhp+AgAABCoeAoACAAAEKhp+AwAABCoeAigfAAAKKi5zCAAABoADAAAEKkJT
+SkIBAAEAAAAAAAwAAAB2NC4wLjMwMzE5AAAAAAUAbAAAAAgEAAAjfgAAdAQAAKwFAAAjU3RyaW5n
+cwAAAAAgCgAArAAAACNVUwDMCgAAEAAAACNHVUlEAAAA3AoAAHgBAAAjQmxvYgAAAAAAAAACAAAB
+Vx2iAQkDAAAA+gEzABYAAAEAAAAfAAAABQAAAAYAAAAJAAAAAQAAAB8AAAACAAAAEAAAAAEAAAAC
+AAAAAwAAAAQAAAABAAAABgAAAAEAAAABAAAAAAB/AwEAAAAAAAYAJQJyBAYAtAJyBAYAcQFfBA8A
+5gQAAAYAngEQBAYACAIQBAYA6QEQBAYAmwIQBAYARQIQBAYAXgIQBAYAtQEQBAYA0AHsAgoAeQIu
+AwoA8AAuAwYAygPDAwYAVAFfBAYAYgXDAwYAQgSSBAYAMgT7Aw4AJAFpAw4AhQFpAw4ADAHmAwYA
+OQFyBAoAVwMuAxIAKAWbABIAbgCbABYAhAWnAxoAkAUiBAYAuwDDAwYAdwDDAwYAoAUQBAAAAAAl
+AAAAAAABAAEAAQAQANsDAQA5AAEAAQAAABAAmQT1BEUAAQADAAABEAAyBfUEWQADAAcAAwEAAEsF
+AAA9AAQACgARAM8DegARAOAAfgARAF4AggAGBk0AhgBWgDsFiQBWgMAAiQBQIAAAAACGAOEDBgAB
+ALYgAAAAAIYYUgQGAAEAviAAAAAAgxhSBAYAAQDGIAAAAACTCD4EjQABAPIgAAAAAJMIyACSAAEA
++SAAAAAAkwjUAJcAAQABIQAAAACWCGkFnQACAAghAAAAAIYYUgQGAAIAECEAAAAAkRhYBKIAAgAA
+AAEA5gIJAFIEAQARAFIEBgAZAFIECgApAFIEEAAxAFIEEAA5AFIEEABBAFIEEABJAFIEEABRAFIE
+EABZAFIEEABhAFIEEABpAFIEBgCBAFIEBgCpAFIEFQC5AFIEBgBxAEMFIADBACQFJQDJALoDKgDR
+ANICMACJAAYDNADZAFIEBgDZALIDEADhAFkFOADRANwCPQDBAHUFAQBxAFIEBgCJAFIEBgDpAIkA
+QgDpAJwFSQCRAFIETgCxAFIEBgAIABQAcAAIABgAdQApAHMA3QAuAAsAtQAuABMAvgAuABsA3QAu
+ACMA5gAuACsADwEuADMADwEuADsADwEuAEMA5gAuAEsAFQEuAFMADwEuAFsALAFDAGMAdQBJAHMA
+3QBhAHsAdQBjAGsAdQAbAAMAAQAEAAMAAABCBKYAAADoAKsAAABtBbAAAgAEAAMAAgAFAAUAAQAG
+AAUAAgAHAAcABIAAAAEAAACgHqSYAAAAAAAAAQAAAAQAAAAAAAAAAAAAAFUAVQAAAAAADwAAAAAA
+AAAAAAAAXgAPAwAAAAAEAAAAAAAAAAAAAABVAMMDAAAAAA8AAAAAAAAAAAAAAF4ALgAAAAAABAAA
+AAAAAAAAAAAAVQCnAwAAAAANAAAAAAAAAAAAAABnACIEAAAAAAAAAAABAAAAowQAAAUAAgAAAABT
+VF9hYWNlZWIwMjM0NTM0OTEyYTRhMTcyMDEyZDc5Y2YzMwA8TW9kdWxlPgBNaWNyb3NvZnQuU3Fs
+U2VydmVyLk1hbmFnZWREVFMAdmFsdWVfXwBtc2NvcmxpYgBkZWZhdWx0SW5zdGFuY2UAVmFyaWFi
+bGUAUnVudGltZVR5cGVIYW5kbGUAR2V0VHlwZUZyb21IYW5kbGUATWljcm9zb2Z0LlNxbFNlcnZl
+ci5EdHMuUnVudGltZQBUeXBlAEZhaWx1cmUAZ2V0X0N1bHR1cmUAc2V0X0N1bHR1cmUAcmVzb3Vy
+Y2VDdWx0dXJlAFZTVEFSVFNjcmlwdE9iamVjdE1vZGVsQmFzZQBBcHBsaWNhdGlvblNldHRpbmdz
+QmFzZQBFZGl0b3JCcm93c2FibGVTdGF0ZQBDb21waWxlckdlbmVyYXRlZEF0dHJpYnV0ZQBEZWJ1
+Z2dlck5vblVzZXJDb2RlQXR0cmlidXRlAERlYnVnZ2FibGVBdHRyaWJ1dGUARWRpdG9yQnJvd3Nh
+YmxlQXR0cmlidXRlAEFzc2VtYmx5VGl0bGVBdHRyaWJ1dGUAQXNzZW1ibHlUcmFkZW1hcmtBdHRy
+aWJ1dGUAVGFyZ2V0RnJhbWV3b3JrQXR0cmlidXRlAEFzc2VtYmx5Q29uZmlndXJhdGlvbkF0dHJp
+YnV0ZQBBc3NlbWJseURlc2NyaXB0aW9uQXR0cmlidXRlAENvbXBpbGF0aW9uUmVsYXhhdGlvbnNB
+dHRyaWJ1dGUAQXNzZW1ibHlQcm9kdWN0QXR0cmlidXRlAEFzc2VtYmx5Q29weXJpZ2h0QXR0cmli
+dXRlAFNTSVNTY3JpcHRUYXNrRW50cnlQb2ludEF0dHJpYnV0ZQBBc3NlbWJseUNvbXBhbnlBdHRy
+aWJ1dGUAUnVudGltZUNvbXBhdGliaWxpdHlBdHRyaWJ1dGUAZ2V0X1ZhbHVlAHNldF9WYWx1ZQB2
+YWx1ZQBTeXN0ZW0uUnVudGltZS5WZXJzaW9uaW5nAFRvU3RyaW5nAE1pY3Jvc29mdC5TcWxTZXJ2
+ZXIuU2NyaXB0VGFzawBNaWNyb3NvZnQuU3FsU2VydmVyLkR0cy5UYXNrcy5TY3JpcHRUYXNrAFNj
+cmlwdE9iamVjdE1vZGVsAFN5c3RlbS5Db21wb25lbnRNb2RlbABTVF9hYWNlZWIwMjM0NTM0OTEy
+YTRhMTcyMDEyZDc5Y2YzMy5kbGwAU3lzdGVtLlhtbABMb2FkWG1sAGdldF9JdGVtAFN5c3RlbQBF
+bnVtAHJlc291cmNlTWFuAFNjcmlwdE1haW4AU3lzdGVtLkNvbmZpZ3VyYXRpb24AU3lzdGVtLkds
+b2JhbGl6YXRpb24AU3lzdGVtLlJlZmxlY3Rpb24ATmV3dG9uc29mdC5Kc29uAEN1bHR1cmVJbmZv
+AGdldF9SZXNvdXJjZU1hbmFnZXIALmN0b3IALmNjdG9yAFN5c3RlbS5EaWFnbm9zdGljcwBTeXN0
+ZW0uUnVudGltZS5Db21waWxlclNlcnZpY2VzAFN5c3RlbS5SZXNvdXJjZXMAU1RfYWFjZWViMDIz
+NDUzNDkxMmE0YTE3MjAxMmQ3OWNmMzMuUHJvcGVydGllcy5SZXNvdXJjZXMucmVzb3VyY2VzAERl
+YnVnZ2luZ01vZGVzAFNUX2FhY2VlYjAyMzQ1MzQ5MTJhNGExNzIwMTJkNzljZjMzLlByb3BlcnRp
+ZXMAZ2V0X1ZhcmlhYmxlcwBTZXR0aW5ncwBTdWNjZXNzAGdldF9EdHMAU2NyaXB0UmVzdWx0cwBT
+ZXJpYWxpemVPYmplY3QAZ2V0X0RlZmF1bHQAc2V0X1Rhc2tSZXN1bHQAWG1sRG9jdW1lbnQASnNv
+bkNvbnZlcnQAZ2V0X0Fzc2VtYmx5AAAAAAAZVQBzAGUAcgA6ADoAVgBhAHIAWABNAEwAABtVAHMA
+ZQByADoAOgBWAGEAcgBKAFMATwBOAABxUwBUAF8AYQBhAGMAZQBlAGIAMAAyADMANAA1ADMANAA5
+ADEAMgBhADQAYQAxADcAMgAwADEAMgBkADcAOQBjAGYAMwAzAC4AUAByAG8AcABlAHIAdABpAGUA
+cwAuAFIAZQBzAG8AdQByAGMAZQBzAAAAAAAzzFGRnljHS4IqRnnkMCFvAAQgAQEIAyAAAQUgAQER
+EQQgAQEOBSABARFRBAcCDg4EIAASYQQgABJlBSABEmkcAyAAHAMgAA4EAAEOHAQgAQEcBgABEnUR
+eQQgABJ9BiACAQ4SfQi3elxWGTTgiQiJhF3NgIDMkQgwrU/msqau7QQAAAAABAEAAAADBhJJAwYS
+TQMGEhACBggDBhEUBAAAEkkEAAASTQUAAQESTQQAABIQAwAAAQQIABJJBAgAEk0ECAASEAgBAAgA
+AAAAAB4BAAEAVAIWV3JhcE5vbkV4Y2VwdGlvblRocm93cwEIAQACAAAAAAAoAQAjU1RfYWFjZWVi
+MDIzNDUzNDkxMmE0YTE3MjAxMmQ3OWNmMzMAAAUBAAAAABYBABFDb3B5cmlnaHQgQCAgMjAyMQAA
+SQEAGi5ORVRGcmFtZXdvcmssVmVyc2lvbj12NC43AQBUDhRGcmFtZXdvcmtEaXNwbGF5TmFtZRIu
+TkVUIEZyYW1ld29yayA0LjcAALQAAADOyu++AQAAAJEAAABsU3lzdGVtLlJlc291cmNlcy5SZXNv
+dXJjZVJlYWRlciwgbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQ
+dWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5I1N5c3RlbS5SZXNvdXJjZXMuUnVudGltZVJl
+c291cmNlU2V0AgAAAAAAAAAAAAAAUEFEUEFEULQAAABQLgAAAAAAAAAAAABqLgAAACAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAXC4AAAAAAAAAAAAAAABfQ29yRGxsTWFpbgBtc2NvcmVlLmRsbAAAAAAA
+/yUAIAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAMAAAA1D0A
+AAAAAAABABAAAAAYAACAAAAAAAAAAAAAAAAAAAABAAEAAAAwAACAAAAAAAAAAAAAAAAAAAABAAAA
+AABIAAAAWEAAABoEAAAAAAAAAAAAABoENAAAAFYAUwBfAFYARQBSAFMASQBPAE4AXwBJAE4ARgBP
+AAAAAAC9BO/+AAABAAAAAQCkmKAeAAABAKSYoB4/AAAAAAAAAAQAAAACAAAAAAAAAAAAAAAAAAAA
+RAAAAAEAVgBhAHIARgBpAGwAZQBJAG4AZgBvAAAAAAAkAAQAAABUAHIAYQBuAHMAbABhAHQAaQBv
+AG4AAAAAAAAAsAR6AwAAAQBTAHQAcgBpAG4AZwBGAGkAbABlAEkAbgBmAG8AAABWAwAAAQAwADAA
+MAAwADAANABiADAAAAAaAAEAAQBDAG8AbQBtAGUAbgB0AHMAAAAAAAAAIgABAAEAQwBvAG0AcABh
+AG4AeQBOAGEAbQBlAAAAAAAAAAAAcAAkAAEARgBpAGwAZQBEAGUAcwBjAHIAaQBwAHQAaQBvAG4A
+AAAAAFMAVABfAGEAYQBjAGUAZQBiADAAMgAzADQANQAzADQAOQAxADIAYQA0AGEAMQA3ADIAMAAx
+ADIAZAA3ADkAYwBmADMAMwAAAD4ADwABAEYAaQBsAGUAVgBlAHIAcwBpAG8AbgAAAAAAMQAuADAA
+LgA3ADgANAAwAC4AMwA5ADAANwA2AAAAAABwACgAAQBJAG4AdABlAHIAbgBhAGwATgBhAG0AZQAA
+AFMAVABfAGEAYQBjAGUAZQBiADAAMgAzADQANQAzADQAOQAxADIAYQA0AGEAMQA3ADIAMAAxADIA
+ZAA3ADkAYwBmADMAMwAuAGQAbABsAAAASAASAAEATABlAGcAYQBsAEMAbwBwAHkAcgBpAGcAaAB0
+AAAAQwBvAHAAeQByAGkAZwBoAHQAIABAACAAIAAyADAAMgAxAAAAKgABAAEATABlAGcAYQBsAFQA
+cgBhAGQAZQBtAGEAcgBrAHMAAAAAAAAAAAB4ACgAAQBPAHIAaQBnAGkAbgBhAGwARgBpAGwAZQBu
+AGEAbQBlAAAAUwBUAF8AYQBhAGMAZQBlAGIAMAAyADMANAA1ADMANAA5ADEAMgBhADQAYQAxADcA
+MgAwADEAMgBkADcAOQBjAGYAMwAzAC4AZABsAGwAAABoACQAAQBQAHIAbwBkAHUAYwB0AE4AYQBt
+AGUAAAAAAFMAVABfAGEAYQBjAGUAZQBiADAAMgAzADQANQAzADQAOQAxADIAYQA0AGEAMQA3ADIA
+MAAxADIAZAA3ADkAYwBmADMAMwAAAEIADwABAFAAcgBvAGQAdQBjAHQAVgBlAHIAcwBpAG8AbgAA
+ADEALgAwAC4ANwA4ADQAMAAuADMAOQAwADcANgAAAAAARgAPAAEAQQBzAHMAZQBtAGIAbAB5ACAA
+VgBlAHIAcwBpAG8AbgAAADEALgAwAC4ANwA4ADQAMAAuADMAOQAwADcANgAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAwAAAB8PgAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -685,7 +3000,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         </ScriptProject>
       </DTS:ObjectData>
     </DTS:Executable>
@@ -695,10 +3010,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
       DTS:DTSID="{51B00A6A-9629-4B04-86D8-B5B6F8428980}"
-      DTS:From="Package\Execute SQL Task"
+      DTS:From="Package\Execute SQL Task - Retrieve XML from table"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
-      DTS:To="Package\Script Task" />
+      DTS:To="Package\Script Task - Convert XML to JSON" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{7CAA2270-6EFC-40AE-A43C-9982BAFC189C}"
+      DTS:From="Package\Script Task - Convert XML to JSON"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Data Flow Task - Create row and push to table" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -711,24 +3034,24 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="131,42"
-          Id="Package\Script Task"
-          TopLeft="412,218" />
-        <NodeLayout
-          Size="163,42"
-          Id="Package\Execute SQL Task"
+          Size="287,42"
+          Id="Package\Execute SQL Task - Retrieve XML from table"
           TopLeft="423,106" />
+        <NodeLayout
+          Size="242,42"
+          Id="Package\Script Task - Convert XML to JSON"
+          TopLeft="412,218" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="504.5,148">
+          TopLeft="566.5,148">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-27,70"
+              EndConnector="-33.5,70"
               Start="0,0"
-              End="-27,62.5">
+              End="-33.5,62.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -739,13 +3062,51 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                     Point2="0,35"
                     Point3="-4,35" />
                   <mssgle:LineSegment
-                    End="-23,35" />
+                    End="-29.5,35" />
                   <mssgle:CubicBezierSegment
-                    Point1="-23,35"
-                    Point2="-27,35"
-                    Point3="-27,39" />
+                    Point1="-29.5,35"
+                    Point2="-33.5,35"
+                    Point3="-33.5,39" />
                   <mssgle:LineSegment
-                    End="-27,62.5" />
+                    End="-33.5,62.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="299,42"
+          Id="Package\Data Flow Task - Create row and push to table"
+          TopLeft="421,332" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="533,260">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="37.5,72"
+              Start="0,0"
+              End="37.5,64.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,32"
+                    Point2="0,36"
+                    Point3="4,36" />
+                  <mssgle:LineSegment
+                    End="33.5,36" />
+                  <mssgle:CubicBezierSegment
+                    Point1="33.5,36"
+                    Point2="37.5,36"
+                    Point3="37.5,40" />
+                  <mssgle:LineSegment
+                    End="37.5,64.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -757,5 +3118,268 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       </GraphLayout>
     </LayoutInfo>
   </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task - Create row and push to table">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Data Flow Task - Create row and push to table\Script Component"
+          TopLeft="441,125" />
+        <NodeLayout
+          Size="154,42"
+          Id="Package\Data Flow Task - Create row and push to table\Derived Column"
+          TopLeft="441,254" />
+        <EdgeLayout
+          Id="Package\Data Flow Task - Create row and push to table.Paths[Output 0]"
+          TopLeft="520.25,167">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,87"
+              Start="0,0"
+              End="0,79.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,79.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="98,42"
+          Id="Package\Data Flow Task - Create row and push to table\Sort"
+          TopLeft="476,366" />
+        <EdgeLayout
+          Id="Package\Data Flow Task - Create row and push to table.Paths[Derived Column Output]"
+          TopLeft="521.5,296">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,70"
+              Start="0,0"
+              End="0,62.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,62.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="130,42"
+          Id="Package\Data Flow Task - Create row and push to table\Merge Join"
+          TopLeft="663,469" />
+        <EdgeLayout
+          Id="Package\Data Flow Task - Create row and push to table.Paths[Sort Output]"
+          TopLeft="525,408">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="182.666666666667,61"
+              Start="0,0"
+              End="182.666666666667,53.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.1550151975684" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,32.1550151975684"
+                    Point2="0,36.1550151975684"
+                    Point3="4,36.1550151975684" />
+                  <mssgle:LineSegment
+                    End="178.666666666667,36.1550151975684" />
+                  <mssgle:CubicBezierSegment
+                    Point1="178.666666666667,36.1550151975684"
+                    Point2="182.666666666667,36.1550151975684"
+                    Point3="182.666666666667,40.1550151975684" />
+                  <mssgle:LineSegment
+                    End="182.666666666667,53.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Data Flow Task - Create row and push to table\OLE DB Source"
+          TopLeft="816,123" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Data Flow Task - Create row and push to table\Derived Column 1"
+          TopLeft="818,249" />
+        <EdgeLayout
+          Id="Package\Data Flow Task - Create row and push to table.Paths[OLE DB Source Output]"
+          TopLeft="891,165">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="8.5,84"
+              Start="0,0"
+              End="8.5,76.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,38"
+                    Point2="0,42"
+                    Point3="4,42" />
+                  <mssgle:LineSegment
+                    End="4.5,42" />
+                  <mssgle:CubicBezierSegment
+                    Point1="4.5,42"
+                    Point2="8.5,42"
+                    Point3="8.5,46" />
+                  <mssgle:LineSegment
+                    End="8.5,76.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="107,42"
+          Id="Package\Data Flow Task - Create row and push to table\Sort 1"
+          TopLeft="850,361" />
+        <EdgeLayout
+          Id="Package\Data Flow Task - Create row and push to table.Paths[Derived Column Output1]"
+          TopLeft="901.5,291">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,70"
+              Start="0,0"
+              End="0,62.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,62.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task - Create row and push to table.Paths[Sort Output1]"
+          TopLeft="903.5,403">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-155.166666666667,66"
+              Start="0,0"
+              End="-155.166666666667,58.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.1185410334347" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,35.1185410334347"
+                    Point2="0,39.1185410334347"
+                    Point3="-4,39.1185410334347" />
+                  <mssgle:LineSegment
+                    End="-151.166666666667,39.1185410334347" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-151.166666666667,39.1185410334347"
+                    Point2="-155.166666666667,39.1185410334347"
+                    Point3="-155.166666666667,43.1185410334347" />
+                  <mssgle:LineSegment
+                    End="-155.166666666667,58.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Data Flow Task - Create row and push to table\OLE DB Destination"
+          TopLeft="642,576" />
+        <EdgeLayout
+          Id="Package\Data Flow Task - Create row and push to table.Paths[Merge Join Output]"
+          TopLeft="727.75,511">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,65"
+              Start="0,0"
+              End="0,57.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,57.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <AnnotationLayout
+          Text="C#  Version 1.0&#xD;&#xA;Elapsed time: 00:00:00.532&#xD;&#xA;"
+          ParentId="Package\Data Flow Task - Create row and push to table"
+          FontInfo="{assembly:Null}"
+          Size="238,96"
+          Id="d22da2f5-12f3-4eab-984c-6e83011fc242"
+          TopLeft="566,18" />
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task - Create row and push to table\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task - Create row and push to table\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
