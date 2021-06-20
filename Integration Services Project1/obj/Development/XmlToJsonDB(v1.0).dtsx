@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="XmlToJsonDB Testing"
   DTS:PackageType="5"
-  DTS:VersionBuild="70"
-  DTS:VersionGUID="{E986F726-A488-4CCA-AF09-CBC4306B9182}">
+  DTS:VersionBuild="72"
+  DTS:VersionGUID="{4A156DA9-60DE-4FA5-A726-0503EADE43CA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -3075,29 +3075,29 @@ task.run = function () {
         <NodeLayout
           Size="290,42"
           Id="Package\Data Flow Task - Combine columns &amp; output"
-          TopLeft="519,263" />
+          TopLeft="535,396" />
         <NodeLayout
           Size="208,42"
           Id="Package\Data Flow Task - Get XML"
-          TopLeft="561.249999310821,49.7368431355485" />
+          TopLeft="585.249999310821,213.736843135548" />
         <NodeLayout
           Size="234,42"
           Id="Package\JavaScript Task - XML to JSON"
-          TopLeft="550.499999068677,159.526319112144" />
+          TopLeft="568.499999068677,300.526319112144" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="666.374999189749,91.7368431355485">
+          TopLeft="687.374999189749,255.736843135548">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,67.7894759765955"
+              EndConnector="0,44.7894759765955"
               Start="0,0"
-              End="0,60.2894759765955">
+              End="0,37.2894759765955">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,60.2894759765955" />
+                    End="0,37.2894759765955" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3108,18 +3108,18 @@ task.run = function () {
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="665.749999534338,201.526319112144">
+          TopLeft="682.749999534338,342.526319112144">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,61.473680887856"
+              EndConnector="0,53.473680887856"
               Start="0,0"
-              End="0,53.973680887856">
+              End="0,45.973680887856">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,53.973680887856" />
+                    End="0,45.973680887856" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3128,6 +3128,13 @@ task.run = function () {
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <AnnotationLayout
+          Text="JavaScript (Cozy Rock)&#xD;&#xA;Elapsed time: 00:00:01.922"
+          ParentId="Package"
+          FontInfo="{assembly:Null}"
+          Size="238,72"
+          Id="62348ecf-ce52-4b79-9edf-7526f338ba25"
+          TopLeft="566,111" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
