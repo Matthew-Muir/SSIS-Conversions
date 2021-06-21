@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>Integration Services Project1</Name>
-    <LastWriteTime>2021-06-19T05:39:44.5384508Z</LastWriteTime>
+    <LastWriteTime>2021-06-21T04:42:26.08689Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -18,7 +18,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>XmlToJsonDB(v1.0).dtsx</Name>
-      <LastWriteTime>2021-06-20T05:23:29.821856Z</LastWriteTime>
+      <LastWriteTime>2021-06-21T04:42:26.0519813Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -27,8 +27,8 @@
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
-      <Name>XmlToJson(Csharp).dtsx</Name>
-      <LastWriteTime>2021-06-20T06:42:14.4117917Z</LastWriteTime>
+      <Name>XmlToJsonCsharp(v1.0).dtsx</Name>
+      <LastWriteTime>2021-06-21T04:37:38.8471201Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

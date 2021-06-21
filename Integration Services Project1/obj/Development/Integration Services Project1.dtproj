@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">TRAINING1</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAv1DVc1TElEqrQWU6kdiu4gAAAAACAAAAAAAQZgAAAAEAACAAAAB7OhALcysIUAmZiTAXqZkR7qb9KynjHTvL0l18Ro0k4wAAAAAOgAAAAAIAACAAAACgjciaeWs04C8dBdVCBMMLEF+Vpqyu08gxy+MeGNudtZAAAADL+5KVdi7tZnR2AMP9GtXx1J6Og3By90eSJJcwnaIM22yuskQeagrib+9wFb2xTDV1Oa2RZM2m6vqBnD7jwopBrocubDFettwVIxczT2l+HfJgXUUVsiPVFC+ipApgw+tELrRuThU36kywn4zuNt7Md+IU/sN8mg6hQCrArl2gziDI3764/NZeicuai09sjpFAAAAAG1mNIlMs2Pa8vv8ryTTzjl/qz2sm5H/acSvucZZ3OGpL9VgD2cUzEoR44fVgIZnBGlKkSE80fYDviG8S5qfS0w==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAv1DVc1TElEqrQWU6kdiu4gAAAAACAAAAAAAQZgAAAAEAACAAAABbtusNt8KW3yqEA5dLNOLUOD4FpAVng7fQ8EMh5NbuKgAAAAAOgAAAAAIAACAAAABEwazWWwrLMtkyHpFiXngrOVDAyDH9pegStoW8QbaQd5AAAACeg7j66V8paughf2FYXX2HWD9RF51GfH//k/+0XpckBfKT+l8xBc4ZhiNQG0kfY1mXSjZtgpZerW3NpTHK8raN+Wlgmx5Q0DzoJzZxxhKcErNTw9G2XKvNQaDqELrMjnstpiV/iSOdiTQaBKgywd5WRAjEjq16EvcMjz9se4ACSVGWckF0g8rUSgSP3rXBprRAAAAAW5jShmeiq8cHAYfzaF5q9J6KfPV9IMVRN8ORScyhb+xh1JWOZ5IVZXxUni3DtQVj6KfHx5ZKz/JtIospO7tK8w==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -34,7 +34,7 @@
           <SSIS:Package SSIS:Name="XmlToJson(Bill).dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="XmlToJsonDB(v1.0).dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="XmlToJsonDB(PoC).dtsx" SSIS:EntryPoint="1" />
-          <SSIS:Package SSIS:Name="XmlToJson(Csharp).dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="XmlToJsonCsharp(v1.0).dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers />
         <SSIS:DeploymentInfo>
@@ -408,10 +408,10 @@
                 <SSIS:Property SSIS:Name="Name">XmlToJsonDB Testing</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">72</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">73</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{4A156DA9-60DE-4FA5-A726-0503EADE43CA}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{68B706A0-124C-4E21-85D3-B9B3990CBB24}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -610,6 +610,8 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">
+                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -1433,16 +1435,16 @@
                 </SSIS:Parameter>
               </SSIS:Parameters>
             </SSIS:PackageMetaData>
-            <SSIS:PackageMetaData SSIS:Name="XmlToJson(Csharp).dtsx">
+            <SSIS:PackageMetaData SSIS:Name="XmlToJsonCsharp(v1.0).dtsx">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">{3BB4C502-B23C-42AC-9BBA-BE8260D790AB}</SSIS:Property>
                 <SSIS:Property SSIS:Name="Name">Package1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">78</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">81</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{34C93489-379A-4D8A-A19A-5E0CFB62E591}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{EFCCDB7F-D207-4914-B052-9290827D9235}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
