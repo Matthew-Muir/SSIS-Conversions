@@ -11,11 +11,23 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="89"
-  DTS:VersionGUID="{38466902-0076-4943-85D4-FC7B63496ED8}">
+  DTS:VersionBuild="96"
+  DTS:VersionGUID="{BF4319FD-9D12-4F1D-9E74-65F9DBF46AB2}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[(localdb)\MSSQLLocalDB.lc_TEA_JSON]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{11D3F3C0-4ED4-45A4-AA6E-DA503B6C0645}"
+      DTS:ObjectName="(localdb)\MSSQLLocalDB.lc_TEA_JSON">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=lc_TEA_JSON;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[DB]"
       DTS:CreationName="ADO.NET:SQL"
@@ -489,11 +501,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination - Push to DB"
+              refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
-              name="OLE DB Destination - Push to DB"
+              name="OLE DB Destination"
               usesDispositions="true"
               version="4">
               <properties>
@@ -538,7 +550,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS,FIRE_TRIGGERS</property>
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS, FIRE_TRIGGERS</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -546,146 +558,146 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination - Push to DB.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LocalHost.TestEnv]"
-                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.TestEnv]"
+                  refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[(localdb)\MSSQLLocalDB.lc_TEA_JSON]"
+                  connectionManagerRefId="Package.ConnectionManagers[(localdb)\MSSQLLocalDB.lc_TEA_JSON]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination - Push to DB.Inputs[OLE DB Destination Input]"
+                  refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination - Push to DB.Inputs[OLE DB Destination Input].Columns[pk]"
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[pk]"
                       cachedDataType="i4"
                       cachedName="pk"
-                      externalMetadataColumnId="Package\Data Flow Task - Create row and push to table\OLE DB Destination - Push to DB.Inputs[OLE DB Destination Input].ExternalColumns[pk]"
+                      externalMetadataColumnId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[pk]"
                       lineageId="Package\Data Flow Task - Create row and push to table\Merge Join - Create row.Outputs[Merge Join Output].Columns[pk]" />
                     <inputColumn
-                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination - Push to DB.Inputs[OLE DB Destination Input].Columns[sending]"
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[sending]"
                       cachedDataType="bool"
                       cachedName="sending"
-                      externalMetadataColumnId="Package\Data Flow Task - Create row and push to table\OLE DB Destination - Push to DB.Inputs[OLE DB Destination Input].ExternalColumns[sending]"
+                      externalMetadataColumnId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[sending]"
                       lineageId="Package\Data Flow Task - Create row and push to table\Merge Join - Create row.Outputs[Merge Join Output].Columns[sending]" />
                     <inputColumn
-                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination - Push to DB.Inputs[OLE DB Destination Input].Columns[sent]"
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[sent]"
                       cachedDataType="bool"
                       cachedName="sent"
-                      externalMetadataColumnId="Package\Data Flow Task - Create row and push to table\OLE DB Destination - Push to DB.Inputs[OLE DB Destination Input].ExternalColumns[sent]"
+                      externalMetadataColumnId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[sent]"
                       lineageId="Package\Data Flow Task - Create row and push to table\Merge Join - Create row.Outputs[Merge Join Output].Columns[sent]" />
                     <inputColumn
-                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination - Push to DB.Inputs[OLE DB Destination Input].Columns[xml_data]"
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[xml_data]"
                       cachedCodepage="1252"
                       cachedDataType="text"
                       cachedName="xml_data"
-                      externalMetadataColumnId="Package\Data Flow Task - Create row and push to table\OLE DB Destination - Push to DB.Inputs[OLE DB Destination Input].ExternalColumns[xml_data]"
+                      externalMetadataColumnId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[xml_data]"
                       lineageId="Package\Data Flow Task - Create row and push to table\Merge Join - Create row.Outputs[Merge Join Output].Columns[xml_data]" />
                     <inputColumn
-                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination - Push to DB.Inputs[OLE DB Destination Input].Columns[crc]"
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[crc]"
                       cachedDataType="i4"
                       cachedName="crc"
-                      externalMetadataColumnId="Package\Data Flow Task - Create row and push to table\OLE DB Destination - Push to DB.Inputs[OLE DB Destination Input].ExternalColumns[crc]"
+                      externalMetadataColumnId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[crc]"
                       lineageId="Package\Data Flow Task - Create row and push to table\Merge Join - Create row.Outputs[Merge Join Output].Columns[crc]" />
                     <inputColumn
-                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination - Push to DB.Inputs[OLE DB Destination Input].Columns[sending_test]"
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[sending_test]"
                       cachedDataType="bool"
                       cachedName="sending_test"
-                      externalMetadataColumnId="Package\Data Flow Task - Create row and push to table\OLE DB Destination - Push to DB.Inputs[OLE DB Destination Input].ExternalColumns[sending_test]"
+                      externalMetadataColumnId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[sending_test]"
                       lineageId="Package\Data Flow Task - Create row and push to table\Merge Join - Create row.Outputs[Merge Join Output].Columns[sending_test]" />
                     <inputColumn
-                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination - Push to DB.Inputs[OLE DB Destination Input].Columns[sent_test]"
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[sent_test]"
                       cachedDataType="bool"
                       cachedName="sent_test"
-                      externalMetadataColumnId="Package\Data Flow Task - Create row and push to table\OLE DB Destination - Push to DB.Inputs[OLE DB Destination Input].ExternalColumns[sent_test]"
+                      externalMetadataColumnId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[sent_test]"
                       lineageId="Package\Data Flow Task - Create row and push to table\Merge Join - Create row.Outputs[Merge Join Output].Columns[sent_test]" />
                     <inputColumn
-                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination - Push to DB.Inputs[OLE DB Destination Input].Columns[SendDTS_Pacific]"
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SendDTS_Pacific]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="100"
                       cachedName="SendDTS_Pacific"
-                      externalMetadataColumnId="Package\Data Flow Task - Create row and push to table\OLE DB Destination - Push to DB.Inputs[OLE DB Destination Input].ExternalColumns[SendDTS_Pacific]"
+                      externalMetadataColumnId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SendDTS_Pacific]"
                       lineageId="Package\Data Flow Task - Create row and push to table\Merge Join - Create row.Outputs[Merge Join Output].Columns[SendDTS_Pacific]" />
                     <inputColumn
-                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination - Push to DB.Inputs[OLE DB Destination Input].Columns[SendDTS_UTC]"
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SendDTS_UTC]"
                       cachedDataType="dbTimeStamp"
                       cachedName="SendDTS_UTC"
-                      externalMetadataColumnId="Package\Data Flow Task - Create row and push to table\OLE DB Destination - Push to DB.Inputs[OLE DB Destination Input].ExternalColumns[SendDTS_UTC]"
+                      externalMetadataColumnId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SendDTS_UTC]"
                       lineageId="Package\Data Flow Task - Create row and push to table\Merge Join - Create row.Outputs[Merge Join Output].Columns[SendDTS_UTC]" />
                     <inputColumn
-                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination - Push to DB.Inputs[OLE DB Destination Input].Columns[JSON]"
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[JSON]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="7000"
                       cachedName="JSON"
-                      externalMetadataColumnId="Package\Data Flow Task - Create row and push to table\OLE DB Destination - Push to DB.Inputs[OLE DB Destination Input].ExternalColumns[JSONText]"
+                      externalMetadataColumnId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[JSONText]"
                       lineageId="Package\Data Flow Task - Create row and push to table\Merge Join - Create row.Outputs[Merge Join Output].Columns[JSON]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination - Push to DB.Inputs[OLE DB Destination Input].ExternalColumns[LocalID]"
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LocalID]"
                       dataType="i4"
                       name="LocalID" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination - Push to DB.Inputs[OLE DB Destination Input].ExternalColumns[InsertDTS_Local]"
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[InsertDTS_Local]"
                       dataType="dbTimeStamp"
                       name="InsertDTS_Local" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination - Push to DB.Inputs[OLE DB Destination Input].ExternalColumns[InsertDTS_UTC]"
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[InsertDTS_UTC]"
                       dataType="dbTimeStamp"
                       name="InsertDTS_UTC" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination - Push to DB.Inputs[OLE DB Destination Input].ExternalColumns[pk]"
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[pk]"
                       dataType="i4"
                       name="pk" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination - Push to DB.Inputs[OLE DB Destination Input].ExternalColumns[sending]"
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[sending]"
                       dataType="bool"
                       name="sending" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination - Push to DB.Inputs[OLE DB Destination Input].ExternalColumns[sent]"
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[sent]"
                       dataType="bool"
                       name="sent" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination - Push to DB.Inputs[OLE DB Destination Input].ExternalColumns[xml_data]"
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[xml_data]"
                       codePage="1252"
                       dataType="text"
                       name="xml_data" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination - Push to DB.Inputs[OLE DB Destination Input].ExternalColumns[crc]"
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[crc]"
                       dataType="i4"
                       name="crc" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination - Push to DB.Inputs[OLE DB Destination Input].ExternalColumns[sending_test]"
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[sending_test]"
                       dataType="bool"
                       name="sending_test" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination - Push to DB.Inputs[OLE DB Destination Input].ExternalColumns[sent_test]"
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[sent_test]"
                       dataType="bool"
                       name="sent_test" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination - Push to DB.Inputs[OLE DB Destination Input].ExternalColumns[SendDTS_Pacific]"
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SendDTS_Pacific]"
                       codePage="1252"
                       dataType="str"
                       length="100"
                       name="SendDTS_Pacific" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination - Push to DB.Inputs[OLE DB Destination Input].ExternalColumns[SendDTS_UTC]"
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SendDTS_UTC]"
                       dataType="dbTimeStamp"
                       name="SendDTS_UTC" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination - Push to DB.Inputs[OLE DB Destination Input].ExternalColumns[JSONText]"
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[JSONText]"
                       codePage="1252"
                       dataType="text"
                       name="JSONText" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination - Push to DB.Inputs[OLE DB Destination Input].ExternalColumns[JSON_Sent]"
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[JSON_Sent]"
                       dataType="i4"
                       name="JSON_Sent" />
                   </externalMetadataColumns>
@@ -693,22 +705,22 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination - Push to DB.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Data Flow Task - Create row and push to table\OLE DB Destination - Push to DB.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination - Push to DB.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task - Create row and push to table\OLE DB Destination - Push to DB.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination - Push to DB.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task - Create row and push to table\OLE DB Destination - Push to DB.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -750,7 +762,8 @@
       ,[sent_test]
       ,[SendDTS_Pacific]
       ,[SendDTS_UTC]
-  FROM [TestEnv].[dbo].[DC_RAW_Sent_Data]</property>
+  FROM [lc_TEA_JSON].[dbo].[DC_RAW_Sent_Data]
+ORDER BY SendDTS_UTC desc;</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -776,8 +789,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task - Create row and push to table\OLE DB Source - Grab columns from RAW.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LocalHost.TestEnv]"
-                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.TestEnv]"
+                  connectionManagerID="Package.ConnectionManagers[(localdb)\MSSQLLocalDB.lc_TEA_JSON]"
+                  connectionManagerRefId="Package.ConnectionManagers[(localdb)\MSSQLLocalDB.lc_TEA_JSON]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2327,7 +2340,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               startId="Package\Data Flow Task - Create row and push to table\Derived Column 1 - Add sort key.Outputs[Derived Column Output]" />
             <path
               refId="Package\Data Flow Task - Create row and push to table.Paths[Merge Join Output]"
-              endId="Package\Data Flow Task - Create row and push to table\OLE DB Destination - Push to DB.Inputs[OLE DB Destination Input]"
+              endId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="Merge Join Output"
               startId="Package\Data Flow Task - Create row and push to table\Merge Join - Create row.Outputs[Merge Join Output]" />
             <path
@@ -2367,8 +2380,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{7F8F9285-2440-4681-899E-52BBE5D5D675}"
-          SQLTask:SqlStatementSource="SELECT TOP (1) ? =  xml_data, ? = SendDTS_UTC FROM dbo.DC_RAW_Sent_Data&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          SQLTask:Connection="{11D3F3C0-4ED4-45A4-AA6E-DA503B6C0645}"
+          SQLTask:SqlStatementSource="SELECT TOP (1) ? =  xml_data, ? = SendDTS_UTC&#xA; FROM dbo.DC_RAW_Sent_Data&#xA;ORDER BY SendDTS_UTC DESC;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ParameterBinding
             SQLTask:ParameterName="0"
             SQLTask:DtsVariableName="User::VarXML"
@@ -3163,14 +3176,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
           Text="C#  Version 1.0&#xA;Elapsed Time 00:00.484"
           ParentId="Package"
           FontInfo="{assembly:Null}"
-          Size="214,72"
+          Size="214,56"
           Id="3bd31bec-248c-46e3-93b1-2a852b40e183"
           TopLeft="457,133" />
         <AnnotationLayout
           Text="A &quot;Script Task&quot; cannot hold a nuget package/dll. So to mitigate this there are two options.&#xA;&#xA;~Write the script task so that it has a file location to find the dll. (Which is currently how it is setup).&#xA;   But that file path must be hard coded in the Xml to JSON script. (Current path for dll is C:\ ).&#xA;&#xA;~Run the gacutil tool to install the dll on the system running the package. "
           ParentId="Package"
           FontInfo="{assembly:Null}"
-          Size="815,168"
+          Size="815,120"
           Id="793b7074-c3f1-4d49-bf49-c35401107510"
           TopLeft="750,218" />
       </GraphLayout>
@@ -3193,10 +3206,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
           Size="162,42"
           Id="Package\Data Flow Task - Create row and push to table\Sort - Sort by key"
           TopLeft="476,366" />
-        <NodeLayout
-          Size="234,42"
-          Id="Package\Data Flow Task - Create row and push to table\OLE DB Destination - Push to DB"
-          TopLeft="642,576" />
         <NodeLayout
           Size="261,42"
           Id="Package\Data Flow Task - Create row and push to table\Script Component - VarJSON to source"
@@ -3326,28 +3335,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task - Create row and push to table.Paths[Merge Join Output]"
-          TopLeft="759,511">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,65"
-              Start="0,0"
-              End="0,57.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,57.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\Data Flow Task - Create row and push to table.Paths[Derived Column Output1]"
           TopLeft="935,291">
           <EdgeLayout.Curve>
@@ -3391,6 +3378,32 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="177,42"
+          Id="Package\Data Flow Task - Create row and push to table\OLE DB Destination"
+          TopLeft="671,546" />
+        <EdgeLayout
+          Id="Package\Data Flow Task - Create row and push to table.Paths[Merge Join Output]"
+          TopLeft="759.25,511">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35"
+              Start="0,0"
+              End="0,27.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -3408,7 +3421,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task - Create row and push to table\OLE DB Destination - Push to DB">
+    design-time-name="Package\Data Flow Task - Create row and push to table\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
