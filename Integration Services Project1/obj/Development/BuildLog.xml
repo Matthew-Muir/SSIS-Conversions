@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>Integration Services Project1</Name>
-    <LastWriteTime>2021-06-24T22:21:38.18683Z</LastWriteTime>
+    <LastWriteTime>2021-06-25T20:12:54.5239914Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -34,6 +34,11 @@
     <ProjectBuildItemInfo>
       <Name>JsonToFile(v1.0).dtsx</Name>
       <LastWriteTime>2021-06-24T23:54:36.2038876Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>UtcDtsToCol(v1.0).dtsx</Name>
+      <LastWriteTime>2021-06-25T20:13:02.296898Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
