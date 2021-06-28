@@ -11,43 +11,21 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="96"
-  DTS:VersionGUID="{BF4319FD-9D12-4F1D-9E74-65F9DBF46AB2}">
+  DTS:VersionBuild="97"
+  DTS:VersionGUID="{DEBDC786-FAFC-492A-8015-AEBD8B43AD7C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[(localdb)\MSSQLLocalDB.lc_TEA_JSON]"
+      DTS:refId="Package.ConnectionManagers[TRAINING1\MSSQLSERVER01.lc_TEA_JSON]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{11D3F3C0-4ED4-45A4-AA6E-DA503B6C0645}"
-      DTS:ObjectName="(localdb)\MSSQLLocalDB.lc_TEA_JSON">
+      DTS:DTSID="{719E43D5-0F54-4110-B608-8C9A6CD7B258}"
+      DTS:ObjectName="TRAINING1\MSSQLSERVER01.lc_TEA_JSON">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=lc_TEA_JSON;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DB]"
-      DTS:CreationName="ADO.NET:SQL"
-      DTS:DTSID="{1D8DAD61-B18E-48F6-A36A-3B76F77CDD3C}"
-      DTS:ObjectName="DB">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=.;Integrated Security=SSPI;Connect Timeout=30;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[LocalHost.TestEnv]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{7F8F9285-2440-4681-899E-52BBE5D5D675}"
-      DTS:ObjectName="LocalHost.TestEnv">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=.;Initial Catalog=TestEnv;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=TRAINING1\MSSQLSERVER01;Initial Catalog=lc_TEA_JSON;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -550,7 +528,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS, FIRE_TRIGGERS</property>
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS,FIRE_TRIGGERS</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -559,8 +537,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task - Create row and push to table\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[(localdb)\MSSQLLocalDB.lc_TEA_JSON]"
-                  connectionManagerRefId="Package.ConnectionManagers[(localdb)\MSSQLLocalDB.lc_TEA_JSON]"
+                  connectionManagerID="Package.ConnectionManagers[TRAINING1\MSSQLSERVER01.lc_TEA_JSON]"
+                  connectionManagerRefId="Package.ConnectionManagers[TRAINING1\MSSQLSERVER01.lc_TEA_JSON]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -789,8 +767,8 @@ ORDER BY SendDTS_UTC desc;</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task - Create row and push to table\OLE DB Source - Grab columns from RAW.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[(localdb)\MSSQLLocalDB.lc_TEA_JSON]"
-                  connectionManagerRefId="Package.ConnectionManagers[(localdb)\MSSQLLocalDB.lc_TEA_JSON]"
+                  connectionManagerID="Package.ConnectionManagers[TRAINING1\MSSQLSERVER01.lc_TEA_JSON]"
+                  connectionManagerRefId="Package.ConnectionManagers[TRAINING1\MSSQLSERVER01.lc_TEA_JSON]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2380,7 +2358,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{11D3F3C0-4ED4-45A4-AA6E-DA503B6C0645}"
+          SQLTask:Connection="{719E43D5-0F54-4110-B608-8C9A6CD7B258}"
           SQLTask:SqlStatementSource="SELECT TOP (1) ? =  xml_data, ? = SendDTS_UTC&#xA; FROM dbo.DC_RAW_Sent_Data&#xA;ORDER BY SendDTS_UTC DESC;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ParameterBinding
             SQLTask:ParameterName="0"
@@ -2416,14 +2394,35 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           ReadOnlyVariables="User::VarUTC,User::VarXML"
           ReadWriteVariables="User::VarJSON">
           <ProjectItem
-            Name="Properties\Settings.settings"
-            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
+            Name="Properties\AssemblyInfo.cs"
+            Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_aaceeb0234534912a4a172012d79cf33")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ST_aaceeb0234534912a4a172012d79cf33")]
+[assembly: AssemblyCopyright("Copyright @  2021")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.resx"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -2543,6 +2542,41 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
 </root>]]></ProjectItem>
+          <ProjectItem
+            Name="packages.config"
+            Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<packages>
+  <package id="Newtonsoft.Json" version="13.0.1" targetFramework="net47" />
+</packages>]]></ProjectItem>
+          <ProjectItem
+            Name="Properties\Settings.Designer.cs"
+            Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_aaceeb0234534912a4a172012d79cf33.Properties.Settings.get_Default():ST_aaceeb0234534912a4a172012d79cf33.Properties.Sett" +
+    "ings")]
+
+namespace ST_aaceeb0234534912a4a172012d79cf33.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
           <ProjectItem
             Name="ScriptMain.cs"
             Encoding="UTF8"><![CDATA[#region Help:  Introduction to the script task
@@ -2711,6 +2745,27 @@ namespace ST_aaceeb0234534912a4a172012d79cf33
 
 }]]></ProjectItem>
           <ProjectItem
+            Name="Project"
+            Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
+  <msb:PropertyGroup>
+    <msb:CodeName>ST_aaceeb0234534912a4a172012d79cf33</msb:CodeName>
+    <msb:Language>msBuild</msb:Language>
+    <msb:DisplayName>ST_aaceeb0234534912a4a172012d79cf33</msb:DisplayName>
+    <msb:ProjectId>{2C87CD82-47C8-499F-BC57-DEF673AAB7AC}</msb:ProjectId>
+  </msb:PropertyGroup>
+  <msb:ItemGroup>
+    <msb:Project Include="ST_aaceeb0234534912a4a172012d79cf33.csproj" />
+    <msb:File Include="Properties\Resources.resx" />
+    <msb:File Include="Properties\Settings.settings" />
+    <msb:File Include="Properties\AssemblyInfo.cs" />
+    <msb:File Include="Properties\Resources.Designer.cs" />
+    <msb:File Include="Properties\Settings.Designer.cs" />
+    <msb:File Include="packages.config" />
+    <msb:File Include="ScriptMain.cs" />
+  </msb:ItemGroup>
+</c:Project>]]></ProjectItem>
+          <ProjectItem
             Name="ST_aaceeb0234534912a4a172012d79cf33.csproj"
             Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -2802,91 +2857,14 @@ namespace ST_aaceeb0234534912a4a172012d79cf33
   </ProjectExtensions>
 </Project>]]></ProjectItem>
           <ProjectItem
-            Name="Project"
-            Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
-<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
-  <msb:PropertyGroup>
-    <msb:CodeName>ST_aaceeb0234534912a4a172012d79cf33</msb:CodeName>
-    <msb:Language>msBuild</msb:Language>
-    <msb:DisplayName>ST_aaceeb0234534912a4a172012d79cf33</msb:DisplayName>
-    <msb:ProjectId>{2C87CD82-47C8-499F-BC57-DEF673AAB7AC}</msb:ProjectId>
-  </msb:PropertyGroup>
-  <msb:ItemGroup>
-    <msb:Project Include="ST_aaceeb0234534912a4a172012d79cf33.csproj" />
-    <msb:File Include="Properties\Resources.resx" />
-    <msb:File Include="Properties\Settings.settings" />
-    <msb:File Include="Properties\AssemblyInfo.cs" />
-    <msb:File Include="Properties\Resources.Designer.cs" />
-    <msb:File Include="Properties\Settings.Designer.cs" />
-    <msb:File Include="packages.config" />
-    <msb:File Include="ScriptMain.cs" />
-  </msb:ItemGroup>
-</c:Project>]]></ProjectItem>
-          <ProjectItem
-            Name="packages.config"
-            Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
-<packages>
-  <package id="Newtonsoft.Json" version="13.0.1" targetFramework="net47" />
-</packages>]]></ProjectItem>
-          <ProjectItem
-            Name="Properties\Settings.Designer.cs"
-            Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
-// <auto-generated>
-//     This code was generated by a tool.
-//
-//     Changes to this file may cause incorrect behavior and will be lost if
-//     the code is regenerated.
-// </auto-generated>
-//------------------------------------------------------------------------------
-
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_aaceeb0234534912a4a172012d79cf33.Properties.Settings.get_Default():ST_aaceeb0234534912a4a172012d79cf33.Properties.Sett" +
-    "ings")]
-
-namespace ST_aaceeb0234534912a4a172012d79cf33.Properties {
-    
-    
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
-        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        private static Settings defaultInstance = new Settings();
-        
-        public static Settings Default {
-            get {
-                return defaultInstance;
-            }
-        }
-    }
-}]]></ProjectItem>
-          <ProjectItem
-            Name="Properties\AssemblyInfo.cs"
-            Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
-
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_aaceeb0234534912a4a172012d79cf33")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ST_aaceeb0234534912a4a172012d79cf33")]
-[assembly: AssemblyCopyright("Copyright @  2021")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+            Name="Properties\Settings.settings"
+            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
           <ProjectItem
             Name="Properties\Resources.Designer.cs"
             Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -3207,6 +3185,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
           Id="Package\Data Flow Task - Create row and push to table\Sort - Sort by key"
           TopLeft="476,366" />
         <NodeLayout
+          Size="177,42"
+          Id="Package\Data Flow Task - Create row and push to table\OLE DB Destination"
+          TopLeft="671,546" />
+        <NodeLayout
           Size="261,42"
           Id="Package\Data Flow Task - Create row and push to table\Script Component - VarJSON to source"
           TopLeft="426,128" />
@@ -3335,6 +3317,28 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\Data Flow Task - Create row and push to table.Paths[Merge Join Output]"
+          TopLeft="759.25,511">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35"
+              Start="0,0"
+              End="0,27.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\Data Flow Task - Create row and push to table.Paths[Derived Column Output1]"
           TopLeft="935,291">
           <EdgeLayout.Curve>
@@ -3370,32 +3374,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,62.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="177,42"
-          Id="Package\Data Flow Task - Create row and push to table\OLE DB Destination"
-          TopLeft="671,546" />
-        <EdgeLayout
-          Id="Package\Data Flow Task - Create row and push to table.Paths[Merge Join Output]"
-          TopLeft="759.25,511">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,35"
-              Start="0,0"
-              End="0,27.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,27.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
