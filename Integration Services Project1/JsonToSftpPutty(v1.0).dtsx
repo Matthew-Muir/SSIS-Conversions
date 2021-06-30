@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="4"
-  DTS:VersionGUID="{228A875C-5E21-4E34-B5B9-66128BD1E6FA}">
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{EEBE2CE8-0E9F-455D-A09E-4F1C385F6CD3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -30,9 +30,8 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <ExecuteProcessData
-          Executable="C:\quick\psftp.exe"
-          Arguments="mattm@localhost -pw mylittlered08AVEO! -be -batch -b test.bat"
-          WorkingDirectory="C:\Users\mattm\Desktop" />
+          Executable="auto.bat"
+          WorkingDirectory="P:\Shared Documents\Information Systems Shared Documents\Drop_Files\TEA_JSON" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>

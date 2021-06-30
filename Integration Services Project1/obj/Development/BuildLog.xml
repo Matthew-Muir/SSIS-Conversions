@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>Integration Services Project1</Name>
-    <LastWriteTime>2021-06-29T23:35:44.2931451Z</LastWriteTime>
+    <LastWriteTime>2021-06-30T17:49:50.02215Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -33,7 +33,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>JsonToFile(v1.0).dtsx</Name>
-      <LastWriteTime>2021-06-29T16:26:46.3969816Z</LastWriteTime>
+      <LastWriteTime>2021-06-30T20:33:00.1954692Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -43,12 +43,12 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>JsonToSftp(v1.0).dtsx</Name>
-      <LastWriteTime>2021-06-29T22:33:50.8678724Z</LastWriteTime>
+      <LastWriteTime>2021-06-30T17:49:49.9952225Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
-      <Name>JsonToSftpFREE(Dev).dtsx</Name>
-      <LastWriteTime>2021-06-29T23:39:09.294626Z</LastWriteTime>
+      <Name>JsonToSftpPutty(v1.0).dtsx</Name>
+      <LastWriteTime>2021-06-30T20:37:00.6114282Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

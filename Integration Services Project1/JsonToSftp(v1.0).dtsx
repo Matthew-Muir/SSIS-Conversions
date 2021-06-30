@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{86A7EA92-FBEC-47E3-B547-7B35D9B3B681}">
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{1AA77CB0-22F8-4571-833C-B771D53275CA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -24,11 +24,11 @@
       <DTS:ObjectData>
         <ConnectionManager
           BackendVersion="2"
-          ConnectionString="ServerHost=localhost;ServerPort=22;ServerUser=mattm;ServerKeyFile=;ServerTimeout=60;LogFile=;TransferBinary=True;ServerType=Unknown;ServerFingerprint=;Compression=True;RetainSameConnection=False;ProxyType=None;ProxyHost=;ProxyPort=80;ProxyUser=;"
+          ConnectionString="ServerHost=localhost;ServerPort=22;ServerUser=admin;ServerKeyFile=;ServerTimeout=60;LogFile=;TransferBinary=True;ServerType=Unknown;ServerFingerprint=;Compression=True;RetainSameConnection=False;ProxyType=None;ProxyHost=;ProxyPort=80;ProxyUser=;"
           ConnectByProxy="False">
           <ServerPassword
             Sensitive="1" xmlns="www.microsoft.com/SqlServer/Dts"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAN9gtUvDVp0OPkF39mIw7PQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACzAbGC4n2N4x/4lNPPPUgUAAAAAASAAACgAAAAEAAAANXBdnluHNYp9Uwz8HzSwtIoAAAAFzbJH1OhBPuoGr00SYjDhOLLojycrqwjK2xjm5drdtwNEQ2stNwVMRQAAACGLf6Nda1ooN0Re8to7B6lCXCpWg</ServerPassword>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAN9gtUvDVp0OPkF39mIw7PQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACa64zWr5M8ArP8Psjs00VLAAAAAASAAACgAAAAEAAAAGWyUQjVd6dlGo3GbjxUI10YAAAAaTI24zT+zvkMDwmOKAwgZaB6XfHZr7s/FAAAADkss376HsxyifK7jwYc2XoCIMWm</ServerPassword>
         </ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
