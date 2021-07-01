@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="6"
-  DTS:VersionGUID="{1AA77CB0-22F8-4571-833C-B771D53275CA}">
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{EC7820BD-BBBA-4467-8293-3A312709DD69}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -28,7 +28,7 @@
           ConnectByProxy="False">
           <ServerPassword
             Sensitive="1" xmlns="www.microsoft.com/SqlServer/Dts"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAN9gtUvDVp0OPkF39mIw7PQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADss1eJcYEA5Sdb68QsqPulAAAAAASAAACgAAAAEAAAADVS3OeeqyKkmWpNv/Cmh+kYAAAAUsV48K05eUSwRY1w83i/aaEVeErrUn+fFAAAAIod3O6yxmYazjGHSy9/L8ha8yrO</ServerPassword>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAN9gtUvDVp0OPkF39mIw7PQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAR4FxG31dcPsJMv456j1i2AAAAAASAAACgAAAAEAAAAOhPHp10o1wUvGmUbxb994QYAAAAmnhvsfy0YLs+5MWwCvyMot+P7iQ/jMvoFAAAAAry4zLZiR4pdeQmavWXEq9YCMAT</ServerPassword>
         </ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -52,7 +52,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="VarSourcePath">
       <DTS:VariableValue
-        DTS:DataType="8">P:\Shared Documents\Information Systems Shared Documents\Drop_Files\TEA_JSON</DTS:VariableValue>
+        DTS:DataType="8">P:\Shared Documents\Information Systems Shared Documents\Drop_Files\TEA_JSON\archive</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
@@ -75,7 +75,7 @@
           IsLocalVariable="True"
           Local="User::VarSourcePath"
           IsRemoteVariable="False"
-          Remote=""
+          Remote="/archive"
           OverwriteExisting="False"
           Result=""
           ExtendedRemoteFileInfo="True"
@@ -99,11 +99,18 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="310,42"
           Id="Package\File Transfer Task - Transfer JSON file to SFTP"
           TopLeft="666,246" />
+        <AnnotationLayout
+          Text="Cozy Rock tool to transfer JSON file from our system to a remote directory vis SFTP."
+          ParentId="Package"
+          FontInfo="{assembly:Null}"
+          Size="470,60"
+          Id="e8ad89cb-1a67-4c9a-8486-432d72062e81"
+          TopLeft="573,162" />
       </GraphLayout>
     </LayoutInfo>
   </Package>

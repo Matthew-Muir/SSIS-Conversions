@@ -1,0 +1,118 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/29/2021 1:06:27 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="TRAINING1"
+  DTS:CreatorName="LCPUD\mattm"
+  DTS:DTSID="{14B4E5DF-5342-4BC6-A7EC-9393CD0D4B81}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.167"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{EC7820BD-BBBA-4467-8293-3A312709DD69}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Localhost SSH server]"
+      DTS:CreationName="SSH"
+      DTS:DTSID="{C2E42329-B3ED-4E28-9026-427B6231CF01}"
+      DTS:ObjectName="Localhost SSH server">
+      <DTS:ObjectData>
+        <ConnectionManager
+          BackendVersion="2"
+          ConnectionString="ServerHost=localhost;ServerPort=22;ServerUser=admin;ServerKeyFile=;ServerTimeout=60;LogFile=;TransferBinary=True;ServerType=Unknown;ServerFingerprint=;Compression=True;RetainSameConnection=False;ProxyType=None;ProxyHost=;ProxyPort=80;ProxyUser=;"
+          ConnectByProxy="False">
+          <ServerPassword
+            Sensitive="1" xmlns="www.microsoft.com/SqlServer/Dts"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAN9gtUvDVp0OPkF39mIw7PQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAC/sGcE4wt94ef1QTlgy7ALAAAAAASAAACgAAAAEAAAANFi7rizk//6CILu3P7UWgoYAAAAc71u7p+TTQ740iY5iyKrIiQEpG6+RLCBFAAAAA037UiwdWU46rPHE6D87it4sPOb</ServerPassword>
+        </ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SFTP_Root]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{C0CDE7C1-E6E7-43C2-912A-084B6173F423}"
+      DTS:ObjectName="SFTP_Root">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="2"
+          DTS:ConnectionString="C:\SFTP_Root" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{4C8ACB63-DC07-4788-8E21-2B8A4CAB0A0B}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="VarSourcePath">
+      <DTS:VariableValue
+        DTS:DataType="8">P:\Shared Documents\Information Systems Shared Documents\Drop_Files\TEA_JSON\archive</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\File Transfer Task - Transfer JSON file to SFTP"
+      DTS:CreationName="CozyRoc.FileTransferTask"
+      DTS:Description="File Transfer Task"
+      DTS:DTSID="{9B67E29A-A416-4DCA-ADE1-ED777E451121}"
+      DTS:ExecutableType="CozyRoc.FileTransferTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="File Transfer Task - Transfer JSON file to SFTP"
+      DTS:TaskContact="File Transfer Task; COZYROC LLC; SSIS+; © 2006-2020 COZYROC LLC; All Rights Reserved; http://www.cozyroc.com/;"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <FileTransferData
+          Connection="{C2E42329-B3ED-4E28-9026-427B6231CF01}"
+          StopOnFailure="True"
+          Action="SendFiles"
+          IsLocalVariable="True"
+          Local="User::VarSourcePath"
+          IsRemoteVariable="False"
+          Remote="/archive"
+          OverwriteExisting="False"
+          Result=""
+          ExtendedRemoteFileInfo="True"
+          IsRemoteWildcard="True"
+          NoFilesFail="True"
+          IncludeSubfolders="False"
+          IsFilterVariable="False"
+          Filter="Name.EndsWith(&quot;json&quot;)"
+          RemotePathSeparator="/" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="310,42"
+          Id="Package\File Transfer Task - Transfer JSON file to SFTP"
+          TopLeft="666,246" />
+        <AnnotationLayout
+          Text="Cozy Rock tool to transfer JSON file from our system to a remote directory vis SFTP."
+          ParentId="Package"
+          FontInfo="{assembly:Null}"
+          Size="470,60"
+          Id="e8ad89cb-1a67-4c9a-8486-432d72062e81"
+          TopLeft="573,162" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

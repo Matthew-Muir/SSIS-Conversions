@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="15"
-  DTS:VersionGUID="{B323723C-6829-46F1-BBC2-A0C99962A97A}">
+  DTS:VersionBuild="16"
+  DTS:VersionGUID="{BD389391-10B7-4D66-917B-7FEAD28CB146}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -31,7 +31,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="\\lcpudfs01\Departments\Shared Documents\Information Systems Shared Documents\Drop_Files\TEA_JSON\archive\DC_XML2JSON_2021-06-30_133700.json">
+          DTS:ConnectionString="\\lcpudfs01\Departments\Shared Documents\Information Systems Shared Documents\Drop_Files\TEA_JSON\archive\DC_XML2JSON_2021-07-01_102837.json">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -60,7 +60,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="\\lcpudfs01\Departments\Shared Documents\Information Systems Shared Documents\Drop_Files\TEA_JSON\DC_XML2JSON_2021-06-30_133700.json">
+          DTS:ConnectionString="\\lcpudfs01\Departments\Shared Documents\Information Systems Shared Documents\Drop_Files\TEA_JSON\DC_XML2JSON_2021-07-01_102837.json">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -97,7 +97,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="VarConnectionString">
       <DTS:VariableValue
-        DTS:DataType="8">\\lcpudfs01\Departments\Shared Documents\Information Systems Shared Documents\Drop_Files\TEA_JSON\archive\DC_XML2JSON_2021-06-30_133700.json</DTS:VariableValue>
+        DTS:DataType="8">\\lcpudfs01\Departments\Shared Documents\Information Systems Shared Documents\Drop_Files\TEA_JSON\archive\DC_XML2JSON_2021-07-01_102837.json</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -108,7 +108,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="VarFileName">
       <DTS:VariableValue
-        DTS:DataType="8">DC_XML2JSON_2021-06-30_133700.json</DTS:VariableValue>
+        DTS:DataType="8">DC_XML2JSON_2021-07-01_102837.json</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -128,7 +128,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="VarStagingConnectionString">
       <DTS:VariableValue
-        DTS:DataType="8">\\lcpudfs01\Departments\Shared Documents\Information Systems Shared Documents\Drop_Files\TEA_JSON\DC_XML2JSON_2021-06-30_133700.json</DTS:VariableValue>
+        DTS:DataType="8">\\lcpudfs01\Departments\Shared Documents\Information Systems Shared Documents\Drop_Files\TEA_JSON\DC_XML2JSON_2021-07-01_102837.json</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -209,99 +209,6 @@
                   </externalMetadataColumns>
                 </input>
               </inputs>
-            </component>
-            <component
-              refId="Package\Data Flow Task\Flat File Destination - Staging"
-              componentClassID="Microsoft.FlatFileDestination"
-              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Flat File Destination"
-              localeId="1033"
-              name="Flat File Destination - Staging"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Specifies whether the data will overwrite or append to the destination file."
-                  name="Overwrite">true</property>
-                <property
-                  dataType="System.Null"
-                  description="Specifies the text to write to the destination file before any data is written."
-                  expressionType="Notify"
-                  name="Header" />
-                <property
-                  dataType="System.Boolean"
-                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
-                  name="EscapeQualifier">false</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Data Flow Task\Flat File Destination - Staging.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Flat File CM Staging]"
-                  connectionManagerRefId="Package.ConnectionManagers[Flat File CM Staging]"
-                  name="FlatFileConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task\Flat File Destination - Staging.Inputs[Flat File Destination Input]"
-                  hasSideEffects="true"
-                  name="Flat File Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination - Staging.Inputs[Flat File Destination Input].Columns[JSONText]"
-                      cachedCodepage="1252"
-                      cachedDataType="text"
-                      cachedName="JSONText"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination - Staging.Inputs[Flat File Destination Input].ExternalColumns[JSONText]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[JSONText]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination - Staging.Inputs[Flat File Destination Input].ExternalColumns[JSONText]"
-                      codePage="1252"
-                      dataType="text"
-                      name="JSONText" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-            </component>
-            <component
-              refId="Package\Data Flow Task\Multicast"
-              componentClassID="Microsoft.Multicast"
-              contactInfo="Multicast;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Distributes every input row to every row in one or more outputs. For example, branch your data flow to make a copy of data so that some values can be masked before sharing with external partners."
-              name="Multicast">
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task\Multicast.Inputs[Multicast Input 1]"
-                  name="Multicast Input 1">
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task\Multicast.Outputs[Multicast Output 1]"
-                  deleteOutputOnPathDetached="true"
-                  name="Multicast Output 1"
-                  synchronousInputId="Package\Data Flow Task\Multicast.Inputs[Multicast Input 1]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Data Flow Task\Multicast.Outputs[Multicast Output 2]"
-                  deleteOutputOnPathDetached="true"
-                  name="Multicast Output 2"
-                  synchronousInputId="Package\Data Flow Task\Multicast.Inputs[Multicast Input 1]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Data Flow Task\Multicast.Outputs[Multicast Output 3]"
-                  dangling="true"
-                  deleteOutputOnPathDetached="true"
-                  name="Multicast Output 3"
-                  synchronousInputId="Package\Data Flow Task\Multicast.Inputs[Multicast Input 1]">
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
             </component>
             <component
               refId="Package\Data Flow Task\OLE DB Source"
@@ -660,18 +567,8 @@ ORDER BY InsertDTS_UTC DESC;</property>
           </components>
           <paths>
             <path
-              refId="Package\Data Flow Task.Paths[Multicast Output 1]"
-              endId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input]"
-              name="Multicast Output 1"
-              startId="Package\Data Flow Task\Multicast.Outputs[Multicast Output 1]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Multicast Output 2]"
-              endId="Package\Data Flow Task\Flat File Destination - Staging.Inputs[Flat File Destination Input]"
-              name="Multicast Output 2"
-              startId="Package\Data Flow Task\Multicast.Outputs[Multicast Output 2]" />
-            <path
               refId="Package\Data Flow Task.Paths[OLE DB Source Output]"
-              endId="Package\Data Flow Task\Multicast.Inputs[Multicast Input 1]"
+              endId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input]"
               name="OLE DB Source Output"
               startId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output]" />
           </paths>
@@ -699,7 +596,7 @@ ORDER BY InsertDTS_UTC DESC;</property>
           Text="Pulls JSON data from JSON table and saves that data as a JSON file to archive directory."
           ParentId="Package"
           FontInfo="{assembly:Null}"
-          Size="491,60"
+          Size="491,40"
           Id="f5c48272-7b2d-45ae-8ddd-b98d3c69000d"
           TopLeft="684,107" />
       </GraphLayout>
@@ -709,7 +606,7 @@ ORDER BY InsertDTS_UTC DESC;</property>
     design-time-name="Package\Data Flow Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="157,42"
           Id="Package\Data Flow Task\OLE DB Source"
@@ -717,25 +614,21 @@ ORDER BY InsertDTS_UTC DESC;</property>
         <NodeLayout
           Size="176,42"
           Id="Package\Data Flow Task\Flat File Destination"
-          TopLeft="566,368" />
-        <NodeLayout
-          Size="123,42"
-          Id="Package\Data Flow Task\Multicast"
-          TopLeft="690,256" />
+          TopLeft="662,312" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
-          TopLeft="752.5,198">
+          TopLeft="751.75,198">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,58"
+              EndConnector="0,114"
               Start="0,0"
-              End="0,50.5">
+              End="0,106.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,50.5" />
+                    End="0,106.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -744,85 +637,6 @@ ORDER BY InsertDTS_UTC DESC;</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Multicast Output 1]"
-          TopLeft="732.333333333333,298">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-78.3333333333334,70"
-              Start="0,0"
-              End="-78.3333333333334,62.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24.5393258426966" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,24.5393258426966"
-                    Point2="0,28.5393258426966"
-                    Point3="-4,28.5393258426966" />
-                  <mssgle:LineSegment
-                    End="-74.3333333333334,28.5393258426966" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-74.3333333333334,28.5393258426966"
-                    Point2="-78.3333333333334,28.5393258426966"
-                    Point3="-78.3333333333334,32.5393258426966" />
-                  <mssgle:LineSegment
-                    End="-78.3333333333334,62.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="223,42"
-          Id="Package\Data Flow Task\Flat File Destination - Staging"
-          TopLeft="771,364" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Multicast Output 2]"
-          TopLeft="770.666666666667,298">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="111.833333333333,66"
-              Start="0,0"
-              End="111.833333333333,58.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,22.908507223114" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,22.908507223114"
-                    Point2="0,26.908507223114"
-                    Point3="4,26.908507223114" />
-                  <mssgle:LineSegment
-                    End="107.833333333333,26.908507223114" />
-                  <mssgle:CubicBezierSegment
-                    Point1="107.833333333333,26.908507223114"
-                    Point2="111.833333333333,26.908507223114"
-                    Point3="111.833333333333,30.908507223114" />
-                  <mssgle:LineSegment
-                    End="111.833333333333,58.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <AnnotationLayout
-          Text="The second flat file destination is a &quot;Staging&quot; area. This allows the Putty&#xD;&#xA;implementation to work. Becuase or else Putty will grab all files in a location and send them.&#xD;&#xA;So the staging area is where the most recent file is kept, sent to SFTP server, then deleted."
-          ParentId="Package\Data Flow Task"
-          FontInfo="{assembly:Null}"
-          Size="515,72"
-          Id="917df658-a8a3-4996-8f3e-4691f6b701b6"
-          TopLeft="497,451" />
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
