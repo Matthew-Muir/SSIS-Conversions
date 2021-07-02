@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="7/1/2021 1:33:02 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="TRAINING1"
+  DTS:CreatorName="LCPUD\mattm"
+  DTS:DTSID="{5CBAAD49-438C-4980-A837-780B11C8D4A9}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.167"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{5E8A0081-7EEB-4164-A62E-0EE9263E720A}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FTPS ShareFile]"
+      DTS:CreationName="FTPS"
+      DTS:DTSID="{F110ED1F-FE75-433A-88F2-C7F2D24371C8}"
+      DTS:ObjectName="FTPS ShareFile">
+      <DTS:ObjectData>
+        <ConnectionManager
+          BackendVersion="2"
+          ConnectionString="ConnectionType=ExplicitSSL;ServerHost=lewiscountypud.sharefileftp.com;ServerPort=21;ServerUser=ucb7b6ab97;ServerTimeout=60;CertificateFile=;LogFile=;PassiveMode=True;PassiveIgnoreAddress=False;TransferBinary=True;ClearCommandChannel=False;CipherType=All;ClearDataChannel=False;RetainSameConnection=False;ProxyType=None;ProxyHost=;ProxyPort=1080;ProxyUser=;"
+          ConnectByProxy="False">
+          <ServerPassword
+            Sensitive="1" xmlns="www.microsoft.com/SqlServer/Dts"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAN9gtUvDVp0OPkF39mIw7PQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABnpyEjUnf2iM8fXQO8PSgsAAAAAASAAACgAAAAEAAAAPlvdQuZmY+ZUVWK442q3g8oAAAA+E0yYyefe0tEQ6r2fSSk2w6tbUSHyNvd6xmOZ+CbUMhxsEokCdkzVhQAAADNBEOJe0iy3yhYY+1Hr4kynvsE/g</ServerPassword>
+        </ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FTPS WinServer2019]"
+      DTS:CreationName="FTPS"
+      DTS:DTSID="{DE8C1F2C-3FB9-4332-AF87-4278F5791B88}"
+      DTS:ObjectName="FTPS WinServer2019">
+      <DTS:ObjectData>
+        <ConnectionManager
+          BackendVersion="2"
+          ConnectionString="ConnectionType=ExplicitTLS;ServerHost=172.21.186.230;ServerPort=21;ServerUser=mattm;ServerTimeout=60;CertificateFile=;LogFile=;PassiveMode=True;PassiveIgnoreAddress=False;TransferBinary=True;ClearCommandChannel=False;CipherType=All;ClearDataChannel=False;RetainSameConnection=False;ProxyType=None;ProxyHost=;ProxyPort=1080;ProxyUser=;"
+          ConnectByProxy="False">
+          <ServerPassword
+            Sensitive="1" xmlns="www.microsoft.com/SqlServer/Dts"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAN9gtUvDVp0OPkF39mIw7PQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACFdIf5rj5vPptCzWX2zAxcAAAAAASAAACgAAAAEAAAADJDSp9VXGjpZI0jlGmoE4AoAAAArF7lfJMER0CwQQMAPeGm7GY9l3bMUDhU/J5zZzpe8guN1oNodtrLphQAAADQ0VkCOCpr87hEWlV7zYeBZsD/xA</ServerPassword>
+        </ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{253D9B31-4C84-497B-839D-66564F36748A}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="VarFilePath">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\quick\</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\File Transfer Task"
+      DTS:CreationName="CozyRoc.FileTransferTask"
+      DTS:Description="File Transfer Task"
+      DTS:DTSID="{4787CCD4-CB19-4D6E-AB75-2D3938CBD9CE}"
+      DTS:ExecutableType="CozyRoc.FileTransferTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="File Transfer Task"
+      DTS:TaskContact="File Transfer Task; COZYROC LLC; SSIS+; © 2006-2020 COZYROC LLC; All Rights Reserved; http://www.cozyroc.com/;"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <FileTransferData
+          Connection="{DE8C1F2C-3FB9-4332-AF87-4278F5791B88}"
+          StopOnFailure="True"
+          Action="SendFiles"
+          IsLocalVariable="True"
+          Local="User::VarFilePath"
+          IsRemoteVariable="False"
+          Remote="/users/mattm"
+          OverwriteExisting="False"
+          Result=""
+          ExtendedRemoteFileInfo="True"
+          IsRemoteWildcard="True"
+          NoFilesFail="True"
+          IncludeSubfolders="False"
+          IsFilterVariable="False"
+          Filter="FullName.Contains(&quot;.txt&quot;)"
+          RemotePathSeparator="/" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="167,42"
+          Id="Package\File Transfer Task"
+          TopLeft="766,293" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
