@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">TRAINING1</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAN9gtUvDVp0OPkF39mIw7PQAAAAACAAAAAAADZgAAwAAAABAAAADM2WdUC8nJputEFz2ty7ufAAAAAASAAACgAAAAEAAAAJ6KJQ0qcxdgWUF2XP9rmTyIAAAAwCNpVafl3xesKUuiwoQIHpY1mugfB3ZMiEQiovN9ogpodMc0Pfg0OOiB9WBUOI39+J1Q14BHbHj2GbBXI5kbmrBaYzzigbxK5juHRb7UuS/JClV3LqvVwt6mD7MC5JTyNVktY9ZupD8EAre6AOtqsyje+SfBx5M4K7DIhwi+W5wCY7sMHJvQuhQAAAC11AVf6Qzn3gDqNOOoJ3BDck1ctA==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAN9gtUvDVp0OPkF39mIw7PQAAAAACAAAAAAADZgAAwAAAABAAAADtGT9lDvylQhQialKaNwPyAAAAAASAAACgAAAAEAAAADiY2wFU/gu2jsD6qrZa8EWIAAAAMX3iIqccyvj3ZSsviqPa9MR4IrvotcueChNDEqs9bl2PO7WKSNPeS8nR1+2H6EFVMRqNICPgp+jijy9HzCALyls6Sa0rhyJSuuTPaNOmvRcsHJRCipV/TTQ2849RnGQLZ13LggJOkNnFK29v3qWeelt3e2zSoCqmQlJixr6Je/ok6H1ixkYoQBQAAABA7u/rRWY6f07WNv2O6Bx+JAwV1Q==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -37,7 +37,8 @@
           <SSIS:Package SSIS:Name="JsonToSftpCozyRock(v1.0).dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="FtpsCozyRock(v1.0).dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="FtpsWinSCP(v1.0).dtsx" SSIS:EntryPoint="1" />
-          <SSIS:Package SSIS:Name="FtpsPush(v1.0).dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="SftpPush(v1.0).dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="SftpPull(Dev).dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers />
         <SSIS:DeploymentInfo>
@@ -2044,16 +2045,33 @@
               </SSIS:Properties>
               <SSIS:Parameters />
             </SSIS:PackageMetaData>
-            <SSIS:PackageMetaData SSIS:Name="FtpsPush(v1.0).dtsx">
+            <SSIS:PackageMetaData SSIS:Name="SftpPush(v1.0).dtsx">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">{4C2CA819-BB5B-45C3-A1CB-81353E0EBEC5}</SSIS:Property>
                 <SSIS:Property SSIS:Name="Name">FtpsWinScpPush Dev</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">26</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">30</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{49BA6E11-6F9F-4ECA-B88C-EACE86B981FF}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{38272B77-42A2-4AD1-890B-992CDFC15841}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="SftpPull(Dev).dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{1C0ED55F-973C-40A1-9871-A2327C04D65A}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">SftpPull Dev</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">31</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{75D6E8A2-6204-4954-B02C-3283FB5BAC84}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
