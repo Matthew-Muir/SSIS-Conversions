@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="FtpsWinScpPush Dev"
   DTS:PackageType="5"
-  DTS:VersionBuild="34"
-  DTS:VersionGUID="{53D872DB-DE82-4865-9A77-3B6E9B274E23}">
+  DTS:VersionBuild="35"
+  DTS:VersionGUID="{AC5C8FA5-1524-441B-80F7-B2A4DF8270B4}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -844,10 +844,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
           Id="c7efcf4a-176b-49ec-b90d-26c4430636bd"
           TopLeft="613,268" />
         <AnnotationLayout
-          Text="To use this package set the defined variables values.&#xA;This package also extends functionality via the value of VarFileName.&#xA;NOTE: a file name must also include it's extension&#xA;~ Leave the field blank to sync your remote directory with the local.&#xA;~ Wildcard characters ('?' '*') will match 0 to many files and transfer all matches.&#xA; ~ An exact file name including extension will transfer only that file."
+          Text="To use this package set the defined variables values.&#xA;This package also extends functionality via the value of VarFileName.&#xA;NOTE: a file name must also include it's extension&#xA;~ Leave the field blank to sync your remote directory with the local.&#xA;~ Wildcard characters ('?' '*') will match 0 to many files and transfer all matches.&#xA; ~ An exact file name including extension will transfer only that file.&#xD;&#xA;~ Enter a folder name with '\' at the end to transfer the entire folder. Or '\*' to transfer just it's contents."
           ParentId="Package"
           FontInfo="{assembly:Null}"
-          Size="590,152"
+          Size="757,173"
           Id="f28c01a4-40b5-4ba7-982d-8bccf106aa71"
           TopLeft="586,454" />
       </GraphLayout>

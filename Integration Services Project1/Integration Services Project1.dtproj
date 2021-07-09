@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">TRAINING1</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAN9gtUvDVp0OPkF39mIw7PQAAAAACAAAAAAADZgAAwAAAABAAAADtGT9lDvylQhQialKaNwPyAAAAAASAAACgAAAAEAAAADiY2wFU/gu2jsD6qrZa8EWIAAAAMX3iIqccyvj3ZSsviqPa9MR4IrvotcueChNDEqs9bl2PO7WKSNPeS8nR1+2H6EFVMRqNICPgp+jijy9HzCALyls6Sa0rhyJSuuTPaNOmvRcsHJRCipV/TTQ2849RnGQLZ13LggJOkNnFK29v3qWeelt3e2zSoCqmQlJixr6Je/ok6H1ixkYoQBQAAABA7u/rRWY6f07WNv2O6Bx+JAwV1Q==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAN9gtUvDVp0OPkF39mIw7PQAAAAACAAAAAAADZgAAwAAAABAAAADwi5h88nVOmPuzmWvmLevVAAAAAASAAACgAAAAEAAAAJffwkVIE216J8EeGY+C3fSIAAAA8VQZJ2gGxWqhXTT/3k6QQSiW8aRSb9Qu6/XtiB6bgYFAyKduIiSkrAn8oRVWl0HXvmMnOJaCEtihepk6JAqhVhVAiwSLEFqwyLM6r7EUemNrFX2LD5iJFH9DI5ZQk0FdWK/9GzwTZsW4P4+cBHqMKK6PwKnHkYWM7fESO4oOWqq56HXRCTyvRRQAAAAfTLCQuy/zmw9himyhITAsBYP9mg==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -38,7 +38,7 @@
           <SSIS:Package SSIS:Name="FtpsCozyRock(v1.0).dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="FtpsWinSCP(v1.0).dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="SftpPush(v1.0).dtsx" SSIS:EntryPoint="1" />
-          <SSIS:Package SSIS:Name="SftpPull(Dev).dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="SftpPull(v1.0).dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers />
         <SSIS:DeploymentInfo>
@@ -2051,10 +2051,10 @@
                 <SSIS:Property SSIS:Name="Name">FtpsWinScpPush Dev</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">30</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">36</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{38272B77-42A2-4AD1-890B-992CDFC15841}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{AF1AEF72-495A-437D-A245-BF6952E8C656}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -2062,16 +2062,16 @@
               </SSIS:Properties>
               <SSIS:Parameters />
             </SSIS:PackageMetaData>
-            <SSIS:PackageMetaData SSIS:Name="SftpPull(Dev).dtsx">
+            <SSIS:PackageMetaData SSIS:Name="SftpPull(v1.0).dtsx">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">{1C0ED55F-973C-40A1-9871-A2327C04D65A}</SSIS:Property>
                 <SSIS:Property SSIS:Name="Name">SftpPull Dev</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">31</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">38</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{75D6E8A2-6204-4954-B02C-3283FB5BAC84}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{A77039F2-BBC4-41F3-B9CE-F26008555295}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
