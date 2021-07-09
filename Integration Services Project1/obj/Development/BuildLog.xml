@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>Integration Services Project1</Name>
-    <LastWriteTime>2021-07-08T20:37:39.4080013Z</LastWriteTime>
+    <LastWriteTime>2021-07-09T18:50:15.2387859Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -43,12 +43,22 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>SftpPush(v1.0).dtsx</Name>
-      <LastWriteTime>2021-07-08T23:36:03.6816978Z</LastWriteTime>
+      <LastWriteTime>2021-07-09T15:47:10.7898266Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
-      <Name>SftpPull(Dev).dtsx</Name>
-      <LastWriteTime>2021-07-09T15:39:24.2304653Z</LastWriteTime>
+      <Name>SftpPull(v1.0).dtsx</Name>
+      <LastWriteTime>2021-07-09T15:45:42.9796455Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>FtpsPush(v1.0).dtsx</Name>
+      <LastWriteTime>2021-07-09T18:48:22.0055344Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>FtpsPull(v1.0).dtsx</Name>
+      <LastWriteTime>2021-07-09T20:09:34.4615349Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
