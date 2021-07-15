@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">TRAINING1</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAN9gtUvDVp0OPkF39mIw7PQAAAAACAAAAAAADZgAAwAAAABAAAACo4x9ruxTSdV+3IRdhyuq9AAAAAASAAACgAAAAEAAAACX20iWgeWXortUFjcFV7UGIAAAA9Ycgm7MkgVkR+BgihD4hXxAlRexSxyCVNh+c5PNolSgBZXSiX1FmY0gINv6jtleZA0DppbA1O6TKCX5utST3fRzsOJDqAt7EBH6tQ5V/CAdOWIFRgph9po4kVFCDf5yGAUe7ySjIg94qeROl2Kq96TJhzEnWrPKVu5lQsEYSTPtKCzIXaeL6sBQAAACppZnSW6Be8CLAe7c86zxMSVEAVQ==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAN9gtUvDVp0OPkF39mIw7PQAAAAACAAAAAAADZgAAwAAAABAAAAD8G73XTBLthb0Z5Svy7QIxAAAAAASAAACgAAAAEAAAANqX6/xc1wQsRwP4vcA8+cuIAAAANFoM+IQ5kK2T8+/qFxrjHYm/quvZsW+w053iFeuCJGKqmKtw8BbkGJlLMuYlQkNAJCnGR3Nk5eZ/d3vkUBY3bdsfrHdSb/f7rYdLCN9AAYoyiRqh1CLvoXRfseThFXuKKLm+Sm6k0lzrjYi1GtVixA67niJWzoFtTk1ra2RoI0tKBVKVIYOIlRQAAABBwn9wjUF+t433L8Rl2eOvbVXpnw==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -41,7 +41,8 @@
           <SSIS:Package SSIS:Name="SftpPull(v1.0).dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="FtpsPush(v1.0).dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="FtpsPull(v1.0).dtsx" SSIS:EntryPoint="1" />
-          <SSIS:Package SSIS:Name="SftpTask(Dev).dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="SftpTask(v1.0).dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="GUI.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers />
         <SSIS:DeploymentInfo>
@@ -2116,7 +2117,7 @@
               </SSIS:Properties>
               <SSIS:Parameters />
             </SSIS:PackageMetaData>
-            <SSIS:PackageMetaData SSIS:Name="SftpTask(Dev).dtsx">
+            <SSIS:PackageMetaData SSIS:Name="SftpTask(v1.0).dtsx">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">{0FA5E762-0D6A-4AE6-9B7D-EBA1CC1A15D6}</SSIS:Property>
                 <SSIS:Property SSIS:Name="Name">Package1</SSIS:Property>
@@ -2245,6 +2246,23 @@
                   </SSIS:Properties>
                 </SSIS:Parameter>
               </SSIS:Parameters>
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="GUI.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{D586892A-305F-4C1A-9B5F-DE740065353D}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Package1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{CB5B7A1A-12BF-4A5E-9DC8-956A354932CA}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
             </SSIS:PackageMetaData>
           </SSIS:PackageInfo>
         </SSIS:DeploymentInfo>
