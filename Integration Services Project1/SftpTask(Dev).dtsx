@@ -1,0 +1,191 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="7/13/2021 11:05:53 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="TRAINING1"
+  DTS:CreatorName="LCPUD\mattm"
+  DTS:DTSID="{0FA5E762-0D6A-4AE6-9B7D-EBA1CC1A15D6}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.167"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{658CD114-2931-4C9E-9CEA-0DDF295FDA24}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:PackageParameters>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{19973DBF-3399-4C01-AA2C-FDDC8EB44110}"
+      DTS:ObjectName="HostName">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue">localhost</DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="3"
+      DTS:DTSID="{219DDFF9-77F1-4812-8143-C4DD13196667}"
+      DTS:ObjectName="HostPortNumber">
+      <DTS:Property
+        DTS:DataType="3"
+        DTS:Name="ParameterValue">22</DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{1FFCD746-E036-49E5-8915-ED98736AE622}"
+      DTS:ObjectName="LocalPath">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue">C:\quick\*.txt</DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{DD18CF03-6CE2-4378-AB61-52704D7671CD}"
+      DTS:ObjectName="Password">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue">password</DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{4D5108AB-C3D1-4066-8830-C405D188F420}"
+      DTS:ObjectName="ProtocolName">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue">Sftp</DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{EFEC3158-73B9-45E2-B437-E6FBC4420BE8}"
+      DTS:ObjectName="RemotePath">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue">/</DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{88977FAB-57A1-49EA-8D12-169A2640F117}"
+      DTS:ObjectName="SshHostKeyFingerPrint">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue">ssh-rsa 1024 ANhrKrpNVsxqr+JGrcQH6EUsz76ewdsazpcX1JE+XQc=</DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{880FC59F-EC63-401F-B177-97A649705FD8}"
+      DTS:ObjectName="UserName">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue">admin</DTS:Property>
+    </DTS:PackageParameter>
+  </DTS:PackageParameters>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{1CCC65DE-2BC8-4368-9F9C-7149CDF14608}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="RemoveFiles">
+      <DTS:VariableValue
+        DTS:DataType="11">0</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\SFTP-Task"
+      DTS:CreationName="SecureFTP.SFTP, SecureFTP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4f5f127b6230f83d"
+      DTS:Description="SFTP-Task"
+      DTS:DTSID="{560C9935-2AAD-460C-AFC7-75D51AC9BC0B}"
+      DTS:ExecutableType="SecureFTP.SFTP, SecureFTP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4f5f127b6230f83d"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SFTP-Task"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:PropertyExpression
+        DTS:Name="FtpHostName">@[$Package::HostName]</DTS:PropertyExpression>
+      <DTS:PropertyExpression
+        DTS:Name="FtpLocalPath">@[$Package::LocalPath]</DTS:PropertyExpression>
+      <DTS:PropertyExpression
+        DTS:Name="FtpPassword">@[$Package::Password]</DTS:PropertyExpression>
+      <DTS:PropertyExpression
+        DTS:Name="FtpPortNumber">@[$Package::HostPortNumber]</DTS:PropertyExpression>
+      <DTS:PropertyExpression
+        DTS:Name="FtpProtocolName">@[$Package::ProtocolName]</DTS:PropertyExpression>
+      <DTS:PropertyExpression
+        DTS:Name="FtpRemotePath">@[$Package::RemotePath]</DTS:PropertyExpression>
+      <DTS:PropertyExpression
+        DTS:Name="FtpRemove">@[User::RemoveFiles]</DTS:PropertyExpression>
+      <DTS:PropertyExpression
+        DTS:Name="FtpSshHostKeyFingerprint">@[$Package::SshHostKeyFingerPrint]</DTS:PropertyExpression>
+      <DTS:PropertyExpression
+        DTS:Name="FtpUserName">@[$Package::UserName]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <InnerObject>
+          <FtpHostName
+            Type="8"
+            Value="localhost" />
+          <FtpLocalPath
+            Type="8"
+            Value="C:\quick\*.txt" />
+          <FtpOperationName
+            Type="8"
+            Value="PutFiles" />
+          <FtpPassword
+            Type="8"
+            Value="password" />
+          <FtpPortNumber
+            Type="3"
+            Value="22" />
+          <FtpProtocolName
+            Type="8"
+            Value="Sftp" />
+          <FtpRemotePath
+            Type="8"
+            Value="/" />
+          <FtpRemove
+            Type="11"
+            Value="0" />
+          <FtpSshHostKeyFingerprint
+            Type="8"
+            Value="ssh-rsa 1024 ANhrKrpNVsxqr+JGrcQH6EUsz76ewdsazpcX1JE+XQc=" />
+          <FtpUserName
+            Type="8"
+            Value="admin" />
+          <TargetServerVersion
+            Type="3"
+            Value="150" />
+        </InnerObject>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="135,42"
+          Id="Package\SFTP-Task"
+          TopLeft="666,328" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

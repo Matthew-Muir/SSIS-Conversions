@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="FtpsPull v1 0"
   DTS:PackageType="5"
-  DTS:VersionBuild="45"
-  DTS:VersionGUID="{44556828-74D0-41E1-8FCC-CA48E953F4D7}">
+  DTS:VersionBuild="46"
+  DTS:VersionGUID="{051EE756-85D4-499F-987E-9A1DE91A1DF7}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -840,7 +840,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==</BinaryItem>
           Id="Package\Script Task - Pull file from server"
           TopLeft="720,357" />
         <AnnotationLayout
-          Text="SFTP Pull from server to local directory via WinSCP dll"
+          Text="FTPS Pull from server to local directory via WinSCP dll"
           ParentId="Package"
           FontInfo="{assembly:Null}"
           Size="406,45"
