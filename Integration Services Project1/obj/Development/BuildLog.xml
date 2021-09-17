@@ -2,23 +2,23 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>Integration Services Project1</Name>
-    <LastWriteTime>2021-07-15T17:55:39.7806296Z</LastWriteTime>
+    <LastWriteTime>2021-09-17T18:18:57.5070772Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>XmlToJsonCsharp(v1.0).dtsx</Name>
-      <LastWriteTime>2021-06-29T18:37:23.1853527Z</LastWriteTime>
+      <LastWriteTime>2021-09-03T18:35:09.1478056Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>JsonToFile(v1.0).dtsx</Name>
-      <LastWriteTime>2021-07-01T16:08:14.1351017Z</LastWriteTime>
+      <LastWriteTime>2021-09-07T18:34:43.055779Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>UtcDtsToCol(v2.0).dtsx</Name>
-      <LastWriteTime>2021-07-01T16:22:03.6647757Z</LastWriteTime>
+      <LastWriteTime>2021-09-03T18:35:09.1348076Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -28,7 +28,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>JsonToSftpCozyRock(v1.0).dtsx</Name>
-      <LastWriteTime>2021-07-01T16:18:47.1933511Z</LastWriteTime>
+      <LastWriteTime>2021-09-17T18:18:57.4760893Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -53,7 +53,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>FtpsPush(v1.0).dtsx</Name>
-      <LastWriteTime>2021-07-09T18:48:22.0055344Z</LastWriteTime>
+      <LastWriteTime>2021-08-03T21:48:45.6239182Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -62,8 +62,33 @@
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
-      <Name>SftpTask(Dev).dtsx</Name>
-      <LastWriteTime>2021-07-15T17:55:39.7526299Z</LastWriteTime>
+      <Name>SftpTask(v1.0).dtsx</Name>
+      <LastWriteTime>2021-07-20T15:02:21.7815746Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>JsonToSftp(v1.0).dtsx</Name>
+      <LastWriteTime>2021-09-08T16:06:50.1875352Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>Test.dtsx</Name>
+      <LastWriteTime>2021-09-14T18:30:25.9681634Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>serverTest.dtsx</Name>
+      <LastWriteTime>2021-09-17T20:19:32.9508144Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>cozy.dtsx</Name>
+      <LastWriteTime>2021-09-16T15:29:30.6026201Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>Zap.dtsx</Name>
+      <LastWriteTime>2021-09-16T21:58:43.7891736Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
-  DTS:CreationDate="7/7/2021 3:38:57 PM"
+  DTS:CreationDate="9/15/2021 10:26:12 AM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="TRAINING1"
   DTS:CreatorName="LCPUD\mattm"
-  DTS:DTSID="{52A32857-B51F-4228-970F-B28C6051DC08}"
+  DTS:DTSID="{715B635A-C308-4009-942F-39D8D9394422}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="15.0.2000.167"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
   DTS:VersionBuild="1"
-  DTS:VersionGUID="{654314BA-E50E-42DC-B245-532B04D16D48}">
+  DTS:VersionGUID="{88C572DA-D41D-48EA-9F16-B918FBEF56F2}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -21,7 +21,7 @@
       DTS:refId="Package\Script Task"
       DTS:CreationName="Microsoft.ScriptTask"
       DTS:Description="Script Task"
-      DTS:DTSID="{D64F5AC4-EC4F-4B78-B713-ABC97FC376EA}"
+      DTS:DTSID="{D7A0E359-743D-45C0-BB82-79C3D5BD9FAB}"
       DTS:ExecutableType="Microsoft.ScriptTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Script Task"
@@ -29,7 +29,7 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <ScriptProject
-          Name="ST_6a98329adc9c4d58814c89d7bb12f13a"
+          Name="ST_c035e67d300d4e4d95053ca376f9cd1c"
           VSTAMajorVersion="15"
           VSTAMinorVersion="0"
           Language="CSharp" />
@@ -51,7 +51,7 @@
         <NodeLayout
           Size="134,42"
           Id="Package\Script Task"
-          TopLeft="713,261" />
+          TopLeft="1170,354" />
       </GraphLayout>
     </LayoutInfo>
   </Package>

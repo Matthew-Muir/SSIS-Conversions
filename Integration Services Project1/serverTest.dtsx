@@ -1,0 +1,148 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="9/14/2021 2:01:38 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="TRAINING1"
+  DTS:CreatorName="LCPUD\mattm"
+  DTS:DTSID="{94BD8417-CC85-499C-BC44-BCF0AEFE1487}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="24"
+  DTS:VersionGUID="{02A0CA5A-86CC-4B41-95CC-7BEB0CAFED74}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\192_168_10_170"
+      DTS:CreationName="SecureFTP.SFTP, SecureFTP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4f5f127b6230f83d"
+      DTS:Description="SFTP Task"
+      DTS:DTSID="{4750B9DC-927C-4CFC-8535-A69A560DE293}"
+      DTS:ExecutableType="SecureFTP.SFTP, SecureFTP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4f5f127b6230f83d"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="192_168_10_170"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <InnerObject>
+          <FtpExePath
+            Type="8"
+            Value="C:\TEMP\WinSCP.exe" />
+          <FtpHostName
+            Type="8"
+            Value="192.168.10.170" />
+          <FtpLocalPath
+            Type="8"
+            Value="C:\TEMP\" />
+          <FtpLogPath
+            Type="8"
+            Value="" />
+          <FtpOperationName
+            Type="8"
+            Value="GetFiles" />
+          <FtpPassword
+            Type="8"
+            Value="MushroomWater33!" />
+          <FtpPortNumber
+            Type="3"
+            Value="22" />
+          <FtpRemotePath
+            Type="8"
+            Value="/DropFiles/MattTestFile.txt" />
+          <FtpRemove
+            Type="11"
+            Value="0" />
+          <FtpSshHostKeyFingerprint
+            Type="8"
+            Value="ssh-rsa 2048 0YQ+5Zmwej5mPy4OeOS7BBn7aZToV8sD+pC8WU+r6yM=" />
+          <FtpUserName
+            Type="8"
+            Value="LCPUDPROD" />
+          <TargetServerVersion
+            Type="3"
+            Value="150" />
+        </InnerObject>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\192_168_35_20"
+      DTS:CreationName="SecureFTP.SFTP, SecureFTP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4f5f127b6230f83d"
+      DTS:Description="SFTP Task"
+      DTS:Disabled="True"
+      DTS:DTSID="{288FBF34-36EE-4601-88C7-BD526977EDD6}"
+      DTS:ExecutableType="SecureFTP.SFTP, SecureFTP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4f5f127b6230f83d"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="192_168_35_20"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <InnerObject>
+          <FtpExePath
+            Type="8"
+            Value="C:\TEMP\WinSCP.exe" />
+          <FtpHostName
+            Type="8"
+            Value="192.168.35.20" />
+          <FtpLocalPath
+            Type="8"
+            Value="C:\TEMP\" />
+          <FtpLogPath
+            Type="8"
+            Value="" />
+          <FtpOperationName
+            Type="8"
+            Value="GetFiles" />
+          <FtpPassword
+            Type="8"
+            Value="MushroomWater33!" />
+          <FtpPortNumber
+            Type="3"
+            Value="22" />
+          <FtpRemotePath
+            Type="8"
+            Value="/DropFiles/MattTestFile.txt" />
+          <FtpRemove
+            Type="11"
+            Value="0" />
+          <FtpSshHostKeyFingerprint
+            Type="8"
+            Value="ssh-rsa 2048 0YQ+5Zmwej5mPy4OeOS7BBn7aZToV8sD+pC8WU+r6yM=" />
+          <FtpUserName
+            Type="8"
+            Value="lcpudprod" />
+          <TargetServerVersion
+            Type="3"
+            Value="150" />
+        </InnerObject>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="164,42"
+          Id="Package\192_168_10_170"
+          TopLeft="758,369" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\192_168_35_20"
+          TopLeft="645,195" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

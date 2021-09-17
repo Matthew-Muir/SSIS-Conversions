@@ -1,0 +1,279 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="7/15/2021 11:07:12 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="TRAINING1"
+  DTS:CreatorName="LCPUD\mattm"
+  DTS:DTSID="{D586892A-305F-4C1A-9B5F-DE740065353D}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="173"
+  DTS:VersionGUID="{712A0B00-BE20-424C-A263-289C288C30E0}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{21E6CE25-17BB-4633-B74C-6EECBFDDCF71}"
+      DTS:ObjectName="Excel Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.16.0;Data Source=C:\Users\mattm\Downloads\archive\Athletes.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 1]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{3D5B4FEE-EC53-48D8-ADB7-05CC2DAA144C}"
+      DTS:ObjectName="Excel Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\mattm\Downloads\archive\Athletes.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{5177874F-4FBD-4775-9C44-48DBB32DC1B9}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\quick\flat.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="pk"
+              DTS:DTSID="{69AF7CD5-5CD2-4D28-8FA2-E3D25980D7CC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="11"
+              DTS:TextQualified="True"
+              DTS:ObjectName="sending"
+              DTS:DTSID="{7FE4F288-9712-4C84-AF0C-E2C66891B4E5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="11"
+              DTS:TextQualified="True"
+              DTS:ObjectName="sent"
+              DTS:DTSID="{201B0EFC-9147-4A9E-9E56-095B8F04F76A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="xml_data"
+              DTS:DTSID="{A27BB0F9-5214-4A9A-828F-D44F269AAD60}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="crc"
+              DTS:DTSID="{1B735347-73E1-4EEC-9D6E-7DD8BE5F5322}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="11"
+              DTS:TextQualified="True"
+              DTS:ObjectName="sending_test"
+              DTS:DTSID="{1AD6694D-7BCA-4943-AE75-933D1EB0F510}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="11"
+              DTS:TextQualified="True"
+              DTS:ObjectName="sent_test"
+              DTS:DTSID="{550FA235-5C55-4CF5-919B-CDEE80B106E1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SendDTS_Pacific"
+              DTS:DTSID="{59C9E722-467C-4C27-A616-98D2A4525CF0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SendDTS_UTC"
+              DTS:DTSID="{6E579875-6EFF-4FFB-A020-3E1453845CA9}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[TRAINING1\MSSQLSERVER01.lc_TEA_JSON]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{C78068B1-A808-4924-8CF4-404B129560BE}"
+      DTS:ObjectName="TRAINING1\MSSQLSERVER01.lc_TEA_JSON">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=TRAINING1\MSSQLSERVER01;Initial Catalog=lc_TEA_JSON;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\FTPS Task"
+      DTS:CreationName="FTP_Secure.FTP_Secure, FTP_Secure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=54baab18257b9ddd"
+      DTS:Description="FTPS Task"
+      DTS:Disabled="True"
+      DTS:DTSID="{B13E4ED0-4097-4C42-99D6-9EFB1406554F}"
+      DTS:ExecutableType="FTP_Secure.FTP_Secure, FTP_Secure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=54baab18257b9ddd"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="FTPS Task"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <InnerObject>
+          <FtpHostName
+            Type="8"
+            Value="172.29.249.149" />
+          <FtpLocalPath
+            Type="8"
+            Value="C:\quick\archive\L@TEST" />
+          <FtpLogPath
+            Type="8"
+            Value="C:\quick\" />
+          <FtpMode
+            Type="8"
+            Value="Active" />
+          <FtpOperationName
+            Type="8"
+            Value="PutFiles" />
+          <FtpPassword
+            Type="8"
+            Value="qwerty!123" />
+          <FtpPortNumber
+            Type="3"
+            Value="21" />
+          <FtpRemotePath
+            Type="8"
+            Value="/" />
+          <FtpRemove
+            Type="11"
+            Value="0" />
+          <FtpSecure
+            Type="8"
+            Value="Explicit" />
+          <FtpUserName
+            Type="8"
+            Value="Administrator" />
+          <TargetServerVersion
+            Type="3"
+            Value="150" />
+          <TlsHostCertificateFingerprint
+            Type="8"
+            Value="3f:76:27:f7:50:61:17:ca:1f:48:4f:b0:ce:c5:a1:d4:9c:2d:3b:86:9d:be:c1:12:68:45:ff:98:e7:24:ce:e6" />
+        </InnerObject>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\SFTP Task"
+      DTS:CreationName="SecureFTP.SFTP, SecureFTP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4f5f127b6230f83d"
+      DTS:Description="SFTP Task"
+      DTS:DTSID="{385E0AE2-3FE0-49B6-B308-81E857626D78}"
+      DTS:ExecutableType="SecureFTP.SFTP, SecureFTP, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4f5f127b6230f83d"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="SFTP Task"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <InnerObject>
+          <FtpHostName
+            Type="8"
+            Value="localhost" />
+          <FtpLocalPath
+            Type="8"
+            Value="C:\quick\archive\panda.bmp" />
+          <FtpLogPath
+            Type="8"
+            Value="C:\quick\" />
+          <FtpOperationName
+            Type="8"
+            Value="GetFiles" />
+          <FtpPassword
+            Type="8"
+            Value="password" />
+          <FtpPortNumber
+            Type="3"
+            Value="22" />
+          <FtpRemotePath
+            Type="8"
+            Value="/" />
+          <FtpRemove
+            Type="11"
+            Value="0" />
+          <FtpSshHostKeyFingerprint
+            Type="8"
+            Value="ssh-rsa 1024 ANhrKrpNVsxqr+JGrcQH6EUsz76ewdsazpcX1JE+XQc=" />
+          <FtpUserName
+            Type="8"
+            Value="admin1" />
+          <TargetServerVersion
+            Type="3"
+            Value="150" />
+        </InnerObject>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="134,42"
+          Id="Package\FTPS Task"
+          TopLeft="553,237" />
+        <NodeLayout
+          Size="134,42"
+          Id="Package\SFTP Task"
+          TopLeft="783,213" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

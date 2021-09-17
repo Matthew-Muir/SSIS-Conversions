@@ -7,12 +7,12 @@
   DTS:CreatorName="LCPUD\mattm"
   DTS:DTSID="{A07B1F1E-4AD5-4AD5-A31F-88287152DD8E}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="15.0.2000.167"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="16"
-  DTS:VersionGUID="{BD389391-10B7-4D66-917B-7FEAD28CB146}">
+  DTS:VersionBuild="20"
+  DTS:VersionGUID="{2EE80571-D468-4DC1-9B11-71451F4A7395}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -31,7 +31,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="\\lcpudfs01\Departments\Shared Documents\Information Systems Shared Documents\Drop_Files\TEA_JSON\archive\DC_XML2JSON_2021-07-01_102837.json">
+          DTS:ConnectionString="\\lcpudfs01\Departments\Shared Documents\Information Systems Shared Documents\Drop_Files\TEA_JSON\JsonFiles\DC_XML2JSON_2021-09-07_131112.json">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -60,7 +60,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="\\lcpudfs01\Departments\Shared Documents\Information Systems Shared Documents\Drop_Files\TEA_JSON\DC_XML2JSON_2021-07-01_102837.json">
+          DTS:ConnectionString="\\lcpudfs01\Departments\Shared Documents\Information Systems Shared Documents\Drop_Files\TEA_JSON\DC_XML2JSON_2021-09-07_131112.json">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -97,7 +97,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="VarConnectionString">
       <DTS:VariableValue
-        DTS:DataType="8">\\lcpudfs01\Departments\Shared Documents\Information Systems Shared Documents\Drop_Files\TEA_JSON\archive\DC_XML2JSON_2021-07-01_102837.json</DTS:VariableValue>
+        DTS:DataType="8">\\lcpudfs01\Departments\Shared Documents\Information Systems Shared Documents\Drop_Files\TEA_JSON\JsonFiles\DC_XML2JSON_2021-09-07_131112.json</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -108,7 +108,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="VarFileName">
       <DTS:VariableValue
-        DTS:DataType="8">DC_XML2JSON_2021-07-01_102837.json</DTS:VariableValue>
+        DTS:DataType="8">DC_XML2JSON_2021-09-07_131112.json</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -117,7 +117,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="VarFilePath">
       <DTS:VariableValue
-        DTS:DataType="8">\\lcpudfs01\Departments\Shared Documents\Information Systems Shared Documents\Drop_Files\TEA_JSON\archive\</DTS:VariableValue>
+        DTS:DataType="8">\\lcpudfs01\Departments\Shared Documents\Information Systems Shared Documents\Drop_Files\TEA_JSON\JsonFiles\</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -128,7 +128,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="VarStagingConnectionString">
       <DTS:VariableValue
-        DTS:DataType="8">\\lcpudfs01\Departments\Shared Documents\Information Systems Shared Documents\Drop_Files\TEA_JSON\DC_XML2JSON_2021-07-01_102837.json</DTS:VariableValue>
+        DTS:DataType="8">\\lcpudfs01\Departments\Shared Documents\Information Systems Shared Documents\Drop_Files\TEA_JSON\DC_XML2JSON_2021-09-07_131112.json</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -596,9 +596,16 @@ ORDER BY InsertDTS_UTC DESC;</property>
           Text="Pulls JSON data from JSON table and saves that data as a JSON file to archive directory."
           ParentId="Package"
           FontInfo="{assembly:Null}"
-          Size="491,40"
+          Size="491,67"
           Id="f5c48272-7b2d-45ae-8ddd-b98d3c69000d"
-          TopLeft="684,107" />
+          TopLeft="1039,185" />
+        <AnnotationLayout
+          Text="JsonToFile(v1.0)"
+          ParentId="Package"
+          FontInfo="{assembly:Null}"
+          Size="138,60"
+          Id="745ae638-f277-43b7-8a0e-91a2c4cf5831"
+          TopLeft="835,161" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -606,7 +613,7 @@ ORDER BY InsertDTS_UTC DESC;</property>
     design-time-name="Package\Data Flow Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="157,42"
           Id="Package\Data Flow Task\OLE DB Source"
@@ -637,6 +644,20 @@ ORDER BY InsertDTS_UTC DESC;</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <AnnotationLayout
+          Text="Extracts JSON data from DC_JSON_DATA_and_STATUS table.&#xA;Saves data as a .json flat file to a destination set in the variables.&#xA;The naming format for this file is DC_XML2JSON_YYYY_MM_DD_HHmmss&#xA;These values and format are set in the variables."
+          ParentId="Package\Data Flow Task"
+          FontInfo="{assembly:Null}"
+          Size="546,109"
+          Id="5485d753-c511-44c6-a497-ed10691330f9"
+          TopLeft="895,194" />
+        <AnnotationLayout
+          Text="Json To File (v1.0)"
+          ParentId="Package\Data Flow Task"
+          FontInfo="{assembly:Null}"
+          Size="151,45"
+          Id="066ec8d9-8904-4aeb-a92e-deedc71c19ea"
+          TopLeft="679,104" />
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
